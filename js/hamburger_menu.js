@@ -1,6 +1,8 @@
-let hamburgerMenu =  document.getElementById('hamburger-menu');
-let navMenu = document.querySelector('.nav-menu')
+let hamburgerMenu = document.getElementById('hamburger-menu');
+let navMenu = document.querySelector('.nav-menu');
 
-hamburgerMenu.addEventListener('click', () => {
-    navMenu.classList.toggle('show')
-})
+if (hamburgerMenu && navMenu) {
+    hamburgerMenu.addEventListener('click', () => {
+        navMenu.classList.toggle('show');
+    });
+}

@@ -241,6 +241,18 @@ nav {
   text-underline-offset: 0.5em
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .fw-100 {
   font-weight: 100;
 }
@@ -417,7 +429,7 @@ nav {
 }
 
 .advise-img {
-  width: 80x;
+  width: 80px;
   height: 80px;
 }
 
@@ -478,7 +490,7 @@ input, textarea {
 }
 
 input:focus, textarea:focus {
-  border-color:3px solid #ddff00;
+  border: 3px solid #ddff00;
   outline: none;
 }
 
@@ -508,8 +520,8 @@ input:focus, textarea:focus {
 
 /* Estilos base sin animación */
 .moveInLeftLarge, .moveInRightLarge, .apear, .apear1, .apear2, .moveInUpLarge, .moveInDownLarge {
-  opacity: 0; 
-  transform: none; 
+  opacity: 1;
+  transform: none;
 }
 
 
