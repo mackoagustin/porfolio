@@ -1,477 +1,488 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Desarrollo web profesional para aumentar tus ventas. Diseñamos sitios web efectivos y optimizados para mejorar tu visibilidad en LATAM. ¡Contáctanos!">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
-    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">  
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Desarrollo Web Profesional | Aumenta Tu Visibilidad Online</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Agustín Macko — Desarrollador Fullstack & UX/UI. Diseño y código para marcas como Laika, Auto Special y TecWeek. Buenos Aires, LATAM.">
+  <title>Agustín Macko — Diseño & Código</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VX2SHT7V5R"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-VX2SHT7V5R');
-</script>
-
-
 <body>
-  <header>
-    <nav>
-    </nav>
-  </header>
+
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- NOISE OVERLAY -->
+  <div class="noise"></div>
+
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-counter" id="loader-counter">0</div>
+      <div class="loader-bar"><div class="loader-fill" id="loader-fill"></div></div>
+      <p class="loader-label">Cargando experiencia</p>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="#hero" class="nav-logo" data-cursor="logo">AM<span class="dot">.</span></a>
+    <div class="nav-links">
+      <a href="#work" class="nav-link" data-cursor="link">Trabajo</a>
+      <a href="#services" class="nav-link" data-cursor="link">Servicios</a>
+      <a href="#contact" class="nav-link" data-cursor="link">Contacto</a>
+    </div>
+    <div class="nav-actions">
+      <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%20quiero%20hablar" target="_blank" rel="noopener noreferrer" class="nav-cta" data-cursor="cta">Hablemos →</a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-mobile">
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav-mobile" id="nav-mobile" aria-hidden="true">
+    <a href="#work" class="nav-mobile-link">Trabajo</a>
+    <a href="#services" class="nav-mobile-link">Servicios</a>
+    <a href="#contact" class="nav-mobile-link">Contacto</a>
+    <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%20quiero%20hablar" target="_blank" rel="noopener noreferrer" class="nav-mobile-cta">Hablemos →</a>
+  </div>
 
   <main>
 
+    <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+    <section class="hero" id="hero">
 
-    <!-- Hero section-->
-    <article class="hero-container cw">
+      <div class="hero-bg">
+        <div class="hero-stripe hero-stripe-1"></div>
+        <div class="hero-stripe hero-stripe-2"></div>
+        <div class="hero-watermark" aria-hidden="true">DEV</div>
+      </div>
 
-      <div class="flex-col-hero">
+      <div class="hero-side-label" aria-hidden="true">BUENOS AIRES — 2026</div>
 
-        <section class="flex-col-center margin-page pt-5 pb-5">
-          
-          <p class="fs-large fw-400 ct moveInUpLarge">DESARROLLO SOFTWARE</p>
-
-          <div id="subtitleHero">
-            <h1 class="title-hero "> AUMENTA TUS VENTAS CON UN DISEÑO WEB EFECTIVO</h1>
-            <p class="fw-400 fs-large" style="padding-bottom: 25px; padding-top: 24px;">Te ayudo a lograr que tu sitio web tenga más visibilidad en LATAM.</p>
-
+      <div class="hero-content">
+        <div class="hero-top-row">
+          <div class="hero-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>DISPONIBLE — PROYECTOS 2026</span>
           </div>
-         
-          <button class="btn-ws flex-row-align apear fs-large" aria-label="Contact us"  onclick="window.open('https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%20estoy%20interesado%20en%20llevar%20mi%20negocio%20m%C3%A1s%20all%C3%A1%20con%20una%20web', '_blank')">
-            Hablemos
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 16 16"><path fill="#ffffff" d="M13.95 4.24C11.86 1 7.58.04 4.27 2.05C1.04 4.06 0 8.44 2.09 11.67l.17.26l-.7 2.62l2.62-.7l.26.17c1.13.61 2.36.96 3.58.96c1.31 0 2.62-.35 3.75-1.05c3.23-2.1 4.19-6.39 2.18-9.71Zm-1.83 6.74c-.35.52-.79.87-1.4.96c-.35 0-.79.17-2.53-.52c-1.48-.7-2.71-1.84-3.58-3.15c-.52-.61-.79-1.4-.87-2.19c0-.7.26-1.31.7-1.75c.17-.17.35-.26.52-.26h.44c.17 0 .35 0 .44.35c.17.44.61 1.49.61 1.58c.09.09.05.76-.35 1.14c-.22.25-.26.26-.17.44c.35.52.79 1.05 1.22 1.49c.52.44 1.05.79 1.66 1.05c.17.09.35.09.44-.09c.09-.17.52-.61.7-.79c.17-.17.26-.17.44-.09l1.4.7c.17.09.35.17.44.26c.09.26.09.61-.09.87Z"/></svg>
-          </button>
-        
-
-        </section>
-  
-  
-        <section class="flex-col-center margin-page" id="imageHero">
-          <img src="img/computer_mobile.png" alt="Diseño web responsive para computadoras y móviles" class="img-fluid hero-img">
-
-        </section>
-
-      </div>
-
-    </article>
-
-    <!-- code language-->
-    <div  class=" slider swiffy-slider slider-item-show6 slider-nav-outside slider-nav-dark slider-nav-sm slider-nav-visible slider-nav-page slider-item-snapstart slider-nav-autoplay slider-nav-autopause slider-item-ratio slider-item-ratio-contain slider-item-ratio-32x9  py-3 py-lg-4" data-slider-nav-autoplay-interval="3000">
-      <div class="slider-container">
-        <div><i class="devicon-javascript-plain cw" loading="lazy"></i></div>
-        <div><i class="devicon-sass-original cw" loading="lazy"></i></div>
-        <div><i class="devicon-jquery-plain cw" loading="lazy"></i></div>
-        <div><i class="devicon-tailwindcss-original cw" loading="lazy"></i></div>
-        <div><i class="devicon-mysql-original cw" loading="lazy"></i></div>
-        <div><i class="devicon-css3-plain cw" loading="lazy"></i></div>
-        <div><i class="devicon-nodejs-plain-wordmark cw" loading="lazy"></i></div>
-        <div><i class="devicon-php-plain cw" loading="lazy"></i></div>
-        <div><i class="devicon-bootstrap-plain cw" loading="lazy"></i></div>
-
-        <div><i class="devicon-javascript-plain cw" loading="lazy"></i></div>
-        <div><i class="devicon-sass-original cw" loading="lazy"></i></div>
-        <div><i class="devicon-jquery-plain cw" loading="lazy"></i></div>
-        <div><i class="devicon-tailwindcss-original cw" loading="lazy"></i></div>
-        <div><i class="devicon-mysql-original cw" loading="lazy"></i></div>
-        <div><i class="devicon-css3-plain cw" loading="lazy"></i></div>
-        <div><i class="devicon-nodejs-plain-wordmark cw" loading="lazy"></i></div>
-        <div><i class="devicon-php-plain cw" loading="lazy"></i></div>
-        <div><i class="devicon-bootstrap-plain cw" loading="lazy"></i></div>
-
-      </div>
-    </div>
-
-
-    <!-- first section-->
-    <article class="margin-page-section mt-5 pt-5 pb-3 mb-5">
-      <h2 class="text-center fs-hero pb-3 moveInUpLarge">¿Cómo <span class="cs ">trabajo</span>?</h2>
-      
-      <section class="margin-page apear"> 
-     
-        <p class="fs-large text-center fw-1200 moveInDownLarge">En mi proceso de desarrollo web, creo sitios personalizados que no solo captan la atención de tus usuarios, sino que también convierten visitas en ventas. Comienzo con un análisis profundo de tu negocio y mercado para diseñar soluciones digitales efectivas y únicas. Desarrollo sitios web profesionales optimizados para conversiones, asegurando un lanzamiento impecable y ofreciendo soporte continuo para tu crecimiento online.</p>
-
-      </section>
-
-      <section class="flex-col-card ">
-
-        <div class="col-12 col-md-6 pb-5 mt-5 pt-0 apear d-flex flex-column align-items-center">
-          <img class="img-fluid mobile1-img" src="img/tracker.png" alt="Ejemplo de diseño web móvil personalizado desarrollado por nuestra empresa">
-
+          <span class="hero-index">[ 01 / HERO ]</span>
         </div>
 
-        <div class="col-12 col-md-6 d-flex flex-column align-items-center">
-          
-          <div class="service-card margin-page shadow moveInLeftLarge">
-            <div class="pading-card">
-              <div class="flex-row-start">
-                <div >
-                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="#FFB703" stroke-linecap="round" stroke-width="1.5"><path d="M1 20v-1a7 7 0 0 1 7-7v0a7 7 0 0 1 7 7v1"/><path d="M13 14v0a5 5 0 0 1 5-5v0a5 5 0 0 1 5 5v.5"/><path stroke-linejoin="round" d="M8 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8m10-3a3 3 0 1 0 0-6a3 3 0 0 0 0 6"/></g></svg>
-                </div>
-    
-                <br>
-                <div class="flex-col">
-                    <h4 class="cs">Primer contacto y diseño</h4>
-                    <p class="fs-medium">
-                      Analizo tu negocio, competencia y estructura para crear un diseño visual que refleje al 100% la identidad de tu marca.</p>
-                </div>
+        <h1 class="hero-title">
+          <span class="line-wrap"><span class="line">DISEÑO</span></span>
+          <span class="line-wrap accent-line"><span class="line outline-text">&amp; CÓDIGO</span></span>
+          <span class="line-wrap offset-line"><span class="line">QUE VENDE</span></span>
+        </h1>
+
+        <div class="hero-sub-grid">
+          <p class="hero-desc">Experiencias digitales con diseño de alto impacto e ingeniería sólida. Sin templates. Sin compromisos. Solo conversión.</p>
+          <div class="hero-cta-group">
+            <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%20quiero%20hablar" target="_blank" rel="noopener noreferrer" class="btn-primary" data-cursor="cta">
+              <span>Iniciar proyecto</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#work" class="btn-ghost" data-cursor="link">↓ Ver trabajo</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-ticker">
+        <div class="ticker-track">
+          <span>UI Design</span><span class="sep">✦</span>
+          <span>Front-End Dev</span><span class="sep">✦</span>
+          <span>Back-End</span><span class="sep">✦</span>
+          <span>Node.js</span><span class="sep">✦</span>
+          <span>SEO</span><span class="sep">✦</span>
+          <span>Landing Pages</span><span class="sep">✦</span>
+          <span>E-Commerce</span><span class="sep">✦</span>
+          <span>UX Strategy</span><span class="sep">✦</span>
+          <span>UI Design</span><span class="sep">✦</span>
+          <span>Front-End Dev</span><span class="sep">✦</span>
+          <span>Back-End</span><span class="sep">✦</span>
+          <span>Node.js</span><span class="sep">✦</span>
+          <span>SEO</span><span class="sep">✦</span>
+          <span>Landing Pages</span><span class="sep">✦</span>
+          <span>E-Commerce</span><span class="sep">✦</span>
+          <span>UX Strategy</span><span class="sep">✦</span>
+        </div>
+      </div>
+
+      <div class="hero-scroll-hint">
+        <div class="scroll-line"></div>
+        <span>scroll</span>
+      </div>
+
+    </section>
+
+    <!-- ═══════════════════════════════ ABOUT ═══════════════════════════════ -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-left reveal-left">
+            <span class="section-label">// Sobre mí</span>
+            <h2 class="about-title">Construyo webs que<br><em>trabajan</em> por vos</h2>
+          </div>
+          <div class="about-right reveal-right">
+            <p class="about-text">Soy Agustín, dev fullstack y diseñador UX/UI en Buenos Aires. Trabajé en productos reales — desde marketplaces como Laika hasta sitios corporativos y landings de alto impacto.</p>
+            <p class="about-text">No vendo páginas bonitas. Construyo sistemas digitales: diseño, front, back y deploy. Todo pensado para que tu web genere contactos, ventas y confianza.</p>
+            <div class="about-stats">
+              <div class="stat reveal-up" style="--delay: 0s">
+                <span class="stat-num" data-target="50">0</span><span class="stat-unit">+</span>
+                <span class="stat-label">Proyectos</span>
+              </div>
+              <div class="stat reveal-up" style="--delay: 0.1s">
+                <span class="stat-num" data-target="5">0</span><span class="stat-unit">+</span>
+                <span class="stat-label">Años</span>
+              </div>
+              <div class="stat reveal-up" style="--delay: 0.2s">
+                <span class="stat-num" data-target="100">0</span><span class="stat-unit">%</span>
+                <span class="stat-label">Dedicación</span>
               </div>
             </div>
-           </div>
-   
-             
-           <div class="service-card margin-page shadow mt-4 moveInRightLarge">
-            <div class="pading-card">
-              <div class="flex-row-start">
-                <div >
-                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="#FFB703" d="M11.61 29.92a1 1 0 0 1-.6-1.07L12.83 17H8a1 1 0 0 1-1-1.23l3-13A1 1 0 0 1 11 2h10a1 1 0 0 1 .78.37a1 1 0 0 1 .2.85L20.25 11H25a1 1 0 0 1 .9.56a1 1 0 0 1-.11 1l-13 17A1 1 0 0 1 12 30a1.1 1.1 0 0 1-.39-.08M17.75 13l2-9H11.8L9.26 15h5.91l-1.59 10.28L23 13Z"/></svg>
-                </div>
-    
-                <br>
-                <div class="flex-col">
-    
-                  <h4 class="cs">Desarrollo y Pre-Entrega</h4>
-                  <p class="fs-medium">
-                    Desarrollo el sitio con todas las funcionalidades necesarias y te presento una versión preliminar para su revisión y ajustes finales.</p> </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ WORK ═══════════════════════════════ -->
+    <section class="work" id="work">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-label">// Proyectos</span>
+          <h2 class="section-title">Trabajo selecto</h2>
+        </div>
+
+        <div class="projects-list">
+
+          <a href="https://autospecial.com.ar" target="_blank" rel="noopener noreferrer" class="project-item reveal-up" data-cursor="view" style="--delay:0s">
+            <div class="project-number">01</div>
+            <div class="project-info">
+              <h3 class="project-title">Auto Special</h3>
+              <p class="project-desc">Landing page de alto impacto para concesionaria premium. Diseño cinematic, galería con lazy loading, formulario CRM.</p>
+              <div class="project-tags">
+                <span>UX/UI</span><span>HTML/CSS</span><span>JS</span><span>SEO</span>
               </div>
             </div>
-           </div>
-    
-   
-           <div class="service-card margin-page shadow  mt-4 moveInLeftLarge">
-            <div class="pading-card">
-              <div class="flex-row-start">
-                <div >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 256 256"><path fill="#FFB703" d="M223.85 47.12a16 16 0 0 0-15-15c-12.58-.75-44.73.4-71.41 27.07L132.69 64H74.36A15.9 15.9 0 0 0 63 68.68L28.7 103a16 16 0 0 0 9.07 27.16l38.47 5.37l44.21 44.21l5.37 38.49a15.94 15.94 0 0 0 10.78 12.92a16.1 16.1 0 0 0 5.1.83a15.9 15.9 0 0 0 11.3-4.68l34.32-34.3a15.9 15.9 0 0 0 4.68-11.36v-58.33l4.77-4.77c26.68-26.68 27.83-58.83 27.08-71.42M74.36 80h42.33l-39.53 39.52L40 114.34Zm74.41-9.45a76.65 76.65 0 0 1 59.11-22.47a76.46 76.46 0 0 1-22.42 59.16L128 164.68L91.32 128ZM176 181.64L141.67 216l-5.19-37.17L176 139.31Zm-74.16 9.5C97.34 201 82.29 224 40 224a8 8 0 0 1-8-8c0-42.29 23-57.34 32.86-61.85a8 8 0 0 1 6.64 14.56c-6.43 2.93-20.62 12.36-23.12 38.91c26.55-2.5 36-16.69 38.91-23.12a8 8 0 1 1 14.56 6.64Z"/></svg>
-                </div>
-    
-                <br>
-                <div class="flex-col">
-    
-                  <h4 class="cs">Entrega y Lanzamiento</h4>
-                  <p class="fs-medium">
-                    Publico tu sitio web en vivo, realizo pruebas finales y te brindo soporte post-lanzamiento para resolver cualquier duda que puedas tener.
-                 </p>
-                </div>
+            <div class="project-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="project-preview">
+              <img src="img/auto2.png" alt="Preview Auto Special" class="preview-img" loading="lazy">
+            </div>
+          </a>
+          <a href="https://laika.com.co/" target="_blank" rel="noopener noreferrer" class="project-item reveal-up" data-cursor="view" style="--delay:0.1s">
+            <div class="project-number">02</div>
+            <div class="project-info">
+              <h3 class="project-title">Laika Marketplace</h3>
+              <p class="project-desc">
+              Marketplace líder para mascotas con catálogo de productos, servicios veterinarios, suscripciones y experiencia de compra optimizada para aumentar la recurrencia y fidelización de clientes.
+              </p>
+              <div class="project-tags">
+                <span>Fullstack</span><span>UX/UI</span><span>React</span><span>MySQL</span>
               </div>
             </div>
-           </div>
+            <div class="project-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="project-preview">
+              <img src="img/laika.png" alt="Preview Laika Marketplace" class="preview-img" loading="lazy">
+            </div>
+          </a>
+
+          <a href="https://www.tecweek.com.ar/" target="_blank" rel="noopener noreferrer" class="project-item reveal-up" data-cursor="view" style="--delay:0.2s">
+            <div class="project-number">03</div>
+            <div class="project-info">
+              <h3 class="project-title">TecWeek</h3>
+              <p class="project-desc">
+              Sitio corporativo enfocado en servicios tecnológicos, desarrollo de software, infraestructura cloud y soluciones IT, diseñado para generar confianza y captar oportunidades comerciales.
+              </p>
+              <div class="project-tags">
+                <span>Next.js</span><span>Supabase</span><span>UX/UI</span><span>JWT</span>
+              </div>
+            </div>
+            <div class="project-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="project-preview">
+              <img src="img/tec.png" alt="Preview TecWeek" class="preview-img" loading="lazy">
+            </div>
+          </a>
+
+          <a href="https://www.tracker-realestate.com/" target="_blank" rel="noopener noreferrer" class="project-item reveal-up" data-cursor="view" style="--delay:0.3s">
+            <div class="project-number">04</div>
+            <div class="project-info">
+              <h3 class="project-title">Tracker Real Estate</h3>
+              <p class="project-desc">Plataforma de seguimiento inmobiliario con dashboard en tiempo real, gestión de propiedades y flujos de captación optimizados para el mercado.</p>
+              <div class="project-tags">
+                <span>Node.js</span><span>MySQL</span><span>JWT</span><span>Dashboard</span>
+              </div>
+            </div>
+            <div class="project-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="project-preview">
+              <img src="img/tracker2.png" alt="Preview Tracker Real Estate" class="preview-img" loading="lazy">
+            </div>
+          </a>
+
 
         </div>
-  
-      
+      </div>
+    </section>
 
-     </section>
-    </article>
+    <!-- ═══════════════════════════════ PROCESS ═══════════════════════════════ -->
+    <section class="process" id="process">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-label">// Proceso</span>
+          <h2 class="section-title">Cómo trabajo</h2>
+        </div>
+
+        <div class="process-timeline">
+          <div class="process-step reveal-up" style="--delay:0s">
+            <div class="step-marker" aria-hidden="true"></div>
+            <span class="step-num">01</span>
+            <div class="step-body">
+              <div class="step-head">
+                <div class="step-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <h3>Descubrimiento</h3>
+              </div>
+              <p>Analizo tu negocio, competencia y objetivos para entender qué necesitás realmente — no lo que creés que necesitás.</p>
+            </div>
+          </div>
+          <div class="process-step reveal-up" style="--delay:0.1s">
+            <div class="step-marker" aria-hidden="true"></div>
+            <span class="step-num">02</span>
+            <div class="step-body">
+              <div class="step-head">
+                <div class="step-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <h3>Diseño</h3>
+              </div>
+              <p>Wireframes, prototipos y sistema de diseño con identidad única. No templates, todo construido desde cero para tu marca.</p>
+            </div>
+          </div>
+          <div class="process-step reveal-up" style="--delay:0.2s">
+            <div class="step-marker" aria-hidden="true"></div>
+            <span class="step-num">03</span>
+            <div class="step-body">
+              <div class="step-head">
+                <div class="step-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <h3>Desarrollo</h3>
+              </div>
+              <p>Código limpio, performante y escalable. Front-end + back-end integrados con las últimas tecnologías del mercado.</p>
+            </div>
+          </div>
+          <div class="process-step reveal-up" style="--delay:0.3s">
+            <div class="step-marker" aria-hidden="true"></div>
+            <span class="step-num">04</span>
+            <div class="step-body">
+              <div class="step-head">
+                <div class="step-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><polyline points="22 4 12 14.01 9 11.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <h3>Lanzamiento</h3>
+              </div>
+              <p>Deploy, pruebas de performance, SEO técnico y soporte post-lanzamiento. Tu negocio en vivo desde el día uno.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ SERVICES ═══════════════════════════════ -->
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-label">// Servicios</span>
+          <h2 class="section-title">Qué hago</h2>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card-new reveal-up" style="--delay:0s">
+            <div class="service-icon-wrap">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 17l10 5 10-5" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 12l10 5 10-5" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Landing Pages</h3>
+            <p>Una sola página, un solo objetivo: que el visitante actúe. Copy, diseño y CTA alineados a conversión.</p>
+            <div class="service-tag">Desde $400 USD</div>
+          </div>
+          <div class="service-card-new reveal-up" style="--delay:0.1s">
+            <div class="service-icon-wrap">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="var(--accent)" stroke-width="1.5"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Sitios Web</h3>
+            <p>Sitios rápidos, seguros y con SEO técnico desde el día uno. Presencia digital que se siente premium y carga al instante.</p>
+            <div class="service-tag">Desde $1.000 USD</div>
+          </div>
+          <div class="service-card-new reveal-up" style="--delay:0.2s">
+            <div class="service-icon-wrap">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" stroke="var(--accent)" stroke-width="1.5"/><path d="M8 21h8M12 17v4" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <h3>UX/UI Design</h3>
+            <p>Interfaces claras, accesibles y con identidad propia. Diseño que guía al usuario sin fricción.</p>
+            <div class="service-tag">Desde $600 USD</div>
+          </div>
+          <div class="service-card-new reveal-up" style="--delay:0.3s">
+            <div class="service-icon-wrap">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><polyline points="16 18 22 12 16 6" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><polyline points="8 6 2 12 8 18" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Desarrollo Fullstack</h3>
+            <p>Del wireframe al deploy: front, back, base de datos y APIs integradas. Un solo equipo, un solo producto.</p>
+            <div class="service-tag">Desde $2.500 USD</div>
+          </div>
+          <div class="service-card-new reveal-up" style="--delay:0.4s">
+            <div class="service-icon-wrap">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>E-Commerce</h3>
+            <p>Tiendas online con pagos integrados, gestión de stock y panel de administración propio. Sin comisiones de plataformas.</p>
+            <div class="service-tag">Desde $1.500 USD</div>
+          </div>
+          <div class="service-card-new reveal-up" style="--delay:0.5s">
+            <div class="service-icon-wrap">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="7" r="4" stroke="var(--accent)" stroke-width="1.5"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Consultoría Digital</h3>
+            <p>Análisis de tu presencia online, estrategia de crecimiento y roadmap técnico para escalar tu negocio.</p>
+            <div class="service-tag">Desde $300 USD</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
 
- 
+    <!-- ═══════════════════════════════ CONTACT CTA ═══════════════════════════════ -->
+    <section class="contact-cta" id="contact">
+      <div class="cta-bg">
+        <div class="cta-orb cta-orb-1"></div>
+        <div class="cta-orb cta-orb-2"></div>
+      </div>
+      <div class="container">
+        <div class="cta-content reveal-up">
+          <span class="section-label cw">// Contacto</span>
+          <h2 class="cta-title">¿Listo para<br><em>despegar</em>?</h2>
+          <p class="cta-desc">Contame tu idea. En 24hs tenés una propuesta en tu bandeja de entrada.</p>
+          <div class="cta-actions">
+            <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%20quiero%20hablar" target="_blank" rel="noopener noreferrer" class="btn-primary btn-large" data-cursor="cta">
+              <span>Escribime por WhatsApp</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="mailto:mackoaa@gmail.com" class="btn-ghost-dark" data-cursor="link">mackoaa@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-
-    <!-- BANNER-->
-    <section class="baner-container">
-      <div class="margin-page pt-5 pb-5">
-       
-        <div class="margin-page-section">
-
-          <h3 class="cw text-center title-banner pt-5 apear"> ¿Cuál es tu próximo desafío?</h3>
-          <div class="row align-items-center">
-            
-            <div class="col-12 col-md-6 d-flex flex-column align-items-center  mt-4 mt-md-5 moveInLeftLarge"> 
-              
-              <p class="cw fs-large  pb-5 text-center">Ayudo a las empresas a superar sus desafíos mediante la creación de soluciones digitales personalizadas que impulsan ventas y atraen nuevos clientes. Utilizo las últimas tendencias en desarrollo web y tecnologías innovadoras para transformar digitalmente tu negocio, optimizar procesos y asegurar un crecimiento sostenible.              </p>
-
-              <button class="btn-banner flex-row-align" aria-label="Contact us" id="buttonHero" onclick="window.open('https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%20estoy%20interesado%20en%20llevar%20mi%20negocio%20m%C3%A1s%20all%C3%A1%20con%20una%20web', '_blank')">
-                Hablemos
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 16 16"><path fill="#ffffff" d="M13.95 4.24C11.86 1 7.58.04 4.27 2.05C1.04 4.06 0 8.44 2.09 11.67l.17.26l-.7 2.62l2.62-.7l.26.17c1.13.61 2.36.96 3.58.96c1.31 0 2.62-.35 3.75-1.05c3.23-2.1 4.19-6.39 2.18-9.71Zm-1.83 6.74c-.35.52-.79.87-1.4.96c-.35 0-.79.17-2.53-.52c-1.48-.7-2.71-1.84-3.58-3.15c-.52-.61-.79-1.4-.87-2.19c0-.7.26-1.31.7-1.75c.17-.17.35-.26.52-.26h.44c.17 0 .35 0 .44.35c.17.44.61 1.49.61 1.58c.09.09.05.76-.35 1.14c-.22.25-.26.26-.17.44c.35.52.79 1.05 1.22 1.49c.52.44 1.05.79 1.66 1.05c.17.09.35.09.44-.09c.09-.17.52-.61.7-.79c.17-.17.26-.17.44-.09l1.4.7c.17.09.35.17.44.26c.09.26.09.61-.09.87Z"/></svg>
+    <!-- ═══════════════════════════════ FORM ═══════════════════════════════ -->
+    <section class="form-section" id="form">
+      <div class="container">
+        <div class="form-grid">
+          <div class="form-left reveal-left">
+            <span class="section-label">// Formulario</span>
+            <h2 class="form-title">¿No sabés<br>por dónde empezar?</h2>
+            <p>Contame tu idea o proyecto y juntos encontramos la solución ideal para hacer crecer tu negocio.</p>
+            <div class="form-contact-list">
+              <a href="https://wa.me/5491150560359" target="_blank" rel="noopener noreferrer" class="form-contact-item" data-cursor="link">
+                <span class="contact-icon">WA</span>
+                <span>+54 9 11 5056-0359</span>
+              </a>
+              <a href="mailto:mackoaa@gmail.com" class="form-contact-item" data-cursor="link">
+                <span class="contact-icon">@</span>
+                <span>mackoaa@gmail.com</span>
+              </a>
+              <a href="https://www.linkedin.com/in/macko-agustin/" target="_blank" rel="noopener noreferrer" class="form-contact-item" data-cursor="link">
+                <span class="contact-icon">IN</span>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
+          <div class="form-right reveal-right">
+            <form action="https://formspree.io/f/myzgvjbd" method="POST" class="contact-form">
+              <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                </div>
+                <div class="form-group">
+                  <label for="whatsapp">WhatsApp</label>
+                  <input type="tel" id="whatsapp" name="whatsapp" placeholder="+54 9 11 XXXX-XXXX">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="servicio">¿Qué necesitás?</label>
+                <select id="servicio" name="servicio">
+                  <option value="">Seleccionar servicio</option>
+                  <option>Landing Page</option>
+                  <option>Sitio Web</option>
+                  <option>E-Commerce</option>
+                  <option>Desarrollo Fullstack</option>
+                  <option>Consultoría</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="mensaje">Tu idea o proyecto</label>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Contame de qué se trata tu proyecto..." required></textarea>
+              </div>
+              <button type="submit" class="btn-form">
+                <span>Enviar mensaje</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </button>
-            </div>
-
-            <div class="col-12 col-md-1">
-            </div>
-            
-
-            <div class="col-12 col-md-5 text-center moveInRightLarge">
-              <img class="img-fluid" src="img/auto_special.png" alt="Ejemplo de diseño web en computadora mostrando nuestras soluciones digitales personalizadas">
-
-            </div>
-          
-          </div>
-        </div>
-      </div>
-    </section>
-
-
- <!-- Service desktop-->
-     <section class="bg-cards-items pb-5 service-desktop-visibility">
-
-      <article class="margin-page-section pt-5 pb-5" >
-        <h2 class="text-center fs-hero pb-3 pt-5 apear">Asesoría y <span class="cs ">servicios</span> </h2>
-        
-        <section class="flex-col-card">
-          <div class="advice-card margin-page mt-3 shadow apear1">
-            <div class="pading-card-advice">
-              <div class="flex-col-advise">
-                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 48 48"><path fill="#FFB703" stroke="#FFB703" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M44 16c0 6.627-5.373 12-12 12c-2.027 0-3.936-.503-5.61-1.39L9 44l-5-5l17.39-17.39A11.95 11.95 0 0 1 20 16c0-6.627 5.373-12 12-12c2.027 0 3.936.502 5.61 1.39L30 13l5 5l7.61-7.61A11.95 11.95 0 0 1 44 16"/></svg>
-                <h3 class="cs fw-500 fs-xl margin-title-text">Diseño UX/UI </h3>
-                <p class="fs-medium">Diseño experiencias centradas en el usuario, combinando un diseño atractivo con una funcionalidad intuitiva y optimizando cada interacción para maximizar su satisfacción.</p>
-              </div>
-            </div>
-          </div>
-  
-          <div class="advice-card margin-page mt-3 shadow apear2">
-            <div class="pading-card-advice">
-              <div class="flex-col-advise">
-                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M9.5 3L8 4.5L11.5 8L8 11.5L9.5 13L14 8L9.5 3zm-5 0L0 8l4.5 5L6 11.5L2.5 8L6 4.5L4.5 3z" fill="#FFB703"/></svg>                
-                <h3 class="cs fw-500 fs-xl margin-title-text">Front-End</h3>                
-                <p class="fs-medium">Desarrollo interfaces front-end utilizando HTML, CSS, PHP y JavaScript, garantizando sitios web responsivos, rápidos y accesibles, con una experiencia de usuario fluida.</p>
-              </div>
-            </div>
-          </div>
-  
-  
-  
-          <div class="advice-card margin-page mt-3 shadow apear">
-            <div class="pading-card-advice">
-              <div class="flex-col-advise">
-                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 48 48"><g fill="none" stroke="#FFB703" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><path d="M5 43h38"/><path fill="#FFB703" d="M4 25V14.99c1.216 0 4.818 4.179 6 6.01l11 2V5l4 2l5.831 18.978L40 28c4 1 4 3.5 4 4c0 3-3.5 3-4 3c-4 0-36-10-36-10"/></g></svg>
-                <p class="cs fw-500 fs-xl margin-title-text">Landing Pages</p>
-                <p class="fw-100 fs-medium cp">Diseño landing pages impactantes que captan visitantes y los guían hacia una acción específica, combinando un UX/UI optimizado y contenido persuasivo.                </p>
-              </div>
-            </div>
-          </div>
-          
-        </section>
-       
-  
-        <section class="flex-col-card">
-
-          <div class="advice-card margin-page mt-3 shadow apear">
-            <div class="pading-card-advice">
-              <div class="flex-col-advise">
-                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24"><path fill="#FFB703" d="M16.36 14c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2m-5.15 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56M14.34 14H9.66c-.1-.66-.16-1.32-.16-2s.06-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2M12 19.96c-.83-1.2-1.5-2.53-1.91-3.96h3.82c-.41 1.43-1.08 2.76-1.91 3.96M8 8H5.08A7.92 7.92 0 0 1 9.4 4.44C8.8 5.55 8.35 6.75 8 8m-2.92 8H8c.35 1.25.8 2.45 1.4 3.56A8 8 0 0 1 5.08 16m-.82-2C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2M12 4.03c.83 1.2 1.5 2.54 1.91 3.97h-3.82c.41-1.43 1.08-2.77 1.91-3.97M18.92 8h-2.95a15.7 15.7 0 0 0-1.38-3.56c1.84.63 3.37 1.9 4.33 3.56M12 2C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2"/></svg>
-                <p class="cs fw-500 fs-xl margin-title-text">Sitios Web</p>
-                <p class="fw-100 fs-medium cp">Creo sitios web estáticos rápidos, seguros y optimizados para SEO utilizando tecnologías modernas como Jamstack, garantizando una carga rápida y un mantenimiento sencillo.
-
-                </p>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="advice-card margin-page mt-3 shadow apear2">
-            <div class="pading-card-advice">
-              <div class="flex-col-advise">
-                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 17 16"><g fill="#FFB703" fill-rule="evenodd"><path d="m4.083.041l6.959 2.667v12.084l-6.709-1.709l-.208.834l7.803 2v-2.042l1.968-.001V.041z"/><path d="M9 8h.875v.875H9z"/></g></svg>
-                <p class="cs fw-500 fs-xl margin-title-text">Back-End</p>
-                <p class="fw-100 fs-medium cp">Desarrollo back-end escalable con Node.js, garantizando eficiencia, integración fluida y rendimiento óptimo para tu sitio o aplicación, con seguridad y estabilidad.</p>
-              </div>
-            </div>
-          </div>
-  
-  
-          <div class="advice-card margin-page mt-3 shadow apear1">
-            <div class="pading-card-advice">
-              <div class="flex-col-advise">
-                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 512 512"><path fill="#FFB703" d="M440.9 136.3a4 4 0 0 0 0-6.91L288.16 40.65a64.14 64.14 0 0 0-64.33 0L71.12 129.39a4 4 0 0 0 0 6.91L254 243.88a4 4 0 0 0 4.06 0ZM54 163.51a4 4 0 0 0-6 3.49v173.89a48 48 0 0 0 23.84 41.39L234 479.51a4 4 0 0 0 6-3.46V274.3a4 4 0 0 0-2-3.46ZM272 275v201a4 4 0 0 0 6 3.46l162.15-97.23A48 48 0 0 0 464 340.89V167a4 4 0 0 0-6-3.45l-184 108a4 4 0 0 0-2 3.45"/></svg>
-                <p class="cs fw-500 fs-xl margin-title-text">Integración</p>
-                <p class="fw-100 fs-medium cg">Desarrollo aplicaciones web completas, integrando front-end y back-end para ofrecer soluciones funcionales y asegurando que todos los componentes trabajen en perfecta armonía.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        
-  
-      </article>
-    </section>
-
-
-
-  <!-- Service cell-->
-  <section class="pt-5 pb-5 service-cell-visibility">
-
-    <h2 class="text-center fs-hero pb-3 pt-5 apear">Asesoría y <span class="cs ">servicios</span> </h2>
-
-    <div class="swiffy-slider slider-item-show2 slider-item-reveal slider-nav-outside slider-nav-round slider-nav-visible slider-indicators-outside slider-indicators-round slider-indicators-dark slider-nav-animation slider-nav-animation-fadein slider-item-first-visible moveInDownLarge">
-      <ul class="slider-container py-4">
-    
-          <li class="slide-visible">
-              <div class="advice-card margin-page mt-3 shadow">
-            <div class="pading-card-advice">
-              <div class="flex-col-advise">
-                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 48 48"><path fill="#FFB703" stroke="#FFB703" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M44 16c0 6.627-5.373 12-12 12c-2.027 0-3.936-.503-5.61-1.39L9 44l-5-5l17.39-17.39A11.95 11.95 0 0 1 20 16c0-6.627 5.373-12 12-12c2.027 0 3.936.502 5.61 1.39L30 13l5 5l7.61-7.61A11.95 11.95 0 0 1 44 16"/></svg>
-                <h3 class="cs fw-500 fs-xl margin-title-text">Diseño UX/UI </h3>
-                <p class="fs-medium">Diseño experiencias centradas en el usuario, combinando un diseño atractivo con una funcionalidad intuitiva y optimizando cada interacción para maximizar la satisfacción del usuario.</p>
-              </div>
-            </div>
-          </div>
-          </li>
-          <li class="slide-visible">
-            <div class="advice-card margin-page mt-3 shadow">
-              <div class="pading-card-advice">
-                <div class="flex-col-advise">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M9.5 3L8 4.5L11.5 8L8 11.5L9.5 13L14 8L9.5 3zm-5 0L0 8l4.5 5L6 11.5L2.5 8L6 4.5L4.5 3z" fill="#FFB703"/></svg>                
-                  <h3 class="cs fw-500 fs-xl margin-title-text">Front-End</h3>                
-                  <p class="fs-medium">Desarrollo interfaces front-end con HTML, CSS, PHP y JavaScript, asegurando sitios web responsivos, rápidos y accesibles, con una experiencia de usuario fluida.</p>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li>
-              
-          <div class="advice-card margin-page mt-3 shadow">
-            <div class="pading-card-advice">
-              <div class="flex-col-advise">
-                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 48 48"><g fill="none" stroke="#FFB703" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><path d="M5 43h38"/><path fill="#FFB703" d="M4 25V14.99c1.216 0 4.818 4.179 6 6.01l11 2V5l4 2l5.831 18.978L40 28c4 1 4 3.5 4 4c0 3-3.5 3-4 3c-4 0-36-10-36-10"/></g></svg>
-                <p class="cs fw-500 fs-xl margin-title-text">Landing Pages</p>
-                <p class="fw-100 fs-medium cp">Diseño landing pages impactantes para captar visitantes y guiarlos hacia una acción específica, con un UX/UI optimizado y contenido persuasivo.</p>
-              </div>
-            </div>
-          </div>
-          </li>
-          <li>
-            <div class="advice-card margin-page mt-3 shadow">
-              <div class="pading-card-advice">
-                <div class="flex-col-advise">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24"><path fill="#FFB703" d="M16.36 14c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2m-5.15 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56M14.34 14H9.66c-.1-.66-.16-1.32-.16-2s.06-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2M12 19.96c-.83-1.2-1.5-2.53-1.91-3.96h3.82c-.41 1.43-1.08 2.76-1.91 3.96M8 8H5.08A7.92 7.92 0 0 1 9.4 4.44C8.8 5.55 8.35 6.75 8 8m-2.92 8H8c.35 1.25.8 2.45 1.4 3.56A8 8 0 0 1 5.08 16m-.82-2C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2M12 4.03c.83 1.2 1.5 2.54 1.91 3.97h-3.82c.41-1.43 1.08-2.77 1.91-3.97M18.92 8h-2.95a15.7 15.7 0 0 0-1.38-3.56c1.84.63 3.37 1.9 4.33 3.56M12 2C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2"/></svg>
-                  <p class="cs fw-500 fs-xl margin-title-text">Sitios Web</p>
-                  <p class="fw-100 fs-medium cp">Creo sitios web estáticos rápidos, seguros y optimizados para SEO utilizando tecnologías modernas como Jamstack, garantizando una carga rápida y un mantenimiento sencillo.
-
-                  </p>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li>
-              
-          <div class="advice-card margin-page mt-3 shadow">
-            <div class="pading-card-advice">
-              <div class="flex-col-advise">
-                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 17 16"><g fill="#FFB703" fill-rule="evenodd"><path d="m4.083.041l6.959 2.667v12.084l-6.709-1.709l-.208.834l7.803 2v-2.042l1.968-.001V.041z"/><path d="M9 8h.875v.875H9z"/></g></svg>
-                <p class="cs fw-500 fs-xl margin-title-text">Back-End</p>
-                <p class="fw-100 fs-medium cp">Desarrollo back-end escalable con Node.js, asegurando eficiencia, integración fluida y rendimiento óptimo para tu sitio o aplicación, con una sólida seguridad y estabilidad.</p>
-              </div>
-            </div>
-          </div>
-          </li>
-          <li>
-            <div class="advice-card margin-page mt-3 shadow">
-              <div class="pading-card-advice">
-                <div class="flex-col-advise">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 512 512"><path fill="#FFB703" d="M440.9 136.3a4 4 0 0 0 0-6.91L288.16 40.65a64.14 64.14 0 0 0-64.33 0L71.12 129.39a4 4 0 0 0 0 6.91L254 243.88a4 4 0 0 0 4.06 0ZM54 163.51a4 4 0 0 0-6 3.49v173.89a48 48 0 0 0 23.84 41.39L234 479.51a4 4 0 0 0 6-3.46V274.3a4 4 0 0 0-2-3.46ZM272 275v201a4 4 0 0 0 6 3.46l162.15-97.23A48 48 0 0 0 464 340.89V167a4 4 0 0 0-6-3.45l-184 108a4 4 0 0 0-2 3.45"/></svg>
-                  <p class="cs fw-500 fs-xl margin-title-text">Integración</p>
-                  <p class="fw-100 fs-medium cg">Desarrollo aplicaciones web completas, integrando front-end y back-end para ofrecer soluciones funcionales y asegurando que todos los componentes trabajen en perfecta armonía.</p>
-                </div>
-              </div>
-            </div>
-          </li>
-      </ul>
-    
-      <button type="button" class="slider-nav margin-page" aria-label="Go left"></button>
-      <button type="button" class="slider-nav slider-nav-next margin-page" aria-label="Go left"></button>
-    
-      <div class="slider-indicators">
-          <button class="active" aria-label="Go to slide"></button>
-          <button aria-label="Go to slide"></button>
-          <button aria-label="Go to slide"></button>
-          <button aria-label="Go to slide"></button>
-          <button aria-label="Go to slide"></button>
-      </div>
-    </div>
-
-  </section>
-
-
-
-
-
-  <!--Formulario-->
-
-
-  <section class="form-container pt-5 pb-5">
-    <div class="margin-page">
-      <div class="margin-page-section cw">
-        <div class="row align-items-center">
-          <h2 class="text-center fs-hero apear  pt-5"> ¿No sabes por donde empezar?</h2>
-          <div class="col-12 col-md-6 d-flex flex-column align-items-center  mt-5 mt-md-5 moveInUpLarge ">
-            <p class=" fs-large text-center"> Si no sabes por dónde empezar, estoy aquí para ayudarte. Cuéntame tu idea o proyecto, y juntos encontraremos la solución ideal para atraer más clientes, aumentar tus ventas y hacer crecer tu negocio con éxito.
-            </p>
-            
-            <img class="img-fluid hero-img" src="img/mobile_computer.png" alt="Computadora y móvil mostrando la integración de soluciones digitales personalizadas">
-
-          </div>
-
-          <div class="col-md-1">
-
-          </div>
-
-          <div class="col-12 col-md-5 fs-medium pt-5 moveInDownLarge">  
-            <form action="https://formspree.io/f/myzgvjbd" method="POST" aria-labelledby="form-title">
-              <h3 id="form-title" class="sr-only">Formulario de Contacto</h3>
-              
-              <label for="nombre">Nombre:</label>
-              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required aria-required="true">
-              
-              <label for="whatsapp">WhatsApp:</label>
-              <input type="tel" id="whatsapp" name="whatsapp" placeholder="Tu número de WhatsApp" required aria-required="true">
-              
-              <label for="email">Email:</label>
-              <input type="email" id="email" name="email" placeholder="Tu email" required aria-required="true">
-              
-              <label for="mensaje">¿Algo de tu idea o proyecto que quieras adelantarnos?</label>
-              <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required aria-required="true"></textarea>
-              
-              <button class="btn-forme" type="submit" aria-label="Enviar formulario de contacto">Enviar</button>
             </form>
-              
           </div>
-
         </div>
       </div>
-    </div>
-  </section>
-
+    </section>
 
   </main>
 
-  <footer class="bg-dark text-light text-center pt-4 pb-3">
-    <p>&copy; 2024 Agustín Macko. Todos los derechos reservados.</p>
-
-    <p>
-      <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%20estoy%20interesado%20en%20llevar%20mi%20negocio%20m%C3%A1s%20all%C3%A1%20con%20una%20web" target="_blank" rel="noopener noreferrer" aria-label="Envíanos un mensaje por WhatsApp" style="color: white;">Hablemos +5491150560359</a>
-
-    </p>
-
-    <p>
-      <a href="mailto:mackoaa@gmail.com" class="text-light" aria-label="Envía un correo a mackoaa@gmail.com">mackoaa@gmail.com</a>
-    </p>
-
-    <div style="display: flex; justify-content: center; ">
-    <a href="https://www.linkedin.com/in/macko-agustin/" style="color: white;"> <i class="devicon-linkedin-plain social-icon"></i></a>
-   
-    <a href="https://www.behance.net/agustinmacko" style="color: white;"> <i class="devicon-behance-plain social-icon"></i></a>
-   </div>
-
-
-
+  <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-logo">AM<span class="dot">.</span></span>
+          <p>Desarrollador Web Fullstack<br>Buenos Aires, Argentina</p>
+        </div>
+        <div class="footer-links">
+          <a href="#work" data-cursor="link">Trabajo</a>
+          <a href="#services" data-cursor="link">Servicios</a>
+          <a href="#contact" data-cursor="link">Contacto</a>
+        </div>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/macko-agustin/" target="_blank" rel="noopener noreferrer" data-cursor="link">LinkedIn</a>
+          <a href="https://www.behance.net/agustinmacko" target="_blank" rel="noopener noreferrer" data-cursor="link">Behance</a>
+          <a href="mailto:mackoaa@gmail.com" data-cursor="link">Email</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Agustín Macko — Todos los derechos reservados.</p>
+        <p>Diseño & código propio</p>
+      </div>
+    </div>
   </footer>
-  
 
-<script src="js/hamburger_menu.js"></script>
-<script src="js/animation.js"></script>
+  <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%20quiero%20hablar" target="_blank" rel="noopener noreferrer" class="mobile-cta" aria-label="Escribir por WhatsApp">WA →</a>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
