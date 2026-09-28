@@ -42,8 +42,6 @@
     initNav();
     initMobileNav();
     initReveal();
-    initCounters();
-    initProjectHover();
     initHeroParallax();
   }
   
@@ -168,56 +166,6 @@
     elements.forEach(el => observer.observe(el));
   }
   
-  // ─── COUNTERS ────────────────────────────────────────────────
-  function initCounters() {
-    const nums = document.querySelectorAll('.stat-num[data-target]');
-  
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        const el = entry.target;
-        const target = +el.dataset.target;
-        const duration = 1400;
-        const start = performance.now();
-  
-        function update(now) {
-          const elapsed = now - start;
-          const progress = Math.min(elapsed / duration, 1);
-          const eased = 1 - Math.pow(1 - progress, 3); // ease-out-cubic
-          el.textContent = Math.floor(eased * target);
-          if (progress < 1) requestAnimationFrame(update);
-          else el.textContent = target;
-        }
-        requestAnimationFrame(update);
-        observer.unobserve(el);
-      });
-    }, { threshold: 0.5 });
-  
-    nums.forEach(el => observer.observe(el));
-  }
-  
-  // ─── PROJECT PREVIEW TILT ────────────────────────────────────
-  function initProjectHover() {
-    if (window.innerWidth <= 768) return;
-
-    document.querySelectorAll('.project-item').forEach(item => {
-      const preview = item.querySelector('.project-preview');
-      if (!preview) return;
-
-      item.addEventListener('mousemove', (e) => {
-        const rect = item.getBoundingClientRect();
-        const x = (e.clientX - rect.left) / rect.width - 0.5;
-        const y = (e.clientY - rect.top) / rect.height - 0.5;
-        preview.style.transform =
-          `translateY(-50%) rotate(${x * -6}deg) scale(1) translate(${x * 12}px, ${y * 8}px)`;
-      });
-
-      item.addEventListener('mouseleave', () => {
-        preview.style.transform = '';
-      });
-    });
-  }
-
   // ─── HERO PARALLAX ───────────────────────────────────────────
   function initHeroParallax() {
     if (window.innerWidth <= 768) return;

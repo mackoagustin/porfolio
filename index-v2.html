@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agustín Macko — Software a medida y Product Engineering</title>
+  <meta name="description" content="Diseño y desarrollo software a medida, sistemas internos, dashboards, automatizaciones e integraciones para empresas. Product Engineering, UX/UI, Node.js, Next.js y AWS.">
+  <meta name="theme-color" content="#050810">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:title" content="Agustín Macko — Software a medida y Product Engineering">
+  <meta property="og:description" content="Sistemas internos, dashboards, automatizaciones e integraciones. Del problema a producción.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/v2.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Saltar al contenido</a>
+
+  <!-- HEADER -->
+  <header class="site-header" id="header">
+    <div class="header-bar">
+      <a href="#top" class="brand" aria-label="Agustín Macko — inicio">
+        <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3l12 9-12 9 3-9z"/></svg>
+        <span>agustín macko</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#casos">Casos</a>
+        <a href="#soluciones">Soluciones</a>
+        <a href="#proceso">Cómo trabajo</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%20quiero%20hablar" target="_blank" rel="noopener noreferrer" class="nav-cta">Hablemos →</a>
+      </nav>
+
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <a href="#casos">Casos</a>
+      <a href="#soluciones">Soluciones</a>
+      <a href="#proceso">Cómo trabajo</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#contacto">Contacto</a>
+      <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%20quiero%20hablar" target="_blank" rel="noopener noreferrer" class="btn btn-white">Hablemos →</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ═══════════ 01 HERO ═══════════ -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-arc" aria-hidden="true"></div>
+      <div class="wrap hero-inner">
+        <span class="tag">Software · Product Engineering</span>
+        <h1 class="hero-title" id="hero-title">
+          <span class="grad">Software a medida</span>
+          <span>que resuelve</span>
+        </h1>
+        <p class="hero-lead">Transformo procesos complejos en herramientas simples de usar.</p>
+        <p class="hero-desc">Diseño y desarrollo sistemas internos, paneles de datos, automatizaciones e integraciones para empresas que necesitan trabajar mejor con su información y sus procesos.</p>
+        <div class="hero-actions">
+          <a href="#casos" class="btn btn-white">Ver casos</a>
+          <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20quiero%20contarte%20un%20problema" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">Contame tu problema</a>
+        </div>
+      </div>
+
+      <div class="clients">
+        <p class="clients-label"><span class="circle-arrow" aria-hidden="true">›</span> Proyectos para</p>
+        <div class="marquee">
+          <ul class="marquee-track">
+            <li>Gobierno de la Ciudad de Buenos Aires</li><li>TecWeek</li><li>Laika</li><li>Auto Special</li><li>Leon Livings</li><li>Tracker</li>
+            <li aria-hidden="true">Gobierno de la Ciudad de Buenos Aires</li><li aria-hidden="true">TecWeek</li><li aria-hidden="true">Laika</li><li aria-hidden="true">Auto Special</li><li aria-hidden="true">Leon Livings</li><li aria-hidden="true">Tracker</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ 02 PROBLEMAS ═══════════ -->
+    <section class="section blobs" id="problemas" aria-labelledby="problemas-title">
+      <div class="wrap split">
+        <h2 class="title-lg reveal" id="problemas-title">Cuando la operación ya no entra en un Excel.</h2>
+        <div class="reveal">
+          <p class="split-text">Muchas empresas no necesitan otra página web. Necesitan conectar información, reemplazar procesos manuales o construir herramientas que acompañen cómo realmente trabajan.</p>
+          <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20quiero%20contarte%20un%20problema" target="_blank" rel="noopener noreferrer" class="btn btn-white">Contame tu problema</a>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <div class="grid-4">
+          <article class="dcard reveal" style="--bar: var(--blue)">
+            <h3>Información dispersa</h3>
+            <span class="chip">01 · Datos</span>
+            <p>Datos repartidos entre Excel, documentos, sistemas externos y procesos manuales que hacen difícil saber qué está pasando.</p>
+          </article>
+          <article class="dcard reveal" style="--bar: var(--cyan)">
+            <h3>Procesos manuales</h3>
+            <span class="chip">02 · Operación</span>
+            <p>Tareas repetitivas, controles y seguimientos que dependen de personas cuando podrían estar automatizados.</p>
+          </article>
+          <article class="dcard reveal" style="--bar: var(--coral)">
+            <h3>Sistemas desconectados</h3>
+            <span class="chip">03 · Integración</span>
+            <p>Plataformas, servicios y bases de datos que necesitan intercambiar información de forma segura y confiable.</p>
+          </article>
+          <article class="dcard reveal" style="--bar: var(--violet)">
+            <h3>Herramientas que quedaron chicas</h3>
+            <span class="chip">04 · Producto</span>
+            <p>Sistemas internos lentos, fragmentados o difíciles de usar que necesitan una nueva interfaz, arquitectura o forma de trabajar.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ 03 CASOS ═══════════ -->
+    <section class="section section-grid" id="casos" aria-labelledby="casos-title">
+      <div class="wrap">
+        <div class="head-center reveal">
+          <span class="tag"><span class="circle-arrow" aria-hidden="true">›</span> Casos</span>
+          <h2 class="title-lg" id="casos-title">Sistemas que construí</h2>
+          <p class="head-text">No son ejercicios conceptuales. Son problemas reales de operación, producto y tecnología.</p>
+        </div>
+
+        <!-- CASO 01 -->
+        <article class="case reveal" aria-labelledby="c1-title">
+          <div class="case-top">
+            <figure class="case-img">
+              <img src="img/tracker2.png" alt="Captura de la plataforma de gestión audiovisual" loading="lazy">
+            </figure>
+            <div class="case-info">
+              <span class="case-bar" style="--bar: var(--blue)" aria-hidden="true"></span>
+              <p class="case-num">Caso 01</p>
+              <h3 class="case-title" id="c1-title">Plataforma de gestión audiovisual</h3>
+              <span class="chip">Sistema cloud para gestión segura de contenido multimedia</span>
+              <dl class="meta">
+                <div><dt>Sector</dt><dd>Sector público · Cloud · Gestión de archivos</dd></div>
+                <div><dt>Cliente</dt><dd>Gobierno de la Ciudad de Buenos Aires</dd></div>
+                <div><dt>Stack</dt><dd>Node.js · AWS S3 · Amazon Cognito · EC2 · IAM · REST API · Sharp</dd></div>
+              </dl>
+            </div>
+          </div>
+          <div class="story">
+            <div><h4>Contexto</h4><p>Un equipo necesitaba administrar y consultar grandes volúmenes de archivos multimedia almacenados en infraestructura cloud.</p></div>
+            <div><h4>Desafío</h4><p>Los archivos debían mantenerse privados y estar disponibles únicamente para usuarios autorizados, evitando accesos públicos directos al almacenamiento.</p></div>
+            <div><h4>Solución</h4><p>Se desarrolló una arquitectura donde una API controla el acceso a los recursos, valida permisos y genera accesos temporales únicamente cuando corresponde.</p></div>
+          </div>
+          <div class="case-foot">
+            <figure class="diagram" aria-label="Arquitectura: Usuario, Frontend, API Node.js, Autenticación y autorización, AWS S3 privado">
+              <figcaption>Cómo funciona</figcaption>
+              <ol class="flow">
+                <li>Usuario</li><li>Frontend</li><li class="is-key">API Node.js</li><li>Autenticación / autorización</li><li class="is-store">AWS S3 privado</li>
+              </ol>
+              <ul class="flow-side"><li>Amazon Cognito</li><li>IAM / Roles</li><li>URLs firmadas</li><li>Thumbnails</li><li>Procesamiento de imágenes</li></ul>
+            </figure>
+            <div class="box">
+              <h4>Impacto</h4>
+              <ul class="checks"><li>Archivos privados</li><li>Acceso controlado</li><li>Gestión centralizada</li><li>Permisos</li><li>Visualización segura</li></ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- CASO 02 -->
+        <article class="case reveal" aria-labelledby="c2-title">
+          <div class="case-top">
+            <figure class="case-img case-img-dash">
+              <div class="dash" aria-label="Ejemplo ficticio del dashboard operativo">
+                <div class="dash-top" aria-hidden="true">
+                  <span class="dash-title">Operaciones</span>
+                  <span class="dash-search">Buscar operación…</span>
+                  <span class="dash-chip">Estado ▾</span>
+                  <span class="dash-chip dash-chip-on">Exportar</span>
+                </div>
+                <div class="dash-scroll">
+                  <table>
+                    <thead><tr><th scope="col">Operación</th><th scope="col">Estado</th><th scope="col">Responsable</th><th scope="col">Última actualización</th><th scope="col">Documentación</th></tr></thead>
+                    <tbody>
+                      <tr><td>#10482</td><td><span class="pill pill-blue">En revisión</span></td><td>Equipo A</td><td>12:45</td><td><span class="doc ok">Completa</span></td></tr>
+                      <tr><td>#10483</td><td><span class="pill pill-amber">Firma pendiente</span></td><td>Equipo B</td><td>11:32</td><td><span class="doc warn">Pendiente</span></td></tr>
+                      <tr><td>#10484</td><td><span class="pill pill-green">Finalizada</span></td><td>Equipo A</td><td>10:15</td><td><span class="doc ok">Completa</span></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <figcaption class="note">Por razones de confidencialidad, la interfaz y los datos fueron recreados exclusivamente para mostrar el funcionamiento conceptual del sistema.</figcaption>
+            </figure>
+            <div class="case-info">
+              <span class="case-bar" style="--bar: var(--coral)" aria-hidden="true"></span>
+              <p class="case-num">Caso 02 <b class="conf">Caso confidencial</b></p>
+              <h3 class="case-title" id="c2-title">Sistema de seguimiento operativo</h3>
+              <span class="chip">Una única vista operativa</span>
+              <dl class="meta">
+                <div><dt>Sector</dt><dd>Salud · Operaciones · Data</dd></div>
+                <div><dt>Capacidades</dt><dd>Seguimiento de estados · Histórico de cambios · Búsquedas · Filtros · Documentación · Exportaciones · Integración con servicios externos · Autenticación · Base de datos</dd></div>
+              </dl>
+            </div>
+          </div>
+          <div class="story">
+            <div><h4>Contexto</h4><p>El equipo necesitaba realizar seguimiento de operaciones que dependían de información proveniente de diferentes sistemas y documentos.</p></div>
+            <div><h4>Desafío</h4><p>Consultar el estado de una operación requería recorrer distintas fuentes de información, dificultando el seguimiento, la detección de cambios y la consulta histórica.</p></div>
+            <div><h4>Solución</h4><p>Se diseñó un sistema que obtiene, normaliza y almacena información proveniente de servicios externos para transformarla en una única vista operativa.</p></div>
+          </div>
+          <div class="case-foot">
+            <figure class="diagram" aria-label="Flujo: sistema externo, servicio de integración, normalización, base de datos, dashboard operativo">
+              <figcaption>Cómo funciona</figcaption>
+              <ol class="flow">
+                <li>Sistema externo / API</li><li>Servicio de integración</li><li>Normalización</li><li>Base de datos</li><li class="is-key">Dashboard operativo</li>
+              </ol>
+              <ul class="flow-side"><li>Servicio de firma electrónica</li></ul>
+            </figure>
+            <div class="compare">
+              <div class="box">
+                <h4>Antes</h4>
+                <ul class="dashes"><li>Información en diferentes sistemas</li><li>Consultas manuales</li><li>Sin histórico centralizado</li></ul>
+              </div>
+              <div class="box box-on">
+                <h4>Después</h4>
+                <ul class="checks"><li>Una vista operativa</li><li>Histórico de cambios</li><li>Búsqueda</li><li>Filtros</li><li>Información normalizada</li></ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- CASO 03 -->
+        <article class="case reveal" aria-labelledby="c3-title">
+          <div class="case-top">
+            <figure class="case-img">
+              <img src="img/tec.png" alt="Captura de la plataforma TecWeek" loading="lazy">
+            </figure>
+            <div class="case-info">
+              <span class="case-bar" style="--bar: var(--cyan)" aria-hidden="true"></span>
+              <p class="case-num">Caso 03</p>
+              <h3 class="case-title" id="c3-title">TecWeek</h3>
+              <span class="chip">De sitio estático a plataforma administrable</span>
+              <p class="case-text">Plataforma digital para TecWeek con experiencia pública y backoffice para administrar contenidos, agenda, sponsors e información del evento.</p>
+              <dl class="meta">
+                <div><dt>Sector</dt><dd>Sector público · Plataforma · CMS</dd></div>
+                <div><dt>Stack</dt><dd>Next.js · Supabase · PostgreSQL · Vercel · JWT · UX/UI</dd></div>
+              </dl>
+              <a href="https://www.tecweek.com.ar/" target="_blank" rel="noopener noreferrer" class="link">Ver plataforma</a>
+            </div>
+          </div>
+          <div class="story">
+            <div><h4>Contexto</h4><p>La información del evento necesitaba mantenerse actualizada durante un período de alta actividad.</p></div>
+            <div><h4>Desafío</h4><p>Un sitio completamente estático genera dependencia del desarrollo cada vez que cambia información operativa o editorial.</p></div>
+            <div><h4>Solución</h4><p>Se desarrolló una plataforma dinámica con un backoffice desde donde administrar contenidos y publicarlos sin modificar código.</p></div>
+          </div>
+          <div class="case-foot">
+            <figure class="diagram" aria-label="Flujo: backoffice, base de datos, sitio público">
+              <figcaption>Cómo funciona</figcaption>
+              <ol class="flow">
+                <li>Backoffice<small>Agenda · Contenidos · Sponsors · Roles</small></li>
+                <li>Base de datos<small>PostgreSQL · Supabase</small></li>
+                <li class="is-key">Sitio público<small>Next.js · Vercel</small></li>
+              </ol>
+            </figure>
+            <div class="box">
+              <h4>Capacidades</h4>
+              <ul class="checks checks-2"><li>Backoffice</li><li>Agenda</li><li>Gestión de contenidos</li><li>Sponsors</li><li>Autenticación</li><li>Roles</li><li>Filtros</li><li>Base de datos</li><li>Responsive</li></ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- CASO 04 -->
+        <article class="case reveal" aria-labelledby="c4-title">
+          <div class="case-top">
+            <figure class="case-img">
+              <img src="img/laika.png" alt="Captura de Laika" loading="lazy">
+            </figure>
+            <div class="case-info">
+              <span class="case-bar" style="--bar: var(--violet)" aria-hidden="true"></span>
+              <p class="case-num">Caso 04</p>
+              <h3 class="case-title" id="c4-title">Operaciones y producto digital</h3>
+              <span class="chip">Product Designer / UX/UI</span>
+              <p class="case-text">Diseño de experiencias y herramientas internas para operaciones de e-commerce: logística, devoluciones, pagos, catálogo, reglas de negocio y administración.</p>
+              <dl class="meta">
+                <div><dt>Cliente</dt><dd>Laika</dd></div>
+                <div><dt>Sector</dt><dd>E-commerce · Operaciones · Product Design</dd></div>
+              </dl>
+              <a href="https://laika.com.co/" target="_blank" rel="noopener noreferrer" class="link">Ver Laika</a>
+            </div>
+          </div>
+          <div class="story">
+            <div><h4>Contexto</h4><p>Una operación de e-commerce implica mucho más que el checkout: catálogo, logística, pagos, devoluciones, reglas internas y distintos perfiles de usuario.</p></div>
+            <div><h4>Desafío</h4><p>Transformar procesos complejos y reglas operativas en interfaces claras que permitan tomar decisiones sin agregar fricción al trabajo diario.</p></div>
+            <div><h4>Solución</h4><p>Diseño de flujos, herramientas internas y experiencias operativas construidas alrededor de estados, permisos, excepciones y reglas reales del negocio.</p></div>
+          </div>
+          <div class="box topics">
+            <h4>Temas trabajados</h4>
+            <ul class="chips"><li>Backoffice</li><li>Feature Management</li><li>Logística</li><li>Devoluciones</li><li>Pagos</li><li>Gestión de catálogo</li><li>Reglas de negocio</li><li>Roles</li><li>Estados</li><li>Design System</li></ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- OTROS PROYECTOS -->
+    <section class="section section-glow" aria-labelledby="otros-title">
+      <div class="glow-top" aria-hidden="true"></div>
+      <div class="wrap">
+        <div class="head-center reveal">
+          <span class="tag"><span class="circle-arrow" aria-hidden="true">›</span> Más trabajo</span>
+          <h2 class="title-lg" id="otros-title">Otros proyectos digitales</h2>
+        </div>
+        <div class="grid-3">
+          <a href="https://autospecial.com.ar" target="_blank" rel="noopener noreferrer" class="pcard reveal">
+            <span class="pcard-img"><img src="img/auto2.png" alt="" loading="lazy"><span class="pcard-title">Auto Special</span></span>
+            <span class="pcard-body"><span>Web · UX/UI · Frontend</span><span class="btn-mini">Ver sitio</span></span>
+          </a>
+          <a href="https://www.leonlivings.com/" target="_blank" rel="noopener noreferrer" class="pcard reveal">
+            <span class="pcard-img"><img src="img/leon.png" alt="" loading="lazy"><span class="pcard-title">Leon Livings</span></span>
+            <span class="pcard-body"><span>E-commerce · UX/UI</span><span class="btn-mini">Ver sitio</span></span>
+          </a>
+          <a href="https://www.tracker-realestate.com/" target="_blank" rel="noopener noreferrer" class="pcard reveal">
+            <span class="pcard-img"><img src="img/tracker2.png" alt="" loading="lazy"><span class="pcard-title">Tracker</span></span>
+            <span class="pcard-body"><span>Dashboard · Real Estate</span><span class="btn-mini">Ver sitio</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ 04 SOLUCIONES ═══════════ -->
+    <section class="section section-grid" id="soluciones" aria-labelledby="soluciones-title">
+      <div class="wrap">
+        <div class="head-center reveal">
+          <h2 class="title-lg" id="soluciones-title">Qué puedo construir</h2>
+        </div>
+        <div class="grid-3">
+          <article class="dcard reveal" style="--bar: var(--blue)"><h3>Sistemas internos</h3><span class="chip">Backoffices y gestión</span><p>Backoffices y herramientas construidas alrededor de cómo trabaja realmente tu equipo: operaciones, permisos, estados, reglas de negocio y gestión.</p></article>
+          <article class="dcard reveal" style="--bar: var(--cyan)"><h3>Datos y dashboards</h3><span class="chip">Información utilizable</span><p>Centralización de información, paneles operativos, filtros, indicadores, históricos y exportaciones para transformar datos dispersos en información utilizable.</p></article>
+          <article class="dcard reveal" style="--bar: var(--coral)"><h3>APIs e integraciones</h3><span class="chip">Sistemas conectados</span><p>Conexión entre sistemas internos, plataformas externas, servicios de terceros y bases de datos.</p></article>
+          <article class="dcard reveal" style="--bar: var(--violet)"><h3>Automatización</h3><span class="chip">Flujos trazables</span><p>Procesos repetitivos, controles y seguimientos que hoy requieren intervención manual pueden transformarse en flujos automáticos y trazables.</p></article>
+          <article class="dcard reveal" style="--bar: var(--blue)"><h3>Cloud / AWS</h3><span class="chip">Infraestructura segura</span><p>Infraestructura para almacenar, procesar y servir información de forma segura utilizando servicios cloud cuando el producto lo requiere.</p></article>
+          <article class="dcard reveal" style="--bar: var(--cyan)"><h3>UX/UI para software complejo</h3><span class="chip">Roles, estados y permisos</span><p>Diseño de sistemas donde comprender roles, estados, permisos, procesos y excepciones es tan importante como diseñar la interfaz.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ 05 PROCESO ═══════════ -->
+    <section class="section section-gray" id="proceso" aria-labelledby="proceso-title">
+      <div class="wrap two-col">
+        <div class="two-col-left reveal">
+          <p class="kicker">Proceso</p>
+          <h2 class="title-md" id="proceso-title">Del problema<br>a producción</h2>
+          <p class="flow-text">Problema → Producto → UX → Arquitectura → Desarrollo → Producción</p>
+          <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20quiero%20contarte%20un%20problema" target="_blank" rel="noopener noreferrer" class="btn btn-white">Contame tu problema</a>
+        </div>
+        <ol class="rows">
+          <li class="reveal"><span class="row-n">01</span><div><h3>Entender la operación</h3><p>Primero entiendo cómo funciona el negocio, quién utiliza el sistema, qué información existe y dónde aparecen los problemas.</p></div></li>
+          <li class="reveal"><span class="row-n">02</span><div><h3>Definir el producto</h3><p>Traduzco el problema en flujos, reglas, roles, información y funcionalidades concretas.</p></div></li>
+          <li class="reveal"><span class="row-n">03</span><div><h3>Diseñar la experiencia</h3><p>Prototipo las partes críticas para validar cómo va a funcionar el sistema antes de llevarlas a código.</p></div></li>
+          <li class="reveal"><span class="row-n">04</span><div><h3>Definir la arquitectura</h3><p>Modelo frontend, backend, datos, permisos, integraciones e infraestructura según las necesidades reales del producto.</p></div></li>
+          <li class="reveal"><span class="row-n">05</span><div><h3>Construir e integrar</h3><p>Desarrollo las distintas partes como componentes de un mismo sistema.</p></div></li>
+          <li class="reveal"><span class="row-n">06</span><div><h3>Publicar e iterar</h3><p>Deploy, validación y evolución del producto cuando empieza a utilizarse en situaciones reales.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ═══════════ 06 FORMA DE TRABAJO ═══════════ -->
+    <section class="section" id="forma-de-trabajo" aria-labelledby="approach-title">
+      <div class="wrap">
+        <div class="head-center reveal">
+          <h2 class="title-lg" id="approach-title">Producto, diseño y tecnología<br>en una misma conversación</h2>
+          <p class="head-text">Los problemas de software rara vez son solamente técnicos o solamente de diseño. Por eso trabajo entendiendo ambas partes desde el comienzo.</p>
+        </div>
+        <div class="grid-3">
+          <article class="qcard reveal"><span class="qcard-n">01</span><h3>Visión de producto</h3><p>No empiezo por una pantalla ni por una tecnología. Primero entiendo el proceso, las reglas y qué necesita resolver el negocio.</p></article>
+          <article class="qcard reveal"><span class="qcard-n">02</span><h3>Diseño + desarrollo</h3><p>Las decisiones de experiencia se toman entendiendo también su impacto técnico, y las decisiones técnicas considerando a las personas que van a usar el sistema.</p></article>
+          <article class="qcard reveal"><span class="qcard-n">03</span><h3>Trabajo directo</h3><p>Desde la definición inicial hasta las decisiones de producto y desarrollo, trabajás directamente conmigo.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ 07 STACK ═══════════ -->
+    <section class="section section-glow" id="stack" aria-labelledby="stack-title">
+      <div class="glow-top" aria-hidden="true"></div>
+      <div class="wrap">
+        <div class="head-center reveal">
+          <span class="tag"><span class="circle-arrow" aria-hidden="true">›</span> Stack</span>
+          <h2 class="title-lg" id="stack-title">Tecnología según el problema</h2>
+          <p class="head-text">No parto de una tecnología para buscarle un problema. La arquitectura se define según el producto, las integraciones, el volumen de información y la operación que tiene que soportar.</p>
+        </div>
+        <div class="grid-3">
+          <div class="scard reveal"><h3>Product</h3><ul class="chips"><li>Figma</li><li>UX/UI</li><li>Design Systems</li><li>Prototyping</li></ul></div>
+          <div class="scard reveal"><h3>Frontend</h3><ul class="chips"><li>Next.js</li><li>React</li><li>JavaScript</li><li>Tailwind CSS</li></ul></div>
+          <div class="scard reveal"><h3>Backend</h3><ul class="chips"><li>Node.js</li><li>Express</li><li>REST APIs</li></ul></div>
+          <div class="scard reveal"><h3>Data</h3><ul class="chips"><li>PostgreSQL</li><li>Supabase</li><li>MySQL</li></ul></div>
+          <div class="scard reveal"><h3>Cloud / Infra</h3><ul class="chips"><li>AWS</li><li>S3</li><li>Cognito</li><li>EC2</li><li>Vercel</li><li>Docker</li><li>NGINX</li></ul></div>
+          <div class="scard reveal"><h3>Architecture</h3><ul class="chips"><li>Authentication</li><li>Roles &amp; permissions</li><li>Integrations</li><li>APIs</li><li>Services</li></ul><p class="scard-note">Microservices: una decisión de arquitectura, solo cuando el sistema lo justifica.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ 08 SOBRE MÍ ═══════════ -->
+    <section class="section section-light" id="sobre-mi" data-theme="light" aria-labelledby="about-title">
+      <div class="wrap about">
+        <div class="about-copy reveal">
+          <h2 class="title-light" id="about-title"><strong>Diseño el producto.</strong><br>Construyo el sistema.</h2>
+          <div class="about-actions">
+            <a href="#contacto" class="btn btn-lavender">Hablemos</a>
+            <a href="https://www.linkedin.com/in/macko-agustin/" target="_blank" rel="noopener noreferrer" class="btn btn-navy">LinkedIn</a>
+          </div>
+          <p>Soy Agustín Macko, diseñador UX/UI y desarrollador fullstack en Buenos Aires. Trabajo en el punto donde producto, experiencia y tecnología se encuentran.</p>
+          <p>Puedo participar desde la definición del problema y los flujos hasta la arquitectura, frontend, backend, base de datos, integraciones y puesta en producción. Eso me permite pensar cada decisión como parte de un sistema y no como una pantalla aislada.</p>
+        </div>
+        <div class="about-side reveal">
+          <div class="portrait" role="img" aria-label="Foto de Agustín Macko"></div>
+          <ul class="roles">
+            <li><strong>Producto + UX</strong><span>Product Engineering</span></li>
+            <li><strong>Front + Back</strong><span>Fullstack Development</span></li>
+            <li><strong>Cloud + Datos</strong><span>UX/UI para software complejo</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-light faq-section" data-theme="light" aria-labelledby="faq-title">
+      <div class="wrap">
+        <h2 class="title-light faq-title reveal" id="faq-title">Preguntas frecuentes</h2>
+        <div class="faq">
+          <details class="reveal">
+            <summary>¿Necesito tener la solución definida?</summary>
+            <p>No. Contame cómo funciona hoy el proceso y qué problema querés resolver. Definir el producto es parte del trabajo.</p>
+          </details>
+          <details class="reveal">
+            <summary>¿Con quién voy a trabajar?</summary>
+            <p>Desde la definición inicial hasta las decisiones de producto y desarrollo, trabajás directamente conmigo.</p>
+          </details>
+          <details class="reveal">
+            <summary>¿Cómo es el proceso de trabajo?</summary>
+            <p>Entender la operación, definir el producto, diseñar la experiencia, definir la arquitectura, construir e integrar, y publicar e iterar.</p>
+          </details>
+          <details class="reveal">
+            <summary>¿Qué tecnologías usás?</summary>
+            <p>La arquitectura se define según el producto, las integraciones, el volumen de información y la operación que tiene que soportar. Trabajo con Next.js, React, Node.js, PostgreSQL, Supabase y AWS, entre otras.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ 09 CONTACTO ═══════════ -->
+    <section class="section contact" id="contacto" aria-labelledby="contact-title">
+      <div class="contact-wave" aria-hidden="true"></div>
+      <div class="wrap contact-grid">
+        <div class="reveal">
+          <h2 class="title-md" id="contact-title">¿Hay un proceso que ya<br>necesita un sistema?</h2>
+          <p class="contact-text">Contame qué están resolviendo hoy con planillas, tareas manuales, sistemas desconectados o herramientas que quedaron chicas.</p>
+          <div class="person">
+            <div class="person-photo" aria-hidden="true"></div>
+            <div>
+              <strong>Agustín Macko</strong>
+              <span class="person-role">Product Engineer / Fullstack · UX/UI</span>
+              <a href="https://wa.me/5491150560359" target="_blank" rel="noopener noreferrer">+54 9 11 5056-0359</a>
+              <a href="mailto:mackoaa@gmail.com">mackoaa@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-actions">
+            <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20quiero%20contarte%20un%20problema" target="_blank" rel="noopener noreferrer" class="btn btn-white">Contame el problema →</a>
+            <a href="https://www.linkedin.com/in/macko-agustin/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">LinkedIn</a>
+          </div>
+        </div>
+
+        <div class="form-card reveal" id="form">
+          <h3>Contame qué necesitás resolver</h3>
+          <p>No necesitás llegar con la solución definida. Contame cómo funciona hoy el proceso y qué problema querés resolver.</p>
+          <form action="https://formspree.io/f/myzgvjbd" method="POST" class="form">
+            <div class="field">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+              </div>
+              <div class="field">
+                <label for="whatsapp">WhatsApp</label>
+                <input type="tel" id="whatsapp" name="whatsapp" autocomplete="tel">
+              </div>
+            </div>
+            <div class="field">
+              <label for="servicio">¿Qué necesitás?</label>
+              <select id="servicio" name="servicio">
+                <option value="">Seleccionar una opción</option>
+                <option>Sistema interno / Backoffice</option>
+                <option>Dashboard o panel de datos</option>
+                <option>Integración / API</option>
+                <option>Automatización</option>
+                <option>AWS / Cloud</option>
+                <option>UX/UI de producto</option>
+                <option>Necesito definir la solución</option>
+                <option>Otro</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="mensaje">¿Cómo funciona hoy?</label>
+              <textarea id="mensaje" name="mensaje" rows="4" placeholder="Contame brevemente qué proceso, sistema o problema te gustaría mejorar..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-white btn-block">Enviar consulta</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- CIERRE -->
+    <section class="closing" aria-labelledby="closing-title">
+      <div class="wrap closing-inner">
+        <h2 class="title-lg" id="closing-title">Del problema al sistema funcionando<br><span class="closing-sub">Problema · Producto · Diseño · Ingeniería</span></h2>
+        <p>¿Tenés un proceso para mejorar?</p>
+        <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20quiero%20contarte%20un%20problema" target="_blank" rel="noopener noreferrer" class="btn btn-white">Hablemos</a>
+      </div>
+      <div class="closing-arc" aria-hidden="true"></div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <a href="#top" class="brand brand-sm">
+        <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3l12 9-12 9 3-9z"/></svg>
+        <span>agustín macko</span>
+      </a>
+      <div class="footer-cols">
+        <div>
+          <h3>Secciones</h3>
+          <a href="#casos">Casos</a>
+          <a href="#soluciones">Soluciones</a>
+          <a href="#proceso">Cómo trabajo</a>
+          <a href="#sobre-mi">Sobre mí</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+        <div>
+          <h3>Qué hago</h3>
+          <span>Software a medida</span>
+          <span>Product Engineering</span>
+          <span>Fullstack · UX/UI</span>
+          <span>Buenos Aires, Argentina</span>
+        </div>
+        <div>
+          <h3>Social</h3>
+          <a href="https://www.linkedin.com/in/macko-agustin/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://www.behance.net/agustinmacko" target="_blank" rel="noopener noreferrer">Behance</a>
+          <a href="mailto:mackoaa@gmail.com">Email</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Product Engineer / Fullstack · UX/UI</span>
+        <span>© 2026 Agustín Macko. Todos los derechos reservados</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/v2.js"></script>
+</body>
+</html>
