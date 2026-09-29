@@ -176,6 +176,8 @@ p { margin: 0; }
   to { transform: translateX(-50%); }
 }
 
+.only-mobile { display: none; }
+
 /* ── Secciones ── */
 .section { padding: 112px 0; }
 .section-warm { background: var(--bg); }
@@ -473,6 +475,8 @@ html:not(.js) .carousel-nav { display: none; }
   .mobile-menu .btn { margin-top: 16px; }
 
   body { font-size: 17px; }
+  .only-desktop { display: none; }
+  .only-mobile { display: inline; }
   .hero { padding-top: 40px; }
   .hero-text { font-size: 18px; }
   .sticker { right: 8px; bottom: -8px; font-size: 14px; }
