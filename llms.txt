@@ -1,0 +1,46 @@
+# Agustín Macko
+
+> Diseñador UX/UI y desarrollador fullstack en Buenos Aires, Argentina. Diseño y desarrollo software a medida para empresas: convierto procesos enredados en sistemas simples de usar. Los clientes trabajan directo conmigo, de principio a fin.
+
+## Soluciones que construyo
+
+- Sistemas internos
+- Dashboards operativos
+- Backoffices
+- Automatizaciones
+- Integraciones entre sistemas
+- Plataformas administrables
+- Gestión de archivos y documentos
+- Cloud / AWS
+- Herramientas para operaciones
+- Chatbots para WhatsApp
+
+## Cómo trabajo
+
+1. Diseño y descubrimiento (definimos juntos la solución): se visualiza la experiencia de quienes van a usar el sistema y se busca la mejor solución a partir de la idea o del proceso actual del cliente.
+2. Desarrollo (construyo el sistema): el sistema se construye por etapas, con avances visibles; las decisiones importantes se toman junto al cliente.
+3. Acompañamiento (lo pongo en marcha y lo sostengo): puesta en marcha, mantenimiento, mejoras y actualizaciones cuando el equipo empieza a usarlo.
+
+## Proyectos
+
+- Salud (confidencial): app de escritorio en Electron, un tracker conectado a la API de un sistema de pólizas que detecta cambios de estado y centraliza el seguimiento, para que el equipo no tenga que buscar cada caso manualmente.
+- Gobierno de la Ciudad de Buenos Aires: gestor para subir, buscar, descargar y compartir archivos almacenados en AWS, con autenticación y permisos, sin depender del acceso técnico a la infraestructura (AWS S3, Node.js, Cognito, EC2, IAM).
+- Chatbot de turnos médicos (en desarrollo): sistema multilínea para clínicas que permite sacar, consultar y cancelar turnos por WhatsApp, con médicos, agendas y configuraciones independientes por clínica (Express, Supabase, Baileys).
+- [TecWeek](https://www.tecweek.com.ar/): sitio del evento con un backoffice para administrar eventos, agenda, sponsors, imágenes y contenidos sin modificar código (Next.js, Supabase, PostgreSQL).
+- [Laika](https://laika.com.co/): diseño de herramientas internas para logística, devoluciones, pagos, catálogo, productos y reglas de negocio (Product Design, UX/UI, Design System).
+- [Tracker](https://www.tracker-realestate.com/): diseño y desarrollo del sitio web que presenta la herramienta para el sector inmobiliario.
+- [Auto Special](https://autospecial.com.ar): diseño UX/UI y desarrollo frontend del sitio, organizado alrededor del catálogo de vehículos.
+- [Leon Livings](https://www.leonlivings.com/): diseño UX/UI de la tienda online: navegación, presentación de productos y recorrido de compra.
+
+## Tecnologías
+
+Figma, React, Next.js, Node.js, PostgreSQL, Supabase, AWS.
+
+## Contacto
+
+- Sitio: https://agustinmacko.com/
+- WhatsApp: https://wa.me/5491150560359
+- Email: mackoaa@gmail.com
+- LinkedIn: https://www.linkedin.com/in/macko-agustin/
+- Behance: https://www.behance.net/agustinmacko
+- GitHub: https://github.com/mackoagustin

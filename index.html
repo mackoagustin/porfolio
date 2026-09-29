@@ -1,995 +1,507 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-AR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agustín Macko — Software a medida y Product Engineering</title>
-  <meta name="description" content="Diseño y desarrollo software a medida, sistemas internos, dashboards, automatizaciones e integraciones para empresas. Product Engineering, UX/UI, Node.js, Next.js y AWS.">
-  <meta name="theme-color" content="#0a0a0a">
+  <title>Agustín Macko — Software a medida para empresas | Product Engineer</title>
+  <meta name="description" content="Diseño y desarrollo software a medida para empresas: sistemas internos, paneles de datos, automatizaciones e integraciones. Trabajás directo conmigo, de principio a fin.">
+  <meta name="author" content="Agustín Macko">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#FFFFFF">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_AR">
-  <meta property="og:title" content="Agustín Macko — Software a medida y Product Engineering">
-  <meta property="og:description" content="Sistemas internos, dashboards, automatizaciones e integraciones. Del problema a producción.">
+  <meta property="og:site_name" content="Agustín Macko">
+  <meta property="og:title" content="Agustín Macko — Software a medida para empresas">
+  <meta property="og:description" content="Convierto procesos enredados en sistemas simples de usar. Trabajás directo conmigo.">
+  <meta property="og:url" content="https://agustinmacko.com/">
+  <meta property="og:image" content="https://agustinmacko.com/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Agustín Macko — Convierto procesos enredados en sistemas simples de usar">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Agustín Macko — Software a medida para empresas">
+  <meta name="twitter:description" content="Convierto procesos enredados en sistemas simples de usar. Trabajás directo conmigo.">
+  <meta name="twitter:image" content="https://agustinmacko.com/img/og.png">
+  <link rel="canonical" href="https://agustinmacko.com/">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://agustinmacko.com/#person",
+        "name": "Agustín Macko",
+        "url": "https://agustinmacko.com/",
+        "image": "https://agustinmacko.com/img/og.png",
+        "jobTitle": "Product Engineer",
+        "description": "Diseñador UX/UI y desarrollador fullstack en Buenos Aires. Diseño y desarrollo software a medida para empresas.",
+        "email": "mailto:mackoaa@gmail.com",
+        "telephone": "+5491150560359",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Buenos Aires",
+          "addressCountry": "AR"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/macko-agustin/",
+          "https://github.com/mackoagustin",
+          "https://www.behance.net/agustinmacko"
+        ],
+        "knowsAbout": [
+          "Software a medida",
+          "Product Engineering",
+          "UX/UI Design",
+          "Product Design",
+          "Desarrollo fullstack",
+          "Figma",
+          "React",
+          "Next.js",
+          "Node.js",
+          "PostgreSQL",
+          "Supabase",
+          "AWS",
+          "Arquitectura de software"
+        ]
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://agustinmacko.com/#service",
+        "name": "Agustín Macko — Software a medida para empresas",
+        "url": "https://agustinmacko.com/",
+        "image": "https://agustinmacko.com/img/og.png",
+        "description": "Diseño y desarrollo de software a medida para empresas: sistemas internos, dashboards operativos, backoffices, automatizaciones e integraciones entre sistemas.",
+        "founder": {
+          "@id": "https://agustinmacko.com/#person"
+        },
+        "email": "mackoaa@gmail.com",
+        "telephone": "+5491150560359",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Buenos Aires",
+          "addressCountry": "AR"
+        },
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Buenos Aires"
+          },
+          {
+            "@type": "Country",
+            "name": "Argentina"
+          }
+        ],
+        "availableLanguage": "es",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Soluciones",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Sistemas internos"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Dashboards operativos"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Backoffices"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Automatizaciones"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Integraciones entre sistemas"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Plataformas administrables"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Gestión de archivos y documentos"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Cloud / AWS"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Herramientas para operaciones"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Chatbots para WhatsApp"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://agustinmacko.com/#website",
+        "url": "https://agustinmacko.com/",
+        "name": "Agustín Macko",
+        "inLanguage": "es-AR",
+        "publisher": {
+          "@id": "https://agustinmacko.com/#person"
+        }
+      }
+    ]
+  }
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
-  <!-- CUSTOM CURSOR -->
-  <div class="cursor" id="cursor" aria-hidden="true"></div>
-  <div class="cursor-follower" id="cursor-follower" aria-hidden="true"></div>
+  <a href="#main" class="skip-link">Saltar al contenido</a>
 
-  <!-- NOISE OVERLAY -->
-  <div class="noise" aria-hidden="true"></div>
+  <header class="header" id="header">
+    <div class="wrap header-inner">
+      <a href="#top" class="brand">Agustín Macko</a>
 
-  <!-- LOADER -->
-  <div class="loader" id="loader" aria-hidden="true">
-    <div class="loader-inner">
-      <div class="loader-counter" id="loader-counter">0</div>
-      <div class="loader-bar"><div class="loader-fill" id="loader-fill"></div></div>
-      <p class="loader-label">Inicializando sistema</p>
-    </div>
-  </div>
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="#proyectos">Proyectos</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="https://www.linkedin.com/in/macko-agustin/" target="_blank" rel="noopener noreferrer" >LinkedIn</a>
+        <a href="#contacto" class="btn btn-dark btn-sm">Escribime</a>
+      </nav>
 
-  <!-- NAV -->
-  <nav class="nav" id="nav" aria-label="Navegación principal">
-    <a href="#hero" class="nav-logo" data-cursor="logo" aria-label="Agustín Macko — inicio">AM<span class="dot">.</span></a>
-    <div class="nav-links">
-      <a href="#casos" class="nav-link" data-cursor="link">Casos</a>
-      <a href="#soluciones" class="nav-link" data-cursor="link">Soluciones</a>
-      <a href="#proceso" class="nav-link" data-cursor="link">Cómo trabajo</a>
-      <a href="#sobre-mi" class="nav-link" data-cursor="link">Sobre mí</a>
-      <a href="#contact" class="nav-link" data-cursor="link">Contacto</a>
-    </div>
-    <div class="nav-actions">
-      <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%20quiero%20hablar" target="_blank" rel="noopener noreferrer" class="nav-cta" data-cursor="cta">Hablemos →</a>
-      <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-mobile">
-        <span class="nav-toggle-line"></span>
-        <span class="nav-toggle-line"></span>
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span>
       </button>
     </div>
-  </nav>
 
-  <div class="nav-mobile" id="nav-mobile" aria-hidden="true">
-    <a href="#casos" class="nav-mobile-link">Casos</a>
-    <a href="#soluciones" class="nav-mobile-link">Soluciones</a>
-    <a href="#proceso" class="nav-mobile-link">Cómo trabajo</a>
-    <a href="#sobre-mi" class="nav-mobile-link">Sobre mí</a>
-    <a href="#contact" class="nav-mobile-link">Contacto</a>
-    <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%20quiero%20hablar" target="_blank" rel="noopener noreferrer" class="nav-mobile-cta">Hablemos →</a>
-  </div>
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <a href="#proyectos">Proyectos</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="https://www.linkedin.com/in/macko-agustin/" target="_blank" rel="noopener noreferrer" class="ico ico-in">LinkedIn</a>
+      <a href="#contacto" class="btn btn-dark">Escribime</a>
+    </div>
+  </header>
 
-  <main>
+  <main id="main">
 
-    <!-- ═══════════════════════════════ 01 HERO ═══════════════════════════════ -->
-    <section class="hero" id="hero">
-
-      <div class="hero-bg" aria-hidden="true">
-        <div class="hero-stripe hero-stripe-1"></div>
-        <div class="hero-stripe hero-stripe-2"></div>
-        <div class="hero-watermark">SYS</div>
-      </div>
-
-      <div class="hero-side-label" aria-hidden="true">BUENOS AIRES — 2026</div>
-
-      <div class="hero-content">
-        <div class="hero-top-row">
-          <div class="hero-eyebrow">
-            <span class="eyebrow-dot" aria-hidden="true"></span>
-            <span>SOFTWARE · PRODUCT ENGINEERING</span>
-          </div>
-          <span class="hero-index" aria-hidden="true">[ 01 / 09 ]</span>
-        </div>
-
-        <h1 class="hero-title">
-          <span class="line-wrap"><span class="line">SOFTWARE</span></span>
-          <span class="line-wrap accent-line"><span class="line outline-text">A MEDIDA</span></span>
-          <span class="line-wrap offset-line"><span class="line">QUE RESUELVE</span></span>
-        </h1>
-
-        <div class="hero-sub-grid">
-          <div class="hero-copy">
-            <p class="hero-lead">Transformo procesos complejos en herramientas simples de usar.</p>
-            <p class="hero-desc">Diseño y desarrollo sistemas internos, paneles de datos, automatizaciones e integraciones para empresas que necesitan trabajar mejor con su información y sus procesos.</p>
-          </div>
-          <div class="hero-cta-group">
-            <a href="#casos" class="btn-primary" data-cursor="cta">
-              <span>Ver casos</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-            <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20quiero%20contarte%20un%20problema" target="_blank" rel="noopener noreferrer" class="btn-ghost" data-cursor="link">Contame tu problema</a>
+    <!-- HOLA -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="hello">Hola, soy Agustín</p>
+          <h1 id="hero-title">Convierto procesos enredados en <span class="mark">sistemas simples</span> de usar.</h1>
+          <p class="hero-text">Diseño y desarrollo software a medida para empresas. Entiendo cómo funciona tu proceso, diseño la solución y la llevo hasta producción. Trabajás directo conmigo, de principio a fin.</p>
+          <div class="actions">
+            <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20te%20quiero%20contar%20lo%20que%20necesito" target="_blank" rel="noopener noreferrer" class="btn btn-wa">Contame qué necesitás</a>
+            <a href="#proyectos" class="btn btn-line">Ver proyectos</a>
           </div>
         </div>
-      </div>
 
-      <div class="hero-ticker" aria-hidden="true">
-        <div class="ticker-track">
-          <span>Sistemas internos</span><span class="sep">✦</span>
-          <span>Backoffices</span><span class="sep">✦</span>
-          <span>Dashboards</span><span class="sep">✦</span>
-          <span>Automatización</span><span class="sep">✦</span>
-          <span>Integraciones</span><span class="sep">✦</span>
-          <span>APIs</span><span class="sep">✦</span>
-          <span>Datos</span><span class="sep">✦</span>
-          <span>Arquitectura</span><span class="sep">✦</span>
-          <span>Cloud</span><span class="sep">✦</span>
-          <span>AWS</span><span class="sep">✦</span>
-          <span>Bases de datos</span><span class="sep">✦</span>
-          <span>Autenticación</span><span class="sep">✦</span>
-          <span>Product Engineering</span><span class="sep">✦</span>
-          <span>UX/UI</span><span class="sep">✦</span>
-          <span>Node.js</span><span class="sep">✦</span>
-          <span>Next.js</span><span class="sep">✦</span>
-          <span>Sistemas internos</span><span class="sep">✦</span>
-          <span>Backoffices</span><span class="sep">✦</span>
-          <span>Dashboards</span><span class="sep">✦</span>
-          <span>Automatización</span><span class="sep">✦</span>
-          <span>Integraciones</span><span class="sep">✦</span>
-          <span>APIs</span><span class="sep">✦</span>
-          <span>Datos</span><span class="sep">✦</span>
-          <span>Arquitectura</span><span class="sep">✦</span>
-          <span>Cloud</span><span class="sep">✦</span>
-          <span>AWS</span><span class="sep">✦</span>
-          <span>Bases de datos</span><span class="sep">✦</span>
-          <span>Autenticación</span><span class="sep">✦</span>
-          <span>Product Engineering</span><span class="sep">✦</span>
-          <span>UX/UI</span><span class="sep">✦</span>
-          <span>Node.js</span><span class="sep">✦</span>
-          <span>Next.js</span><span class="sep">✦</span>
-        </div>
-      </div>
-
-      <div class="hero-scroll-hint" aria-hidden="true">
-        <div class="scroll-line"></div>
-        <span>scroll</span>
-      </div>
-
-    </section>
-
-    <!-- ═══════════════════════════════ 02 PROBLEMAS ═══════════════════════════════ -->
-    <section class="problems" id="problemas" aria-labelledby="problemas-title">
-      <div class="container">
-        <div class="split-header">
-          <div class="section-header reveal-left">
-            <span class="section-index" aria-hidden="true">[ 02 / 09 ]</span>
-            <span class="section-label">// Problemas</span>
-            <h2 class="section-title" id="problemas-title">Cuando la operación ya no entra en un Excel.</h2>
+        <figure class="hero-shots" aria-label="Captura de TecWeek y ejemplo de un panel operativo">
+          <div class="shot shot-back">
+            <span class="shot-bar" aria-hidden="true"><i></i><i></i><i></i></span>
+            <img src="img/tec2026.webp" width="1200" height="542" alt="Sitio de TecWeek con la cuenta regresiva del evento en Buenos Aires" fetchpriority="high">
           </div>
-          <p class="section-intro reveal-right">Muchas empresas no necesitan otra página web. Necesitan conectar información, reemplazar procesos manuales o construir herramientas que acompañen cómo realmente trabajan.</p>
-        </div>
+          <div class="shot shot-front" aria-hidden="true">
+            <img src="img/laika.webp" width="1200" height="542" alt="Sitio de TecWeek con la cuenta regresiva del evento en Buenos Aires" fetchpriority="high">
+          </div>
+          <!-- <figcaption class="sticker">Hablás directo conmigo</figcaption> -->
+        </figure>
+      </div>
 
-        <div class="problem-grid">
-          <article class="problem-item reveal-up" style="--delay:0s">
-            <span class="problem-num" aria-hidden="true">01</span>
-            <h3>Información dispersa</h3>
-            <p>Datos repartidos entre Excel, documentos, sistemas externos y procesos manuales que hacen difícil saber qué está pasando.</p>
-            <code class="problem-hint" aria-hidden="true">clientes_final_v7.xlsx · export (2).csv · mail_reenviado.pdf</code>
-          </article>
-          <article class="problem-item reveal-up" style="--delay:0.1s">
-            <span class="problem-num" aria-hidden="true">02</span>
-            <h3>Procesos manuales</h3>
-            <p>Tareas repetitivas, controles y seguimientos que dependen de personas cuando podrían estar automatizados.</p>
-            <code class="problem-hint" aria-hidden="true">copiar → pegar → revisar → repetir</code>
-          </article>
-          <article class="problem-item reveal-up" style="--delay:0.2s">
-            <span class="problem-num" aria-hidden="true">03</span>
-            <h3>Sistemas desconectados</h3>
-            <p>Plataformas, servicios y bases de datos que necesitan intercambiar información de forma segura y confiable.</p>
-            <code class="problem-hint" aria-hidden="true">sistema_a ✕ sistema_b ✕ planilla</code>
-          </article>
-          <article class="problem-item reveal-up" style="--delay:0.3s">
-            <span class="problem-num" aria-hidden="true">04</span>
-            <h3>Herramientas que quedaron chicas</h3>
-            <p>Sistemas internos lentos, fragmentados o difíciles de usar que necesitan una nueva interfaz, arquitectura o forma de trabajar.</p>
-            <code class="problem-hint" aria-hidden="true">cargando… cargando… cargando…</code>
-          </article>
+      <div class="ticker" aria-label="Soluciones que construyo">
+        <!-- <p class="wrap ticker-label">Soluciones que construyo</p> -->
+        <div class="ticker-row">
+          <ul class="ticker-track ticker-solutions">
+            <li>Sistemas internos</li><li>Dashboards operativos</li><li>Backoffices</li><li>Automatizaciones</li><li>Integraciones entre sistemas</li><li>Plataformas administrables</li><li>Gestión de archivos y documentos</li><li>Cloud / AWS</li><li>Herramientas para operaciones</li>
+            <li aria-hidden="true">Sistemas internos</li><li aria-hidden="true">Dashboards operativos</li><li aria-hidden="true">Backoffices</li><li aria-hidden="true">Automatizaciones</li><li aria-hidden="true">Integraciones entre sistemas</li><li aria-hidden="true">Plataformas administrables</li><li aria-hidden="true">Gestión de archivos y documentos</li><li aria-hidden="true">Cloud / AWS</li><li aria-hidden="true">Herramientas para operaciones</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════ 03 CASOS ═══════════════════════════════ -->
-    <section class="cases" id="casos" aria-labelledby="casos-title">
-      <div class="container">
-        <div class="split-header">
-          <div class="section-header reveal-left">
-            <span class="section-index" aria-hidden="true">[ 03 / 09 ]</span>
-            <span class="section-label">// Casos</span>
-            <h2 class="section-title" id="casos-title">Sistemas que construí.</h2>
+    <!-- TE SUENA -->
+    <section class="section section-warm" id="ayuda" aria-labelledby="ayuda-title">
+      <div class="wrap">
+        <h2 class="title reveal" id="ayuda-title">¿Te suena alguna de estas?</h2>
+
+        <div class="thread">
+          <ul class="thread-in" aria-label="Problemas que escucho de empresas">
+            <li class="msg reveal" style="--i: 0">Respondemos las mismas consultas todos los días.</li>
+            <li class="msg reveal" style="--i: 1">Tenemos archivos e imágenes por todos lados y nunca encontramos nada.</li>
+            <li class="msg reveal" style="--i: 2">Tenemos todo en planillas y ya no damos abasto.</li>
+            <li class="msg reveal" style="--i: 3">Para saber cómo está algo tenemos que revisar tres lugares distintos.</li>
+            <li class="msg reveal" style="--i: 4">Cada cambio depende de que alguien de sistemas tenga tiempo.</li>
+            <li class="msg reveal" style="--i: 5">El sistema que usamos nos quedó chico.</li>
+          </ul>
+
+          <p class="msg msg-reply reveal" style="--i: 6">Si alguna te sonó, probablemente se pueda resolver mejor.<span class="msg-meta" aria-hidden="true">✓✓</span></p>
+
+          <div class="thread-cta reveal">
+            <p>Contame cómo trabajan hoy y vemos qué tendría sentido construir.</p>
+            <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20te%20quiero%20contar%20lo%20que%20necesito" target="_blank" rel="noopener noreferrer" class="btn btn-wa">Contame el tuyo</a>
           </div>
-          <p class="section-intro reveal-right">No son ejercicios conceptuales. Son problemas reales de operación, producto y tecnología.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section class="section section-tint" id="proyectos" aria-labelledby="proyectos-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <h2 class="title" id="proyectos-title">Algunos problemas que convertí en software</h2>
+            <p>Distintas industrias y necesidades, pero la misma idea: entender primero cómo funciona el negocio y después construir la herramienta adecuada.</p>
+          </div>
+          <div class="carousel-nav">
+            <button type="button" class="carousel-btn" data-dir="-1" aria-label="Proyecto anterior" aria-controls="projects-track">←</button>
+            <button type="button" class="carousel-btn" data-dir="1" aria-label="Proyecto siguiente" aria-controls="projects-track">→</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel reveal" id="projects-track" role="region" aria-roledescription="carrusel" aria-label="Proyectos" tabindex="0">
+          <article class="project">
+            <p class="project-badge">Datos anonimizados</p>
+            <div class="project-visual">
+              <img src="img/salud-tracker.webp" width="1200" height="750" alt="Tracker de pólizas con filtros por estado, región y firma, y listado de casos con datos anonimizados" loading="lazy">
+            </div>
+            <div class="project-body">
+              <p class="project-tag">Salud · Operaciones · Confidencial</p>
+              <h3>Un tracker que avisa cuando un caso cambia de estado</h3>
+              <p>Para saber si una póliza había cambiado de estado, el equipo tenía que entrar al sistema y revisar caso por caso. Construí un tracker conectado a la API que detecta esas actualizaciones solo: hoy saben en minutos qué casos necesitan atención, sin perder la tarde buscándolos uno por uno.</p>
+              <ul class="project-stack" aria-label="Tecnologías"><li>App de escritorio</li><li>Electron</li><li>API</li><li>Integraciones</li></ul>
+              <a href="https://wa.me/5491150560359" target="_blank" rel="noopener noreferrer"  class="link">Solicitar demo ↗</a>
+
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-visual">
+              <img src="img/aws.webp" width="1200" height="601" alt="Gestor de archivos en AWS con carpetas, buscador y acciones para subir y compartir contenido" loading="lazy">
+            </div>
+            <div class="project-body">
+              <p class="project-tag">GCBA · Cloud</p>
+              <h3>Un gestor de archivos propio para el contenido en AWS</h3>
+              <p>Las imágenes del área estaban en AWS, pero no había una forma simple de administrarlas: subirlas, buscarlas o compartirlas requería acceso técnico a la infraestructura. Construí un gestor con autenticación y permisos propios, y ahora el equipo maneja el contenido desde su propia interfaz, sin pedirle nada a sistemas.</p>
+              <ul class="project-stack" aria-label="Tecnologías"><li>AWS S3</li><li>Node.js</li><li>Cognito</li><li>EC2</li><li>IAM</li></ul>
+              <a href="https://wa.me/5491150560359" target="_blank" rel="noopener noreferrer"  class="link">Solicitar demo ↗</a>
+
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-visual">
+              <img src="img/chatbot.webp" width="1201" height="676" alt="Ilustración de un chatbot de salud" loading="lazy">
+            </div>
+            <div class="project-body">
+              <p class="project-tag">Salud · WhatsApp · Multi-clínica</p>
+              <h3>Gestionar turnos por WhatsApp sin hacerlo manualmente</h3>
+              <p>Construí un sistema multilínea para clínicas que permite sacar, consultar y cancelar turnos desde WhatsApp, con agendas, médicos y configuraciones independientes por clínica. Lo que antes eran decenas de mensajes atendidos a mano, hoy se resuelve solo y se supervisa desde un único dashboard.</p>
+              <ul class="project-stack" aria-label="Tecnologías"><li>WhatsApp</li><li>Express</li><li>Supabase</li><li>Baileys</li><li>Multi-tenant</li></ul>
+              <a href="https://wa.me/5491150560359" target="_blank" rel="noopener noreferrer"  class="link">Solicitar demo ↗</a>
+        
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-visual">
+              <img src="img/tec2026.webp" width="1200" height="599" alt="Sitio de TecWeek Buenos Aires 2026 con la cuenta regresiva del evento" loading="lazy">
+            </div>
+            <div class="project-body">
+              <p class="project-tag">TecWeek · Plataforma</p>
+              <h3>Actualizar el evento sin depender de desarrollo</h3>
+              <p>Desarrollé el sitio de TecWeek junto con un backoffice para administrar eventos, agenda, sponsors, imágenes y otros contenidos sin tocar código. Durante el evento, que es cuando más cambia la información, el equipo pudo mantenerlo actualizado por su cuenta, sin esperar a un desarrollador para cada ajuste.</p>
+              <ul class="project-stack" aria-label="Tecnologías"><li>Next.js</li><li>Supabase</li><li>PostgreSQL</li><li>Backoffice</li></ul>
+              <a href="https://www.tecweek.com.ar/" target="_blank" rel="noopener noreferrer" class="link">Ver sitio online ↗</a>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-visual">
+              <img src="img/laika.webp" width="1200" height="550" alt="Tienda online de Laika, productos para mascotas" loading="lazy">
+            </div>
+            <div class="project-body">
+              <p class="project-tag">Laika · Product Design</p>
+              <h3>Reglas de negocio complejas, convertidas en flujos que se entienden</h3>
+              <p>Diseñé herramientas internas para procesos de logística, devoluciones, pagos, catálogo y reglas de negocio, sobre operaciones con múltiples estados y excepciones. El objetivo era que quien opera el sistema todos los días tome decisiones con menos ambigüedad y menos margen de error.</p>
+              <ul class="project-stack" aria-label="Disciplinas"><li>Product Design</li><li>UX/UI</li><li>Design System</li></ul>
+              <a href="https://laika.com.co/" target="_blank" rel="noopener noreferrer" class="link">Ver sitio online ↗</a>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-visual">
+              <img src="img/tracker2.webp" width="1200" height="543" alt="Sitio de Tracker, herramienta para inmobiliarios, con la app mostrando su tablero de avance" loading="lazy">
+            </div>
+            <div class="project-body">
+              <p class="project-tag">Tracker · Real Estate</p>
+              <h3>Un sitio que explica el producto en segundos</h3>
+              <p>Diseñé y desarrollé el sitio de Tracker para presentar la herramienta y su propuesta de valor al sector inmobiliario. Alguien que nunca usó el producto puede entender en la primera pantalla qué hace y para quién es.</p>
+              <ul class="project-stack" aria-label="Disciplinas"><li>UX/UI</li><li>Frontend</li><li>Sitio web</li></ul>
+              <a href="https://www.tracker-realestate.com/" target="_blank" rel="noopener noreferrer" class="link">Ver sitio online ↗</a>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-visual">
+              <img src="img/autospecial2026.webp" width="1202" height="602" alt="Sitio de Auto Special, concesionario Ford, con buscador de vehículos" loading="lazy">
+            </div>
+            <div class="project-body">
+              <p class="project-tag">Auto Special · Web</p>
+              <h3>Un catálogo de vehículos fácil de recorrer</h3>
+              <p>Trabajé el diseño UX/UI y el desarrollo frontend del sitio de Auto Special, organizando la información y la experiencia visual alrededor de su catálogo. El resultado es un recorrido más directo entre buscar un vehículo y encontrar sus datos.</p>
+              <ul class="project-stack" aria-label="Disciplinas"><li>UX/UI</li><li>Frontend</li></ul>
+              <a href="https://autospecial.com.ar" target="_blank" rel="noopener noreferrer" class="link">Ver sitio online ↗</a>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-visual">
+              <img src="img/leon.webp" width="1200" height="605" alt="Tienda online de Leon Livings, mobiliario de exterior" loading="lazy">
+            </div>
+            <div class="project-body">
+              <p class="project-tag">Leon Livings · E-commerce</p>
+              <h3>Una tienda online fiel a la identidad de la marca</h3>
+              <p>Diseñé la experiencia UX/UI de la tienda online, trabajando la navegación, la presentación de productos y el recorrido de compra. La experiencia de comprar quedó tan cuidada como la identidad visual de la marca.</p>
+              <ul class="project-stack" aria-label="Disciplinas"><li>UX/UI</li><li>E-commerce</li></ul>
+              <a href="https://www.leonlivings.com/" target="_blank" rel="noopener noreferrer" class="link">Ver sitio online ↗</a>
+            </div>
+          </article>
+
+      </div>
+    </section>
+
+    <!-- SOBRE MÍ Y CÓMO TRABAJO -->
+    <section class="section section-warm" id="sobre-mi" aria-labelledby="sobre-title">
+      <div class="wrap">
+        <div class="about-intro">
+          <div class="about-copy">
+            <p class="about-kicker reveal">Sobre mí</p>
+            <h2 class="about-statement reveal" id="sobre-title">Diseño el producto y <span class="mark">construyo el sistema.</span></h2>
+            <p class="about-lead reveal">Diseñador UX/UI y desarrollador fullstack en Buenos Aires. Trabajás directo conmigo de la primera charla a la puesta en marcha, sin intermediarios.</p>
+            <ul class="about-facts reveal">
+              <li>Buenos Aires, Argentina</li>
+              <li>UX/UI + desarrollo fullstack</li>
+              <li>Trato directo, sin intermediarios</li>
+            </ul>
+          </div>
+
+          <figure class="duo reveal">
+            <div class="duo-card duo-design" aria-hidden="true">
+              <p class="duo-bar"><span></span><span></span><span></span> Diseño · turno</p>
+              <p class="duo-title">Tu turno</p>
+              <p class="duo-row">Clínica médica <span>Mar 10:00</span></p>
+              <p class="duo-btn">Confirmar</p>
+            </div>
+            <svg class="duo-arrow" viewBox="0 0 80 40" aria-hidden="true"><path d="M4 30 C 24 4, 52 4, 72 22" /><path d="M62 22 L72 22 L68 12" /></svg>
+            <div class="duo-card duo-code" aria-hidden="true">
+              <p class="duo-bar"><span></span><span></span><span></span> turno.jsx</p>
+<pre><code><i>&lt;Turno</i>
+  <b>especialidad</b>=<s>"Clínica médica"</s>
+  <b>horario</b>=<s>"Mar 10:00"</s>
+<i>/&gt;</i>
+<i>&lt;Boton&gt;</i>Confirmar<i>&lt;/Boton&gt;</i></code></pre>
+            </div>
+            <figcaption>Lo que decidimos en una pantalla llega igual al código.</figcaption>
+          </figure>
         </div>
 
-        <!-- CASO 01 -->
-        <article class="case" id="caso-audiovisual" aria-labelledby="caso-01-title">
-          <header class="case-head reveal-up">
-            <span class="case-index">01 / Cloud · Sector público</span>
-            <h3 class="case-title" id="caso-01-title">Plataforma de<br>gestión audiovisual</h3>
-            <div class="case-meta">
-              <span>Sector público · Cloud · Gestión de archivos</span>
-              <span class="case-client">Gobierno de la Ciudad de Buenos Aires</span>
-            </div>
-            <p class="case-lead">Sistema cloud para gestión segura de contenido multimedia.</p>
-          </header>
+        <p class="about-kicker steps-kicker reveal" id="como-trabajo">Cómo trabajamos juntos</p>
+        <ol class="steps">
+          <li class="step reveal" style="--i: 0">
+            <p class="step-label"><span class="step-n">01</span> Diseño y descubrimiento</p>
+            <h3>Definimos juntos la solución</h3>
+            <p>Visualizamos la experiencia de quienes van a usar el sistema. Contame tu idea o cómo funciona hoy tu proceso y te ayudo a encontrar la mejor solución para tu caso.</p>
+          </li>
+          <li class="step reveal" style="--i: 1">
+            <p class="step-label"><span class="step-n">02</span> Desarrollo</p>
+            <h3>Construyo el sistema</h3>
+            <p>Construyo el sistema por etapas y vas viendo cómo tu idea se hace realidad. Las decisiones importantes las tomamos juntos.</p>
+          </li>
+          <li class="step reveal" style="--i: 2">
+            <p class="step-label"><span class="step-n">03</span> Acompañamiento</p>
+            <h3>Lo pongo en marcha y lo sostengo</h3>
+            <p>Lo ponemos en marcha, lo mantengo e incorporo mejoras y actualizaciones cuando tu equipo empieza a usarlo de verdad.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
 
-          <div class="case-body">
-            <div class="case-story reveal-left">
-              <div class="case-row">
-                <h4>Contexto</h4>
-                <p>Un equipo necesitaba administrar y consultar grandes volúmenes de archivos multimedia almacenados en infraestructura cloud.</p>
-              </div>
-              <div class="case-row">
-                <h4>Desafío</h4>
-                <p>Los archivos debían mantenerse privados y estar disponibles únicamente para usuarios autorizados, evitando accesos públicos directos al almacenamiento.</p>
-              </div>
-              <div class="case-row">
-                <h4>Solución</h4>
-                <p>Se desarrolló una arquitectura donde una API controla el acceso a los recursos, valida permisos y genera accesos temporales únicamente cuando corresponde.</p>
-              </div>
-            </div>
-
-            <figure class="case-visual reveal-right" aria-labelledby="caso-01-fig">
-              <figcaption class="visual-caption" id="caso-01-fig">Cómo funciona — arquitectura</figcaption>
-              <div class="arch">
-                <ol class="arch-main">
-                  <li class="arch-node">Usuario</li>
-                  <li class="arch-node">Frontend</li>
-                  <li class="arch-node arch-node--accent">API Node.js</li>
-                  <li class="arch-node">Autenticación / autorización</li>
-                  <li class="arch-node arch-node--storage">AWS S3 privado</li>
-                </ol>
-                <ul class="arch-side" aria-label="Servicios asociados">
-                  <li>Amazon Cognito</li>
-                  <li>IAM / Roles</li>
-                  <li>URLs firmadas</li>
-                  <li>Thumbnails</li>
-                  <li>Procesamiento de imágenes</li>
-                </ul>
-              </div>
-              <pre class="terminal" aria-hidden="true"><span class="t-dim">$</span> GET /media/:id
-  auth ........... <span class="t-ok">ok</span>
-  permisos ....... <span class="t-ok">ok</span>
-  <span class="t-accent">→ URL firmada temporal</span></pre>
-            </figure>
-          </div>
-
-          <div class="case-foot reveal-up">
-            <div class="case-impact">
-              <h4>Impacto</h4>
-              <ul class="tag-list tag-list--accent">
-                <li>Archivos privados</li>
-                <li>Acceso controlado</li>
-                <li>Gestión centralizada</li>
-                <li>Permisos</li>
-                <li>Visualización segura</li>
-              </ul>
-            </div>
-            <div class="case-stack">
-              <h4>Stack</h4>
-              <ul class="tag-list">
-                <li>Node.js</li>
-                <li>AWS S3</li>
-                <li>Amazon Cognito</li>
-                <li>EC2</li>
-                <li>IAM</li>
-                <li>REST API</li>
-                <li>Sharp</li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <!-- CASO 02 -->
-        <article class="case case--reverse" id="caso-seguimiento" aria-labelledby="caso-02-title">
-          <header class="case-head reveal-up">
-            <span class="case-index">02 / Data · Operaciones</span>
-            <h3 class="case-title" id="caso-02-title">Sistema de<br>seguimiento operativo</h3>
-            <div class="case-meta">
-              <span>Salud · Operaciones · Data</span>
-              <span class="case-badge">Caso confidencial</span>
-            </div>
-            <p class="case-lead">Una única vista operativa a partir de información que estaba distribuida en distintas fuentes.</p>
-          </header>
-
-          <div class="case-body">
-            <div class="case-story reveal-right">
-              <div class="case-row">
-                <h4>Contexto</h4>
-                <p>El equipo necesitaba realizar seguimiento de operaciones que dependían de información proveniente de diferentes sistemas y documentos.</p>
-              </div>
-              <div class="case-row">
-                <h4>Desafío</h4>
-                <p>Consultar el estado de una operación requería recorrer distintas fuentes de información, dificultando el seguimiento, la detección de cambios y la consulta histórica.</p>
-              </div>
-              <div class="case-row">
-                <h4>Solución</h4>
-                <p>Se diseñó un sistema que obtiene, normaliza y almacena información proveniente de servicios externos para transformarla en una única vista operativa.</p>
-              </div>
-            </div>
-
-            <figure class="case-visual reveal-left" aria-labelledby="caso-02-fig">
-              <figcaption class="visual-caption" id="caso-02-fig">Arquitectura + demo recreada</figcaption>
-
-              <div class="pipeline">
-                <ol class="pipeline-main">
-                  <li>Sistema externo / API</li>
-                  <li>Servicio de integración</li>
-                  <li>Normalización</li>
-                  <li>Base de datos</li>
-                  <li class="pipeline-accent">Dashboard operativo</li>
-                </ol>
-                <p class="pipeline-side">+ Servicio de firma electrónica</p>
-              </div>
-
-              <div class="dash" aria-label="Ejemplo ficticio del dashboard operativo">
-                <div class="dash-bar" aria-hidden="true">
-                  <span class="dash-search">Buscar operación…</span>
-                  <span class="dash-chip">Estado ▾</span>
-                  <span class="dash-chip">Equipo ▾</span>
-                  <span class="dash-chip dash-chip--accent">Exportar</span>
-                </div>
-                <div class="dash-scroll">
-                  <table class="dash-table">
-                    <thead>
-                      <tr>
-                        <th scope="col">Operación</th>
-                        <th scope="col">Estado</th>
-                        <th scope="col">Responsable</th>
-                        <th scope="col">Última act.</th>
-                        <th scope="col">Documentación</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>#10482</td>
-                        <td><span class="badge badge--review">En revisión</span></td>
-                        <td>Equipo A</td>
-                        <td>12:45</td>
-                        <td><span class="doc doc--ok">Completa</span></td>
-                      </tr>
-                      <tr>
-                        <td>#10483</td>
-                        <td><span class="badge badge--pending">Firma pendiente</span></td>
-                        <td>Equipo B</td>
-                        <td>11:32</td>
-                        <td><span class="doc doc--pending">Pendiente</span></td>
-                      </tr>
-                      <tr>
-                        <td>#10484</td>
-                        <td><span class="badge badge--done">Finalizada</span></td>
-                        <td>Equipo A</td>
-                        <td>10:15</td>
-                        <td><span class="doc doc--ok">Completa</span></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <p class="visual-disclaimer">Por razones de confidencialidad, la interfaz y los datos fueron recreados exclusivamente para mostrar el funcionamiento conceptual del sistema.</p>
-            </figure>
-          </div>
-
-          <div class="case-foot reveal-up">
-            <div class="before-after">
-              <div class="ba-col">
-                <h4>Antes</h4>
-                <ul>
-                  <li>Información en diferentes sistemas</li>
-                  <li>Consultas manuales</li>
-                  <li>Sin histórico centralizado</li>
-                </ul>
-              </div>
-              <div class="ba-col ba-col--after">
-                <h4>Después</h4>
-                <ul>
-                  <li>Una vista operativa</li>
-                  <li>Histórico de cambios</li>
-                  <li>Búsqueda</li>
-                  <li>Filtros</li>
-                  <li>Información normalizada</li>
-                </ul>
-              </div>
-            </div>
-            <div class="case-stack">
-              <h4>Capacidades</h4>
-              <ul class="tag-list">
-                <li>Seguimiento de estados</li>
-                <li>Histórico de cambios</li>
-                <li>Búsquedas</li>
-                <li>Filtros</li>
-                <li>Documentación</li>
-                <li>Exportaciones</li>
-                <li>Integración con servicios externos</li>
-                <li>Autenticación</li>
-                <li>Base de datos</li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <!-- CASO 03 -->
-        <article class="case" id="caso-tecweek" aria-labelledby="caso-03-title">
-          <header class="case-head reveal-up">
-            <span class="case-index">03 / Plataforma · CMS</span>
-            <h3 class="case-title" id="caso-03-title">TecWeek</h3>
-            <div class="case-meta">
-              <span>Sector público · Plataforma · CMS</span>
-            </div>
-            <p class="case-lead">De sitio estático a plataforma administrable.</p>
-            <p class="case-summary">Plataforma digital para TecWeek con experiencia pública y backoffice para administrar contenidos, agenda, sponsors e información del evento.</p>
-          </header>
-
-          <div class="case-body">
-            <div class="case-story reveal-left">
-              <div class="case-row">
-                <h4>Contexto</h4>
-                <p>La información del evento necesitaba mantenerse actualizada durante un período de alta actividad.</p>
-              </div>
-              <div class="case-row">
-                <h4>Desafío</h4>
-                <p>Un sitio completamente estático genera dependencia del desarrollo cada vez que cambia información operativa o editorial.</p>
-              </div>
-              <div class="case-row">
-                <h4>Solución</h4>
-                <p>Se desarrolló una plataforma dinámica con un backoffice desde donde administrar contenidos y publicarlos sin modificar código.</p>
-              </div>
-            </div>
-
-            <figure class="case-visual reveal-right" aria-labelledby="caso-03-fig">
-              <figcaption class="visual-caption" id="caso-03-fig">Backoffice → publicación</figcaption>
-              <div class="admin" aria-hidden="true">
-                <div class="admin-side">
-                  <span class="admin-brand">Backoffice</span>
-                  <span class="admin-nav admin-nav--active">Agenda</span>
-                  <span class="admin-nav">Contenidos</span>
-                  <span class="admin-nav">Sponsors</span>
-                  <span class="admin-nav">Usuarios / roles</span>
-                </div>
-                <div class="admin-main">
-                  <div class="admin-top">
-                    <span>Agenda</span>
-                    <span class="admin-btn">+ Nueva actividad</span>
-                  </div>
-                  <div class="admin-row"><span>Actividad 01</span><span class="badge badge--done">Publicado</span></div>
-                  <div class="admin-row"><span>Actividad 02</span><span class="badge badge--done">Publicado</span></div>
-                  <div class="admin-row"><span>Actividad 03</span><span class="badge badge--review">Borrador</span></div>
-                </div>
-              </div>
-              <ol class="flow-inline" aria-label="Flujo de publicación">
-                <li>Backoffice</li>
-                <li>Base de datos</li>
-                <li>Sitio público</li>
-              </ol>
-              <p class="visual-disclaimer">Representación conceptual del backoffice.</p>
-            </figure>
-          </div>
-
-          <div class="case-foot reveal-up">
-            <div class="before-after">
-              <div class="ba-col">
-                <h4>Antes</h4>
-                <ul>
-                  <li>Contenido fijo en código</li>
-                  <li>Cada cambio dependía de desarrollo</li>
-                </ul>
-              </div>
-              <div class="ba-col ba-col--after">
-                <h4>Después</h4>
-                <ul>
-                  <li>Backoffice administrable</li>
-                  <li>Publicación sin modificar código</li>
-                  <li>Roles y autenticación</li>
-                </ul>
-              </div>
-            </div>
-            <div class="case-stack">
-              <h4>Capacidades</h4>
-              <ul class="tag-list tag-list--accent">
-                <li>Backoffice</li>
-                <li>Agenda</li>
-                <li>Gestión de contenidos</li>
-                <li>Sponsors</li>
-                <li>Autenticación</li>
-                <li>Roles</li>
-                <li>Filtros</li>
-                <li>Base de datos</li>
-                <li>Responsive</li>
-              </ul>
-              <h4>Stack</h4>
-              <ul class="tag-list">
-                <li>Next.js</li>
-                <li>Supabase</li>
-                <li>PostgreSQL</li>
-                <li>Vercel</li>
-                <li>JWT</li>
-                <li>UX/UI</li>
-              </ul>
-              <a href="https://www.tecweek.com.ar/" target="_blank" rel="noopener noreferrer" class="case-link" data-cursor="link">Ver plataforma →</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- CASO 04 -->
-        <article class="case case--reverse" id="caso-laika" aria-labelledby="caso-04-title">
-          <header class="case-head reveal-up">
-            <span class="case-index">04 / Product design</span>
-            <h3 class="case-title" id="caso-04-title">Operaciones y<br>producto digital</h3>
-            <div class="case-meta">
-              <span>E-commerce · Operaciones · Product Design</span>
-              <span class="case-client">Laika</span>
-            </div>
-            <p class="case-lead">Diseño de experiencias y herramientas internas para operaciones de e-commerce: logística, devoluciones, pagos, catálogo, reglas de negocio y administración.</p>
-            <p class="case-role">Rol: Product Design · UX/UI</p>
-          </header>
-
-          <div class="case-body">
-            <div class="case-story reveal-right">
-              <div class="case-row">
-                <h4>Contexto</h4>
-                <p>Una operación de e-commerce implica mucho más que el checkout: catálogo, logística, pagos, devoluciones, reglas internas y distintos perfiles de usuario.</p>
-              </div>
-              <div class="case-row">
-                <h4>Desafío</h4>
-                <p>Transformar procesos complejos y reglas operativas en interfaces claras que permitan tomar decisiones sin agregar fricción al trabajo diario.</p>
-              </div>
-              <div class="case-row">
-                <h4>Solución</h4>
-                <p>Diseño de flujos, herramientas internas y experiencias operativas construidas alrededor de estados, permisos, excepciones y reglas reales del negocio.</p>
-              </div>
-            </div>
-
-            <figure class="case-visual reveal-left" aria-labelledby="caso-04-fig">
-              <figcaption class="visual-caption" id="caso-04-fig">Diseño alrededor de estados</figcaption>
-              <div class="states" aria-hidden="true">
-                <div class="states-row">
-                  <span class="state">Solicitud</span>
-                  <span class="state-arrow">→</span>
-                  <span class="state">En revisión</span>
-                  <span class="state-arrow">→</span>
-                  <span class="state state--accent">Resuelta</span>
-                </div>
-                <div class="states-branch">
-                  <span class="state-arrow state-arrow--down">↳</span>
-                  <span class="state state--hot">Excepción</span>
-                  <span class="states-note">regla · permiso · rol</span>
-                </div>
-              </div>
-              <ul class="theme-grid" aria-label="Temas trabajados">
-                <li>Backoffice</li>
-                <li>Feature Management</li>
-                <li>Logística</li>
-                <li>Devoluciones</li>
-                <li>Pagos</li>
-                <li>Gestión de catálogo</li>
-                <li>Reglas de negocio</li>
-                <li>Roles</li>
-                <li>Estados</li>
-                <li>Design System</li>
-              </ul>
-              <p class="visual-disclaimer">Diagrama conceptual. No representa la interfaz ni las reglas reales del producto.</p>
-            </figure>
-          </div>
-        </article>
-
-        <!-- OTROS PROYECTOS -->
-        <div class="others reveal-up">
-          <h3 class="others-title">Otros proyectos digitales</h3>
-          <ul class="others-list">
-            <li>
-              <a href="https://autospecial.com.ar" target="_blank" rel="noopener noreferrer" class="others-item" data-cursor="link">
-                <span class="others-name">Auto Special</span>
-                <span class="others-cat">Web · UX/UI · Frontend</span>
-                <span class="others-arrow" aria-hidden="true">↗</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.leonlivings.com/" target="_blank" rel="noopener noreferrer" class="others-item" data-cursor="link">
-                <span class="others-name">Leon Livings</span>
-                <span class="others-cat">E-commerce · UX/UI</span>
-                <span class="others-arrow" aria-hidden="true">↗</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.tracker-realestate.com/" target="_blank" rel="noopener noreferrer" class="others-item" data-cursor="link">
-                <span class="others-name">Tracker</span>
-                <span class="others-cat">Dashboard · Real Estate</span>
-                <span class="others-arrow" aria-hidden="true">↗</span>
-              </a>
-            </li>
+    <!-- CONTACTO -->
+    <section class="section contact" id="contacto" aria-labelledby="contacto-title">
+      <div class="wrap contact-grid">
+        <div class="contact-copy reveal">
+          <h2 class="title" id="contacto-title">¿Charlamos?</h2>
+          <p class="lead">Contame qué te está complicando hoy. No hace falta que sepas qué solución necesitás: me contás cómo funciona y lo vemos juntos.</p>
+          <ul class="contact-list">
+            <li><a href="https://wa.me/5491150560359" target="_blank" rel="noopener noreferrer" class="ico ico-wa">+54 9 11 5056-0359</a></li>
+            <li><a href="mailto:mackoaa@gmail.com" class="ico ico-mail">mackoaa@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/macko-agustin/" target="_blank" rel="noopener noreferrer" class="ico ico-in">LinkedIn</a></li>
+            <li><a href="https://www.behance.net/agustinmacko" target="_blank" rel="noopener noreferrer" class="ico ico-be">Behance</a></li>
           </ul>
         </div>
 
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════ 04 SOLUCIONES ═══════════════════════════════ -->
-    <section class="services" id="soluciones" aria-labelledby="soluciones-title">
-      <div class="container">
-        <div class="section-header reveal-up">
-          <span class="section-index" aria-hidden="true">[ 04 / 09 ]</span>
-          <span class="section-label">// Soluciones</span>
-          <h2 class="section-title" id="soluciones-title">Qué puedo construir.</h2>
-        </div>
-
-        <div class="services-grid">
-          <article class="service-card-new reveal-up" style="--delay:0s">
-            <div class="service-icon-wrap" aria-hidden="true">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 17l10 5 10-5" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 12l10 5 10-5" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <h3>Sistemas internos</h3>
-            <p>Backoffices y herramientas construidas alrededor de cómo trabaja realmente tu equipo: operaciones, permisos, estados, reglas de negocio y gestión.</p>
-            <div class="service-tag">01</div>
-          </article>
-          <article class="service-card-new reveal-up" style="--delay:0.1s">
-            <div class="service-icon-wrap" aria-hidden="true">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" stroke="var(--accent)" stroke-width="1.5"/><path d="M7 16v-4M12 16V8M17 16v-6" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </div>
-            <h3>Datos y dashboards</h3>
-            <p>Centralización de información, paneles operativos, filtros, indicadores, históricos y exportaciones para transformar datos dispersos en información utilizable.</p>
-            <div class="service-tag">02</div>
-          </article>
-          <article class="service-card-new reveal-up" style="--delay:0.2s">
-            <div class="service-icon-wrap" aria-hidden="true">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="5" cy="12" r="2.5" stroke="var(--accent)" stroke-width="1.5"/><circle cx="19" cy="5" r="2.5" stroke="var(--accent)" stroke-width="1.5"/><circle cx="19" cy="19" r="2.5" stroke="var(--accent)" stroke-width="1.5"/><path d="M7.3 11l9.4-4.8M7.3 13l9.4 4.8" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </div>
-            <h3>APIs e integraciones</h3>
-            <p>Conexión entre sistemas internos, plataformas externas, servicios de terceros y bases de datos.</p>
-            <div class="service-tag">03</div>
-          </article>
-          <article class="service-card-new reveal-up" style="--delay:0.3s">
-            <div class="service-icon-wrap" aria-hidden="true">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <h3>Automatización</h3>
-            <p>Procesos repetitivos, controles y seguimientos que hoy requieren intervención manual pueden transformarse en flujos automáticos y trazables.</p>
-            <div class="service-tag">04</div>
-          </article>
-          <article class="service-card-new reveal-up" style="--delay:0.4s">
-            <div class="service-icon-wrap" aria-hidden="true">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M7 18h10a4 4 0 0 0 .6-7.96A6 6 0 0 0 6.1 9.2 4.5 4.5 0 0 0 7 18z" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <h3>Cloud / AWS</h3>
-            <p>Infraestructura para almacenar, procesar y servir información de forma segura utilizando servicios cloud cuando el producto lo requiere.</p>
-            <div class="service-tag">05</div>
-          </article>
-          <article class="service-card-new reveal-up" style="--delay:0.5s">
-            <div class="service-icon-wrap" aria-hidden="true">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" stroke="var(--accent)" stroke-width="1.5"/><path d="M8 21h8M12 17v4" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </div>
-            <h3>UX/UI para software complejo</h3>
-            <p>Diseño de sistemas donde comprender roles, estados, permisos, procesos y excepciones es tan importante como diseñar la interfaz.</p>
-            <div class="service-tag">06</div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════ 05 PROCESO ═══════════════════════════════ -->
-    <section class="process" id="proceso" aria-labelledby="proceso-title">
-      <div class="container">
-        <div class="section-header reveal-up">
-          <span class="section-index" aria-hidden="true">[ 05 / 09 ]</span>
-          <span class="section-label">// Proceso</span>
-          <h2 class="section-title" id="proceso-title">Del problema a producción.</h2>
-        </div>
-
-        <ol class="flow-strip reveal-up" aria-label="Etapas">
-          <li>Problema</li>
-          <li>Producto</li>
-          <li>UX</li>
-          <li>Arquitectura</li>
-          <li>Desarrollo</li>
-          <li>Producción</li>
-        </ol>
-
-        <div class="process-timeline">
-          <div class="process-step reveal-up" style="--delay:0s">
-            <div class="step-marker" aria-hidden="true"></div>
-            <span class="step-num" aria-hidden="true">01</span>
-            <div class="step-body">
-              <div class="step-head">
-                <div class="step-icon" aria-hidden="true">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-                </div>
-                <h3>Entender la operación</h3>
-              </div>
-              <p>Primero entiendo cómo funciona el negocio, quién utiliza el sistema, qué información existe y dónde aparecen los problemas.</p>
-            </div>
-          </div>
-          <div class="process-step reveal-up" style="--delay:0.05s">
-            <div class="step-marker" aria-hidden="true"></div>
-            <span class="step-num" aria-hidden="true">02</span>
-            <div class="step-body">
-              <div class="step-head">
-                <div class="step-icon" aria-hidden="true">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </div>
-                <h3>Definir el producto</h3>
-              </div>
-              <p>Traduzco el problema en flujos, reglas, roles, información y funcionalidades concretas.</p>
-            </div>
-          </div>
-          <div class="process-step reveal-up" style="--delay:0.1s">
-            <div class="step-marker" aria-hidden="true"></div>
-            <span class="step-num" aria-hidden="true">03</span>
-            <div class="step-body">
-              <div class="step-head">
-                <div class="step-icon" aria-hidden="true">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" stroke="currentColor" stroke-width="1.5"/><path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-                </div>
-                <h3>Diseñar la experiencia</h3>
-              </div>
-              <p>Prototipo las partes críticas para validar cómo va a funcionar el sistema antes de llevarlas a código.</p>
-            </div>
-          </div>
-          <div class="process-step reveal-up" style="--delay:0.15s">
-            <div class="step-marker" aria-hidden="true"></div>
-            <span class="step-num" aria-hidden="true">04</span>
-            <div class="step-body">
-              <div class="step-head">
-                <div class="step-icon" aria-hidden="true">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="9" y="2" width="6" height="5" stroke="currentColor" stroke-width="1.5"/><rect x="2" y="17" width="6" height="5" stroke="currentColor" stroke-width="1.5"/><rect x="16" y="17" width="6" height="5" stroke="currentColor" stroke-width="1.5"/><path d="M12 7v5M5 17v-5h14v5" stroke="currentColor" stroke-width="1.5"/></svg>
-                </div>
-                <h3>Definir la arquitectura</h3>
-              </div>
-              <p>Modelo frontend, backend, datos, permisos, integraciones e infraestructura según las necesidades reales del producto.</p>
-            </div>
-          </div>
-          <div class="process-step reveal-up" style="--delay:0.2s">
-            <div class="step-marker" aria-hidden="true"></div>
-            <span class="step-num" aria-hidden="true">05</span>
-            <div class="step-body">
-              <div class="step-head">
-                <div class="step-icon" aria-hidden="true">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </div>
-                <h3>Construir e integrar</h3>
-              </div>
-              <p>Desarrollo las distintas partes como componentes de un mismo sistema.</p>
-            </div>
-          </div>
-          <div class="process-step reveal-up" style="--delay:0.25s">
-            <div class="step-marker" aria-hidden="true"></div>
-            <span class="step-num" aria-hidden="true">06</span>
-            <div class="step-body">
-              <div class="step-head">
-                <div class="step-icon" aria-hidden="true">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><polyline points="22 4 12 14.01 9 11.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </div>
-                <h3>Publicar e iterar</h3>
-              </div>
-              <p>Deploy, validación y evolución del producto cuando empieza a utilizarse en situaciones reales.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════ 06 FORMA DE TRABAJO ═══════════════════════════════ -->
-    <section class="approach" id="forma-de-trabajo" aria-labelledby="approach-title">
-      <div class="container">
-        <div class="split-header">
-          <div class="section-header reveal-left">
-            <span class="section-index" aria-hidden="true">[ 06 / 09 ]</span>
-            <span class="section-label">// Forma de trabajo</span>
-            <h2 class="section-title" id="approach-title">Producto, diseño y tecnología en una misma conversación.</h2>
-          </div>
-          <p class="section-intro reveal-right">Los problemas de software rara vez son solamente técnicos o solamente de diseño. Por eso trabajo entendiendo ambas partes desde el comienzo.</p>
-        </div>
-
-        <div class="approach-grid">
-          <article class="approach-item reveal-up" style="--delay:0s">
-            <span class="approach-num" aria-hidden="true">01</span>
-            <h3>Visión de producto</h3>
-            <p>No empiezo por una pantalla ni por una tecnología. Primero entiendo el proceso, las reglas y qué necesita resolver el negocio.</p>
-          </article>
-          <article class="approach-item reveal-up" style="--delay:0.1s">
-            <span class="approach-num" aria-hidden="true">02</span>
-            <h3>Diseño + desarrollo</h3>
-            <p>Las decisiones de experiencia se toman entendiendo también su impacto técnico, y las decisiones técnicas considerando a las personas que van a usar el sistema.</p>
-          </article>
-          <article class="approach-item reveal-up" style="--delay:0.2s">
-            <span class="approach-num" aria-hidden="true">03</span>
-            <h3>Trabajo directo</h3>
-            <p>Desde la definición inicial hasta las decisiones de producto y desarrollo, trabajás directamente conmigo.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════ 07 STACK ═══════════════════════════════ -->
-    <section class="stack" id="stack" aria-labelledby="stack-title">
-      <div class="container">
-        <div class="split-header">
-          <div class="section-header reveal-left">
-            <span class="section-index" aria-hidden="true">[ 07 / 09 ]</span>
-            <span class="section-label">// Stack</span>
-            <h2 class="section-title" id="stack-title">Tecnología según el problema.</h2>
-          </div>
-          <p class="section-intro reveal-right">No parto de una tecnología para buscarle un problema. La arquitectura se define según el producto, las integraciones, el volumen de información y la operación que tiene que soportar.</p>
-        </div>
-
-        <dl class="layers reveal-up">
-          <div class="layer">
-            <dt><span class="layer-num">L1</span> Product</dt>
-            <dd>Figma <i>/</i> UX/UI <i>/</i> Design Systems <i>/</i> Prototyping</dd>
-          </div>
-          <div class="layer">
-            <dt><span class="layer-num">L2</span> Frontend</dt>
-            <dd>Next.js <i>/</i> React <i>/</i> JavaScript <i>/</i> Tailwind CSS</dd>
-          </div>
-          <div class="layer">
-            <dt><span class="layer-num">L3</span> Backend</dt>
-            <dd>Node.js <i>/</i> Express <i>/</i> REST APIs</dd>
-          </div>
-          <div class="layer">
-            <dt><span class="layer-num">L4</span> Data</dt>
-            <dd>PostgreSQL <i>/</i> Supabase <i>/</i> MySQL</dd>
-          </div>
-          <div class="layer">
-            <dt><span class="layer-num">L5</span> Cloud / Infra</dt>
-            <dd>AWS <i>/</i> S3 <i>/</i> Cognito <i>/</i> EC2 <i>/</i> Vercel <i>/</i> Docker <i>/</i> NGINX</dd>
-          </div>
-          <div class="layer layer--arch">
-            <dt><span class="layer-num">L6</span> Architecture</dt>
-            <dd>
-              Authentication <i>/</i> Roles &amp; permissions <i>/</i> Integrations <i>/</i> APIs <i>/</i> Services
-              <small class="layer-note">Microservices: decisión arquitectónica, solo cuando el sistema lo justifica.</small>
-            </dd>
-          </div>
-        </dl>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════ 08 SOBRE MÍ ═══════════════════════════════ -->
-    <section class="about" id="sobre-mi" aria-labelledby="about-title">
-      <div class="container">
-        <div class="about-grid">
-          <div class="about-left reveal-left">
-            <span class="section-index" aria-hidden="true">[ 08 / 09 ]</span>
-            <span class="section-label">// Sobre mí</span>
-            <h2 class="about-title" id="about-title">Diseño el producto.<em>Construyo el sistema.</em></h2>
-          </div>
-          <div class="about-right reveal-right">
-            <p class="about-text">Soy Agustín Macko, diseñador UX/UI y desarrollador fullstack en Buenos Aires. Trabajo en el punto donde producto, experiencia y tecnología se encuentran.</p>
-            <p class="about-text">Puedo participar desde la definición del problema y los flujos hasta la arquitectura, frontend, backend, base de datos, integraciones y puesta en producción. Eso me permite pensar cada decisión como parte de un sistema y no como una pantalla aislada.</p>
-            <p class="about-disciplines">Product Engineering <i>·</i> Fullstack Development <i>·</i> UX/UI</p>
-            <ul class="about-stats about-concepts">
-              <li class="stat reveal-up" style="--delay: 0s">
-                <span class="concept">Producto <b>+</b> UX</span>
-              </li>
-              <li class="stat reveal-up" style="--delay: 0.1s">
-                <span class="concept">Front <b>+</b> Back</span>
-              </li>
-              <li class="stat reveal-up" style="--delay: 0.2s">
-                <span class="concept">Cloud <b>+</b> Datos</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════ 09 CONTACTO ═══════════════════════════════ -->
-    <section class="contact-cta" id="contact" aria-labelledby="contact-title">
-      <div class="container">
-        <div class="cta-content reveal-up">
-          <span class="section-index" aria-hidden="true">[ 09 / 09 ]</span>
-          <span class="section-label cw">// Contacto</span>
-          <h2 class="cta-title" id="contact-title">¿Hay un proceso que ya<br>necesita un <em>sistema</em>?</h2>
-          <p class="cta-desc">Contame qué están resolviendo hoy con planillas, tareas manuales, sistemas desconectados o herramientas que quedaron chicas.</p>
-          <div class="cta-actions">
-            <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20quiero%20contarte%20un%20problema" target="_blank" rel="noopener noreferrer" class="btn-primary btn-large" data-cursor="cta">
-              <span>Contame el problema</span>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-            <a href="https://www.linkedin.com/in/macko-agustin/" target="_blank" rel="noopener noreferrer" class="btn-ghost" data-cursor="link">LinkedIn</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="form-section" id="form" aria-labelledby="form-title">
-      <div class="container">
-        <div class="form-grid">
-          <div class="form-left reveal-left">
-            <span class="section-label">// Formulario</span>
-            <h2 class="form-title" id="form-title">Contame qué necesitás resolver.</h2>
-            <p>No necesitás llegar con la solución definida. Contame cómo funciona hoy el proceso y qué problema querés resolver.</p>
-            <div class="form-contact-list">
-              <a href="https://wa.me/5491150560359" target="_blank" rel="noopener noreferrer" class="form-contact-item" data-cursor="link">
-                <span class="contact-icon" aria-hidden="true">WA</span>
-                <span>+54 9 11 5056-0359</span>
-              </a>
-              <a href="mailto:mackoaa@gmail.com" class="form-contact-item" data-cursor="link">
-                <span class="contact-icon" aria-hidden="true">@</span>
-                <span>mackoaa@gmail.com</span>
-              </a>
-              <a href="https://www.linkedin.com/in/macko-agustin/" target="_blank" rel="noopener noreferrer" class="form-contact-item" data-cursor="link">
-                <span class="contact-icon" aria-hidden="true">IN</span>
-                <span>LinkedIn</span>
-              </a>
-            </div>
-          </div>
-          <div class="form-right reveal-right">
-            <form action="https://formspree.io/f/myzgvjbd" method="POST" class="contact-form">
-              <div class="form-group">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" autocomplete="name" required>
-              </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="email">Email</label>
-                  <input type="email" id="email" name="email" placeholder="tu@empresa.com" autocomplete="email" required>
-                </div>
-                <div class="form-group">
-                  <label for="whatsapp">WhatsApp</label>
-                  <input type="tel" id="whatsapp" name="whatsapp" placeholder="+54 9 11 XXXX-XXXX" autocomplete="tel">
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="servicio">¿Qué necesitás?</label>
-                <select id="servicio" name="servicio">
-                  <option value="">Seleccionar una opción</option>
-                  <option>Sistema interno / Backoffice</option>
-                  <option>Dashboard o panel de datos</option>
-                  <option>Integración / API</option>
-                  <option>Automatización</option>
-                  <option>AWS / Cloud</option>
-                  <option>UX/UI de producto</option>
-                  <option>Necesito definir la solución</option>
-                  <option>Otro</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="mensaje">¿Cómo funciona hoy?</label>
-                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Contame brevemente qué proceso, sistema o problema te gustaría mejorar..." required></textarea>
-              </div>
-              <button type="submit" class="btn-form">
-                <span>Enviar consulta</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </button>
-            </form>
-          </div>
-        </div>
+        <form action="https://formspree.io/f/myzgvjbd" method="POST" class="form reveal" id="form">
+          <p class="form-title">Dejame un mensaje</p>
+          <label for="nombre">Tu nombre</label>
+          <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+          <label for="email">Tu email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+          <label for="mensaje">¿Qué necesitás resolver?</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Contame en pocas palabras cómo trabajan hoy…" required></textarea>
+          <button type="submit" class="btn btn-dark btn-block">Enviar</button>
+        </form>
       </div>
     </section>
 
   </main>
 
-  <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
   <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <span class="footer-logo">AM<span class="dot">.</span></span>
-          <p>Software a medida · Product Engineering<br>Fullstack · UX/UI<br>Buenos Aires, Argentina</p>
-        </div>
-        <nav class="footer-links" aria-label="Secciones">
-          <a href="#casos" data-cursor="link">Casos</a>
-          <a href="#soluciones" data-cursor="link">Soluciones</a>
-          <a href="#proceso" data-cursor="link">Cómo trabajo</a>
-          <a href="#sobre-mi" data-cursor="link">Sobre mí</a>
-          <a href="#contact" data-cursor="link">Contacto</a>
-        </nav>
-        <div class="footer-social">
-          <a href="https://www.linkedin.com/in/macko-agustin/" target="_blank" rel="noopener noreferrer" data-cursor="link">LinkedIn</a>
-          <a href="https://www.behance.net/agustinmacko" target="_blank" rel="noopener noreferrer" data-cursor="link">Behance</a>
-          <a href="mailto:mackoaa@gmail.com" data-cursor="link">Email</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2026 Agustín Macko — Todos los derechos reservados.</p>
-        <p>Diseñado y desarrollado por Agustín Macko</p>
-      </div>
+    <div class="wrap footer-inner">
+      <span>Agustín Macko · Buenos Aires</span>
+      <span>© 2026</span>
     </div>
   </footer>
-
-  <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%20quiero%20hablar" target="_blank" rel="noopener noreferrer" class="mobile-cta" aria-label="Escribir por WhatsApp">WA →</a>
 
   <script src="js/main.js"></script>
 </body>
