@@ -165,7 +165,9 @@ p { margin: 0; }
   display: flex; width: max-content;
   animation: ticker 40s linear infinite;
 }
-.ticker-row:hover .ticker-track { animation-play-state: paused; }
+@media (hover: hover) {
+  .ticker-row:hover .ticker-track { animation-play-state: paused; }
+}
 .ticker-track li { display: flex; align-items: center; white-space: nowrap; }
 .ticker-track li::after { content: "✦"; margin-inline: 28px; font-size: .7em; opacity: .5; }
 .ticker-solutions li { font: 600 26px/1 var(--font-title); letter-spacing: -0.02em; padding: 22px 0; }
@@ -506,5 +508,7 @@ html:not(.js) .carousel-nav { display: none; }
   html { scroll-behavior: auto; }
   .js .reveal { opacity: 1; transform: none; transition: none; }
   .ticker-track { animation: none; }
+  .ticker-row { overflow-x: auto; scrollbar-width: none; }
+  .ticker-row::-webkit-scrollbar { display: none; }
   .btn, .project { transition: none; }
 }
