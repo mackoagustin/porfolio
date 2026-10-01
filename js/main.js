@@ -1,6 +1,39 @@
 (function () {
   'use strict';
 
+  var sendEvent = function (name, params) {
+    if (typeof window.gtag === 'function') window.gtag('event', name, params);
+  };
+
+  var placeOf = function (el) {
+    if (el.closest('.mobile-menu')) return 'menu_mobile';
+    if (el.closest('.header')) return 'header';
+    var section = el.closest('section[id]');
+    return section ? section.id : 'otro';
+  };
+
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest('a[href]');
+    if (!link) return;
+    var href = link.getAttribute('href');
+    var project = link.closest('.project');
+    var params = { location: placeOf(link) };
+    if (project) params.project = project.querySelector('h3').textContent.trim();
+
+    if (href.indexOf('wa.me') !== -1) sendEvent('contact_whatsapp', params);
+    else if (href.indexOf('mailto:') === 0) sendEvent('contact_email', params);
+    else if (href.indexOf('linkedin.com') !== -1) sendEvent('contact_linkedin', params);
+    else if (href.indexOf('behance.net') !== -1) sendEvent('contact_behance', params);
+    else if (project) sendEvent('project_site_click', params);
+  });
+
+  var form = document.getElementById('form');
+  if (form) {
+    form.addEventListener('submit', function () {
+      sendEvent('contact_form_submit', { location: 'contacto' });
+    });
+  }
+
   var header = document.getElementById('header');
   var toggle = document.getElementById('menu-toggle');
   var menu = document.getElementById('mobile-menu');
