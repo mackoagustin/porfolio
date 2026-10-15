@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NZE4ZRXTH5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-NZE4ZRXTH5');
+  </script>
+  <title>Turnos por WhatsApp para clínicas: sistema multi-clínica a medida | Agustín Macko</title>
+  <meta name="description" content="Caso real: sistema para que los pacientes saquen, consulten y cancelen turnos por WhatsApp, con agendas y médicos independientes por clínica y un dashboard para supervisar todo.">
+  <meta name="author" content="Agustín Macko">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#FFFFFF">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:site_name" content="Agustín Macko">
+  <meta property="og:title" content="Turnos por WhatsApp para clínicas, sin atención manual">
+  <meta property="og:description" content="Sistema multi-clínica para sacar, consultar y cancelar turnos desde WhatsApp, supervisado desde un único dashboard.">
+  <meta property="og:url" content="https://agustinmacko.com.ar/casos/turnos-whatsapp-clinicas/">
+  <meta property="og:image" content="https://agustinmacko.com.ar/img/bot.jpg">
+  <meta property="og:image:alt" content="Conversación de WhatsApp con el asistente de turnos: menú para sacar, ver o cancelar turnos y elección de especialidad, médico y horario">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Turnos por WhatsApp para clínicas, sin atención manual">
+  <meta name="twitter:description" content="Sistema multi-clínica para sacar, consultar y cancelar turnos desde WhatsApp, supervisado desde un único dashboard.">
+  <meta name="twitter:image" content="https://agustinmacko.com.ar/img/bot.jpg">
+  <link rel="canonical" href="https://agustinmacko.com.ar/casos/turnos-whatsapp-clinicas/">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CreativeWork",
+        "@id": "https://agustinmacko.com.ar/casos/turnos-whatsapp-clinicas/#caso",
+        "name": "Turnos por WhatsApp para clínicas",
+        "headline": "Turnos por WhatsApp para clínicas, sin atención manual",
+        "description": "Sistema multi-clínica para sacar, consultar y cancelar turnos desde WhatsApp, con agendas, médicos y configuraciones independientes por clínica.",
+        "url": "https://agustinmacko.com.ar/casos/turnos-whatsapp-clinicas/",
+        "image": "https://agustinmacko.com.ar/img/bot.jpg",
+        "inLanguage": "es-AR",
+        "author": { "@id": "https://agustinmacko.com.ar/#person" },
+        "about": ["Chatbots para WhatsApp", "Automatizaciones", "Gestión de turnos médicos"],
+        "keywords": "turnos por WhatsApp, chatbot para clínicas, automatización de turnos médicos, sistema multi-clínica"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://agustinmacko.com.ar/" },
+          { "@type": "ListItem", "position": 2, "name": "Proyectos", "item": "https://agustinmacko.com.ar/#proyectos" },
+          { "@type": "ListItem", "position": 3, "name": "Turnos por WhatsApp para clínicas" }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body data-case="turnos-whatsapp-clinicas">
+
+  <a href="#main" class="skip-link">Saltar al contenido</a>
+
+  <header class="header" id="header">
+    <div class="wrap header-inner">
+      <a href="/" class="brand">Agustín Macko</a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="/#proyectos">Proyectos</a>
+        <a href="/#sobre-mi">Sobre mí</a>
+        <a href="https://www.linkedin.com/in/macko-agustin/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="#contacto" class="btn btn-dark btn-sm">Escribime</a>
+      </nav>
+
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <a href="/#proyectos">Proyectos</a>
+      <a href="/#sobre-mi">Sobre mí</a>
+      <a href="https://www.linkedin.com/in/macko-agustin/" target="_blank" rel="noopener noreferrer" class="ico ico-in">LinkedIn</a>
+      <a href="#contacto" class="btn btn-dark">Escribime</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="case-hero" id="caso" aria-labelledby="case-title">
+      <div class="wrap">
+        <nav aria-label="Ruta de navegación">
+          <ol class="crumbs">
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/#proyectos">Proyectos</a></li>
+            <li aria-current="page">Turnos por WhatsApp</li>
+          </ol>
+        </nav>
+
+        <p class="project-tag">Salud · WhatsApp · Multi-clínica</p>
+        <h1 id="case-title">Turnos por WhatsApp para clínicas, <span class="mark">sin atención manual</span></h1>
+        <div class="case-intro">
+          <div>
+            <p class="case-summary">Diseñé y desarrollé un sistema para que los pacientes saquen, consulten y cancelen turnos directamente desde WhatsApp. Cada clínica tiene su propia línea, sus médicos, sus agendas y sus reglas, y todo se supervisa desde un único dashboard.</p>
+            <div class="actions">
+              <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20vi%20el%20caso%20de%20turnos%20por%20WhatsApp%20y%20quiero%20algo%20parecido" target="_blank" rel="noopener noreferrer" class="btn btn-wa">Quiero algo así para mi clínica</a>
+              <a href="#solucion" class="btn btn-line">Ver cómo funciona</a>
+            </div>
+          </div>
+          <dl class="case-facts">
+            <div><dt>Industria</dt><dd>Salud: clínicas y consultorios</dd></div>
+            <div><dt>Qué resuelve</dt><dd>Gestión de turnos atendida a mano por WhatsApp</dd></div>
+            <div><dt>Qué hice</dt><dd>Diseño del flujo, desarrollo y puesta en marcha</dd></div>
+          </dl>
+        </div>
+
+        <figure class="case-shot">
+          <img src="/img/bot.jpg" width="1200" height="750" alt="Conversación de WhatsApp con el asistente de turnos: menú para sacar, ver o cancelar turnos y elección de especialidad, médico y horario">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Detalle del caso">
+      <div class="wrap case-content">
+
+        <div class="case-block" id="problema">
+          <header class="case-block-head">
+            <p class="case-kicker">El problema</p>
+            <h2>Decenas de mensajes por día para pedir, cambiar o cancelar un turno</h2>
+          </header>
+          <div class="case-block-body">
+            <p>En una clínica, WhatsApp es el canal por el que los pacientes prefieren escribir. El problema es que cada pedido de turno se convierte en una conversación: el paciente pregunta por un médico, la recepción revisa la agenda, propone horarios, espera la respuesta y finalmente lo anota. Lo mismo pasa cuando alguien quiere saber cuándo era su turno o necesita cancelarlo.</p>
+            <p>Todo ese trabajo es repetitivo, depende de que alguien esté disponible para responder y se vuelve difícil de sostener cuando la clínica crece o cuando hay varias sedes, cada una con sus propios médicos y horarios.</p>
+          </div>
+        </div>
+
+        <div class="case-block" id="solucion">
+          <header class="case-block-head">
+            <p class="case-kicker">La solución</p>
+            <h2>Un sistema que atiende los turnos por WhatsApp y se supervisa desde un dashboard</h2>
+          </header>
+          <div class="case-block-body">
+            <p>Construí un sistema multilínea: cada clínica tiene su propio número de WhatsApp conectado a la plataforma y el paciente resuelve su gestión conversando, sin instalar nada ni entrar a otra página.</p>
+            <ul class="case-list">
+              <li><strong>Sacar turno</strong>El paciente elige especialidad o médico y el sistema le ofrece los horarios disponibles según la agenda real.</li>
+              <li><strong>Consultar y cancelar</strong>Puede ver cuándo es su próximo turno o cancelarlo desde el mismo chat, y ese horario vuelve a quedar disponible.</li>
+              <li><strong>Configuración independiente por clínica</strong>Médicos, agendas, horarios y reglas propias para cada clínica, sobre una misma plataforma multi-tenant.</li>
+              <li><strong>Dashboard único</strong>El equipo supervisa turnos, agendas y conversaciones desde un solo lugar, sin tener que estar pendiente del teléfono.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="case-block" id="resultado">
+          <header class="case-block-head">
+            <p class="case-kicker">El resultado</p>
+            <h2>La recepción deja de responder lo mismo todo el día</h2>
+          </header>
+          <div class="case-block-body">
+            <p>Lo que antes eran decenas de mensajes atendidos a mano pasa a resolverse solo, a cualquier hora. El equipo de la clínica interviene únicamente cuando hace falta y tiene la información de turnos centralizada en el dashboard, en lugar de repartida entre chats y planillas.</p>
+            <p>Como la plataforma es multi-clínica, sumar una nueva sede o un nuevo cliente es una cuestión de configuración, no de desarrollar otro sistema desde cero.</p>
+          </div>
+        </div>
+
+        <div class="case-block" id="stack">
+          <header class="case-block-head">
+            <p class="case-kicker">Tecnología</p>
+            <h2>Cómo está construido</h2>
+          </header>
+          <div class="case-block-body">
+            <p>Backend en Node.js con Express, base de datos y autenticación en Supabase, y conexión con WhatsApp mediante Baileys. La arquitectura es multi-tenant: cada clínica tiene sus datos y su configuración aislados dentro de la misma plataforma.</p>
+            <ul class="project-stack" aria-label="Tecnologías"><li>WhatsApp</li><li>Node.js</li><li>Express</li><li>Supabase</li><li>Baileys</li><li>Multi-tenant</li></ul>
+          </div>
+        </div>
+
+        <div class="case-block" id="preguntas">
+          <header class="case-block-head">
+            <p class="case-kicker">Preguntas frecuentes</p>
+            <h2>Lo que suelen preguntarme sobre este tipo de sistema</h2>
+          </header>
+          <div class="case-block-body">
+            <div class="faq">
+              <details>
+                <summary>¿Sirve para una clínica con varias sedes?</summary>
+                <p>Sí. Cada sede puede tener su propia línea de WhatsApp, sus médicos y sus agendas, y se administran todas desde el mismo dashboard.</p>
+              </details>
+              <details>
+                <summary>¿Los pacientes tienen que instalar algo?</summary>
+                <p>No. Todo funciona dentro de WhatsApp, que es la aplicación que ya usan para escribirle a la clínica.</p>
+              </details>
+              <details>
+                <summary>¿Se puede adaptar a cómo trabaja mi clínica?</summary>
+                <p>Sí, es un desarrollo a medida. Primero entendemos cómo se dan los turnos hoy, qué reglas tienen y qué casos especiales aparecen, y el flujo se diseña a partir de eso.</p>
+              </details>
+              <details>
+                <summary>¿Qué pasa si el paciente necesita hablar con una persona?</summary>
+                <p>El equipo sigue teniendo acceso a las conversaciones y puede intervenir cuando hace falta. El sistema se ocupa de lo repetitivo, no reemplaza la atención humana.</p>
+              </details>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-cta">
+          <div>
+            <h2>¿Tu equipo pasa el día respondiendo turnos por WhatsApp?</h2>
+            <p>Contame cómo trabajan hoy y vemos qué parte se puede automatizar.</p>
+          </div>
+          <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20vi%20el%20caso%20de%20turnos%20por%20WhatsApp%20y%20quiero%20algo%20parecido" target="_blank" rel="noopener noreferrer" class="btn btn-wa">Hablemos por WhatsApp</a>
+        </div>
+
+        <div class="case-block" id="otros-casos">
+          <header class="case-block-head">
+            <p class="case-kicker">Otros casos</p>
+            <h2>Más soluciones desarrolladas</h2>
+          </header>
+          <div class="case-block-body">
+            <div class="case-more">
+              <a href="/casos/tracker-polizas/" class="case-card">
+                <span class="project-tag">Salud · Operaciones</span>
+                <h3>Un tracker que avisa cuando un caso cambia de estado</h3>
+                <span>Ver caso →</span>
+              </a>
+              <a href="/casos/gestor-archivos-aws/" class="case-card">
+                <span class="project-tag">GCBA · Cloud</span>
+                <h3>Un gestor de archivos propio para el contenido en AWS</h3>
+                <span>Ver caso →</span>
+              </a>
+              <a href="/casos/backoffice-tecweek/" class="case-card">
+                <span class="project-tag">TecWeek · Plataforma</span>
+                <h3>Actualizar el evento sin depender de desarrollo</h3>
+                <span>Ver caso →</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section contact" id="contacto" aria-labelledby="contacto-title">
+      <div class="wrap contact-grid">
+        <div class="contact-copy">
+          <h2 class="title" id="contacto-title">¿Charlamos?</h2>
+          <p class="lead">Contame qué te está complicando hoy. No hace falta que sepas qué solución necesitás: me contás cómo funciona y lo vemos juntos.</p>
+          <ul class="contact-list">
+            <li><a href="https://wa.me/5491150560359" target="_blank" rel="noopener noreferrer" class="ico ico-wa">+54 9 11 5056-0359</a></li>
+            <li><a href="mailto:mackoaa@gmail.com" class="ico ico-mail">mackoaa@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/macko-agustin/" target="_blank" rel="noopener noreferrer" class="ico ico-in">LinkedIn</a></li>
+            <li><a href="https://www.behance.net/agustinmacko" target="_blank" rel="noopener noreferrer" class="ico ico-be">Behance</a></li>
+          </ul>
+        </div>
+
+        <form action="https://formspree.io/f/myzgvjbd" method="POST" class="form" id="form">
+          <input type="hidden" name="origen" value="Caso: turnos por WhatsApp">
+          <p class="form-title">Dejame un mensaje</p>
+          <label for="nombre">Tu nombre</label>
+          <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+          <label for="email">Tu email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+          <label for="mensaje">¿Qué necesitás resolver?</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Contame en pocas palabras cómo trabajan hoy…" required></textarea>
+          <button type="submit" class="btn btn-dark btn-block">Enviar</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>Agustín Macko · Buenos Aires</span>
+      <span>© 2026</span>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

@@ -12,6 +12,8 @@
     return section ? section.id : 'otro';
   };
 
+  var currentCase = document.body.dataset.case;
+
   document.addEventListener('click', function (e) {
     var link = e.target.closest('a[href]');
     if (!link) return;
@@ -19,18 +21,22 @@
     var project = link.closest('.project');
     var params = { location: placeOf(link) };
     if (project) params.project = project.querySelector('h3').textContent.trim();
+    if (currentCase) params.case = currentCase;
 
     if (href.indexOf('wa.me') !== -1) sendEvent('contact_whatsapp', params);
     else if (href.indexOf('mailto:') === 0) sendEvent('contact_email', params);
     else if (href.indexOf('linkedin.com') !== -1) sendEvent('contact_linkedin', params);
     else if (href.indexOf('behance.net') !== -1) sendEvent('contact_behance', params);
+    else if (href.indexOf('/casos/') === 0) sendEvent('case_open', Object.assign(params, { target: href }));
     else if (project) sendEvent('project_site_click', params);
   });
 
   var form = document.getElementById('form');
   if (form) {
     form.addEventListener('submit', function () {
-      sendEvent('contact_form_submit', { location: 'contacto' });
+      var params = { location: 'contacto' };
+      if (currentCase) params.case = currentCase;
+      sendEvent('contact_form_submit', params);
     });
   }
 

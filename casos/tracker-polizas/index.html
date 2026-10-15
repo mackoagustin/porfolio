@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NZE4ZRXTH5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-NZE4ZRXTH5');
+  </script>
+  <title>Tracker de pólizas integrado por API: seguimiento automático de casos | Agustín Macko</title>
+  <meta name="description" content="Caso real: aplicación de escritorio conectada a la API de un sistema de pólizas que detecta cambios de estado y muestra qué casos necesitan atención, sin revisarlos uno por uno.">
+  <meta name="author" content="Agustín Macko">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#FFFFFF">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:site_name" content="Agustín Macko">
+  <meta property="og:title" content="Un tracker que avisa cuando un caso cambia de estado">
+  <meta property="og:description" content="Integración por API con un sistema de pólizas para detectar cambios de estado automáticamente y dejar de revisar caso por caso.">
+  <meta property="og:url" content="https://agustinmacko.com.ar/casos/tracker-polizas/">
+  <meta property="og:image" content="https://agustinmacko.com.ar/img/salud-tracker.webp">
+  <meta property="og:image:alt" content="Tracker de pólizas con filtros por estado, región y firma">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Un tracker que avisa cuando un caso cambia de estado">
+  <meta name="twitter:description" content="Integración por API con un sistema de pólizas para detectar cambios de estado automáticamente y dejar de revisar caso por caso.">
+  <meta name="twitter:image" content="https://agustinmacko.com.ar/img/salud-tracker.webp">
+  <link rel="canonical" href="https://agustinmacko.com.ar/casos/tracker-polizas/">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CreativeWork",
+        "@id": "https://agustinmacko.com.ar/casos/tracker-polizas/#caso",
+        "name": "Tracker de pólizas integrado por API",
+        "headline": "Un tracker que avisa cuando un caso cambia de estado",
+        "description": "Aplicación de escritorio conectada a la API de un sistema de pólizas que detecta cambios de estado y centraliza el seguimiento de casos.",
+        "url": "https://agustinmacko.com.ar/casos/tracker-polizas/",
+        "image": "https://agustinmacko.com.ar/img/salud-tracker.webp",
+        "inLanguage": "es-AR",
+        "author": { "@id": "https://agustinmacko.com.ar/#person" },
+        "about": ["Integraciones entre sistemas", "Herramientas para operaciones", "Automatizaciones"],
+        "keywords": "integración por API, seguimiento de pólizas, automatizar seguimiento de casos, app de escritorio a medida"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://agustinmacko.com.ar/" },
+          { "@type": "ListItem", "position": 2, "name": "Proyectos", "item": "https://agustinmacko.com.ar/#proyectos" },
+          { "@type": "ListItem", "position": 3, "name": "Tracker de pólizas" }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body data-case="tracker-polizas">
+
+  <a href="#main" class="skip-link">Saltar al contenido</a>
+
+  <header class="header" id="header">
+    <div class="wrap header-inner">
+      <a href="/" class="brand">Agustín Macko</a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="/#proyectos">Proyectos</a>
+        <a href="/#sobre-mi">Sobre mí</a>
+        <a href="https://www.linkedin.com/in/macko-agustin/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="#contacto" class="btn btn-dark btn-sm">Escribime</a>
+      </nav>
+
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <a href="/#proyectos">Proyectos</a>
+      <a href="/#sobre-mi">Sobre mí</a>
+      <a href="https://www.linkedin.com/in/macko-agustin/" target="_blank" rel="noopener noreferrer" class="ico ico-in">LinkedIn</a>
+      <a href="#contacto" class="btn btn-dark">Escribime</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="case-hero" id="caso" aria-labelledby="case-title">
+      <div class="wrap">
+        <nav aria-label="Ruta de navegación">
+          <ol class="crumbs">
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/#proyectos">Proyectos</a></li>
+            <li aria-current="page">Tracker de pólizas</li>
+          </ol>
+        </nav>
+
+        <p class="project-tag">Salud · Operaciones · Confidencial</p>
+        <h1 id="case-title">Un tracker que <span class="mark">avisa cuando un caso cambia de estado</span></h1>
+        <div class="case-intro">
+          <div>
+            <p class="case-summary">Para una empresa del sector salud desarrollé una aplicación de escritorio conectada a la API de su sistema de pólizas. Detecta automáticamente los cambios de estado y muestra qué casos necesitan atención, para que el equipo deje de revisarlos uno por uno.</p>
+            <div class="actions">
+              <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20vi%20el%20caso%20del%20tracker%20de%20p%C3%B3lizas%20y%20quiero%20algo%20parecido" target="_blank" rel="noopener noreferrer" class="btn btn-wa">Quiero algo así para mi equipo</a>
+              <a href="#solucion" class="btn btn-line">Ver cómo funciona</a>
+            </div>
+          </div>
+          <dl class="case-facts">
+            <div><dt>Industria</dt><dd>Salud: gestión de pólizas</dd></div>
+            <div><dt>Qué resuelve</dt><dd>Seguimiento manual de estados, caso por caso</dd></div>
+            <div><dt>Qué hice</dt><dd>Diseño, integración por API y desarrollo de la app</dd></div>
+          </dl>
+        </div>
+
+        <figure class="case-shot">
+          <img src="/img/salud-tracker.webp" width="1200" height="750" alt="Tracker de pólizas con filtros por estado, región y firma, y listado de casos con datos anonimizados">
+          <figcaption>Datos anonimizados por confidencialidad del cliente.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Detalle del caso">
+      <div class="wrap case-content">
+
+        <div class="case-block" id="problema">
+          <header class="case-block-head">
+            <p class="case-kicker">El problema</p>
+            <h2>Saber qué cambió obligaba a revisar cada caso a mano</h2>
+          </header>
+          <div class="case-block-body">
+            <p>El equipo trabajaba con un sistema de pólizas que guardaba toda la información, pero no avisaba cuando algo cambiaba. Para saber si una póliza había avanzado, se había rechazado o necesitaba una acción, alguien tenía que entrar al sistema y abrir los casos de a uno.</p>
+            <p>Con muchos casos activos, ese control consumía horas, dependía de la memoria de cada persona y hacía que algunos cambios importantes se detectaran tarde.</p>
+          </div>
+        </div>
+
+        <div class="case-block" id="solucion">
+          <header class="case-block-head">
+            <p class="case-kicker">La solución</p>
+            <h2>Una app conectada al sistema que detecta los cambios sola</h2>
+          </header>
+          <div class="case-block-body">
+            <p>En lugar de reemplazar el sistema que ya usaban, construí una herramienta que se conecta a él mediante su API y trabaja encima de esa información.</p>
+            <ul class="case-list">
+              <li><strong>Detección automática de cambios</strong>La app consulta la API y identifica qué casos cambiaron de estado desde la última revisión.</li>
+              <li><strong>Un solo lugar para el seguimiento</strong>Todos los casos en un listado centralizado, en vez de entrar al sistema uno por uno.</li>
+              <li><strong>Filtros que reflejan cómo trabaja el equipo</strong>Por estado, región y firma, para encontrar rápido lo que le toca a cada persona.</li>
+              <li><strong>App de escritorio</strong>Desarrollada en Electron, para que el equipo la use como una herramienta más de su día a día.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="case-block" id="resultado">
+          <header class="case-block-head">
+            <p class="case-kicker">El resultado</p>
+            <h2>De perder la tarde buscando casos a saberlo en minutos</h2>
+          </header>
+          <div class="case-block-body">
+            <p>Hoy el equipo sabe en minutos qué casos necesitan atención, sin revisar el sistema caso por caso. El tiempo que antes se iba en controlar estados ahora se usa para resolver los casos que realmente lo necesitan.</p>
+            <p>Además, como la herramienta se integra con el sistema existente, no hubo que migrar datos ni cambiar la forma de trabajar del resto de la organización.</p>
+          </div>
+        </div>
+
+        <div class="case-block" id="stack">
+          <header class="case-block-head">
+            <p class="case-kicker">Tecnología</p>
+            <h2>Cómo está construido</h2>
+          </header>
+          <div class="case-block-body">
+            <p>Aplicación de escritorio en Electron que se integra con la API del sistema de pólizas del cliente. La lógica de detección compara el estado de cada caso entre consultas para identificar los que cambiaron.</p>
+            <ul class="project-stack" aria-label="Tecnologías"><li>App de escritorio</li><li>Electron</li><li>API</li><li>Integraciones</li></ul>
+          </div>
+        </div>
+
+        <div class="case-block" id="preguntas">
+          <header class="case-block-head">
+            <p class="case-kicker">Preguntas frecuentes</p>
+            <h2>Lo que suelen preguntarme sobre este tipo de integración</h2>
+          </header>
+          <div class="case-block-body">
+            <div class="faq">
+              <details>
+                <summary>¿Hay que reemplazar el sistema que ya usamos?</summary>
+                <p>No. La idea es construir encima de lo que ya funciona: me conecto a tu sistema y resuelvo la parte que hoy hacen a mano.</p>
+              </details>
+              <details>
+                <summary>¿Qué pasa si mi sistema no tiene API?</summary>
+                <p>Depende del caso. A veces hay exportaciones, bases de datos o integraciones alternativas. Lo primero es revisar qué ofrece tu sistema y desde ahí ver la mejor opción.</p>
+              </details>
+              <details>
+                <summary>¿Tiene que ser una app de escritorio?</summary>
+                <p>No. En este caso fue lo más práctico para el equipo, pero la misma solución puede ser una aplicación web o un panel interno.</p>
+              </details>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-cta">
+          <div>
+            <h2>¿Tu equipo revisa un sistema a mano para saber qué cambió?</h2>
+            <p>Contame qué sistema usan y cómo hacen el seguimiento hoy.</p>
+          </div>
+          <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20vi%20el%20caso%20del%20tracker%20de%20p%C3%B3lizas%20y%20quiero%20algo%20parecido" target="_blank" rel="noopener noreferrer" class="btn btn-wa">Hablemos por WhatsApp</a>
+        </div>
+
+        <div class="case-block" id="otros-casos">
+          <header class="case-block-head">
+            <p class="case-kicker">Otros casos</p>
+            <h2>Más soluciones desarrolladas</h2>
+          </header>
+          <div class="case-block-body">
+            <div class="case-more">
+              <a href="/casos/turnos-whatsapp-clinicas/" class="case-card">
+                <span class="project-tag">Salud · WhatsApp</span>
+                <h3>Gestionar turnos por WhatsApp sin hacerlo manualmente</h3>
+                <span>Ver caso →</span>
+              </a>
+              <a href="/casos/gestor-archivos-aws/" class="case-card">
+                <span class="project-tag">GCBA · Cloud</span>
+                <h3>Un gestor de archivos propio para el contenido en AWS</h3>
+                <span>Ver caso →</span>
+              </a>
+              <a href="/casos/backoffice-tecweek/" class="case-card">
+                <span class="project-tag">TecWeek · Plataforma</span>
+                <h3>Actualizar el evento sin depender de desarrollo</h3>
+                <span>Ver caso →</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section contact" id="contacto" aria-labelledby="contacto-title">
+      <div class="wrap contact-grid">
+        <div class="contact-copy">
+          <h2 class="title" id="contacto-title">¿Charlamos?</h2>
+          <p class="lead">Contame qué te está complicando hoy. No hace falta que sepas qué solución necesitás: me contás cómo funciona y lo vemos juntos.</p>
+          <ul class="contact-list">
+            <li><a href="https://wa.me/5491150560359" target="_blank" rel="noopener noreferrer" class="ico ico-wa">+54 9 11 5056-0359</a></li>
+            <li><a href="mailto:mackoaa@gmail.com" class="ico ico-mail">mackoaa@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/macko-agustin/" target="_blank" rel="noopener noreferrer" class="ico ico-in">LinkedIn</a></li>
+            <li><a href="https://www.behance.net/agustinmacko" target="_blank" rel="noopener noreferrer" class="ico ico-be">Behance</a></li>
+          </ul>
+        </div>
+
+        <form action="https://formspree.io/f/myzgvjbd" method="POST" class="form" id="form">
+          <input type="hidden" name="origen" value="Caso: tracker de pólizas">
+          <p class="form-title">Dejame un mensaje</p>
+          <label for="nombre">Tu nombre</label>
+          <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+          <label for="email">Tu email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+          <label for="mensaje">¿Qué necesitás resolver?</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Contame en pocas palabras cómo trabajan hoy…" required></textarea>
+          <button type="submit" class="btn btn-dark btn-block">Enviar</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>Agustín Macko · Buenos Aires</span>
+      <span>© 2026</span>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

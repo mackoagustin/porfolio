@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NZE4ZRXTH5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-NZE4ZRXTH5');
+  </script>
+  <title>Gestor de archivos en AWS S3 con permisos propios | Agustín Macko</title>
+  <meta name="description" content="Caso real para el Gobierno de la Ciudad de Buenos Aires: gestor para subir, buscar, descargar y compartir archivos en AWS S3, con autenticación y permisos, sin acceso técnico a la infraestructura.">
+  <meta name="author" content="Agustín Macko">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#FFFFFF">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:site_name" content="Agustín Macko">
+  <meta property="og:title" content="Un gestor de archivos propio para el contenido en AWS">
+  <meta property="og:description" content="Interfaz con autenticación y permisos para que el equipo administre sus archivos en AWS S3 sin depender de sistemas.">
+  <meta property="og:url" content="https://agustinmacko.com.ar/casos/gestor-archivos-aws/">
+  <meta property="og:image" content="https://agustinmacko.com.ar/img/aws.webp">
+  <meta property="og:image:alt" content="Gestor de archivos en AWS con carpetas, buscador y acciones para subir y compartir contenido">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Un gestor de archivos propio para el contenido en AWS">
+  <meta name="twitter:description" content="Interfaz con autenticación y permisos para que el equipo administre sus archivos en AWS S3 sin depender de sistemas.">
+  <meta name="twitter:image" content="https://agustinmacko.com.ar/img/aws.webp">
+  <link rel="canonical" href="https://agustinmacko.com.ar/casos/gestor-archivos-aws/">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CreativeWork",
+        "@id": "https://agustinmacko.com.ar/casos/gestor-archivos-aws/#caso",
+        "name": "Gestor de archivos en AWS S3",
+        "headline": "Un gestor de archivos propio para el contenido en AWS",
+        "description": "Gestor para subir, buscar, descargar y compartir archivos almacenados en AWS S3, con autenticación y permisos propios.",
+        "url": "https://agustinmacko.com.ar/casos/gestor-archivos-aws/",
+        "image": "https://agustinmacko.com.ar/img/aws.webp",
+        "inLanguage": "es-AR",
+        "author": { "@id": "https://agustinmacko.com.ar/#person" },
+        "about": ["Gestión de archivos y documentos", "Cloud / AWS", "Sistemas internos"],
+        "keywords": "gestor de archivos AWS S3, gestión documental a medida, interfaz para S3, permisos con Cognito"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://agustinmacko.com.ar/" },
+          { "@type": "ListItem", "position": 2, "name": "Proyectos", "item": "https://agustinmacko.com.ar/#proyectos" },
+          { "@type": "ListItem", "position": 3, "name": "Gestor de archivos en AWS" }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body data-case="gestor-archivos-aws">
+
+  <a href="#main" class="skip-link">Saltar al contenido</a>
+
+  <header class="header" id="header">
+    <div class="wrap header-inner">
+      <a href="/" class="brand">Agustín Macko</a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="/#proyectos">Proyectos</a>
+        <a href="/#sobre-mi">Sobre mí</a>
+        <a href="https://www.linkedin.com/in/macko-agustin/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="#contacto" class="btn btn-dark btn-sm">Escribime</a>
+      </nav>
+
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <a href="/#proyectos">Proyectos</a>
+      <a href="/#sobre-mi">Sobre mí</a>
+      <a href="https://www.linkedin.com/in/macko-agustin/" target="_blank" rel="noopener noreferrer" class="ico ico-in">LinkedIn</a>
+      <a href="#contacto" class="btn btn-dark">Escribime</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="case-hero" id="caso" aria-labelledby="case-title">
+      <div class="wrap">
+        <nav aria-label="Ruta de navegación">
+          <ol class="crumbs">
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/#proyectos">Proyectos</a></li>
+            <li aria-current="page">Gestor de archivos en AWS</li>
+          </ol>
+        </nav>
+
+        <p class="project-tag">GCBA · Cloud</p>
+        <h1 id="case-title">Un gestor de archivos propio para <span class="mark">el contenido en AWS</span></h1>
+        <div class="case-intro">
+          <div>
+            <p class="case-summary">Para un área del Gobierno de la Ciudad de Buenos Aires desarrollé un gestor que permite subir, buscar, descargar y compartir archivos almacenados en AWS S3, con autenticación y permisos propios. El equipo administra su contenido desde una interfaz simple, sin acceso técnico a la infraestructura.</p>
+            <div class="actions">
+              <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20vi%20el%20caso%20del%20gestor%20de%20archivos%20en%20AWS%20y%20quiero%20algo%20parecido" target="_blank" rel="noopener noreferrer" class="btn btn-wa">Quiero algo así para mi equipo</a>
+              <a href="#solucion" class="btn btn-line">Ver cómo funciona</a>
+            </div>
+          </div>
+          <dl class="case-facts">
+            <div><dt>Cliente</dt><dd>Gobierno de la Ciudad de Buenos Aires</dd></div>
+            <div><dt>Qué resuelve</dt><dd>Archivos en la nube que solo podía manejar sistemas</dd></div>
+            <div><dt>Qué hice</dt><dd>Diseño, desarrollo e infraestructura en AWS</dd></div>
+          </dl>
+        </div>
+
+        <figure class="case-shot">
+          <img src="/img/aws.webp" width="1200" height="601" alt="Gestor de archivos en AWS con carpetas, buscador y acciones para subir y compartir contenido">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Detalle del caso">
+      <div class="wrap case-content">
+
+        <div class="case-block" id="problema">
+          <header class="case-block-head">
+            <p class="case-kicker">El problema</p>
+            <h2>Los archivos estaban en la nube, pero manejarlos requería acceso técnico</h2>
+          </header>
+          <div class="case-block-body">
+            <p>Las imágenes y archivos del área ya estaban almacenados en AWS, pero no había una forma simple de administrarlos. Subir contenido nuevo, encontrar un archivo o compartirlo con otra persona requería entrar a la infraestructura, algo que solo podía hacer alguien con conocimientos y permisos técnicos.</p>
+            <p>En la práctica, cada tarea cotidiana se convertía en un pedido a sistemas, y el equipo que generaba el contenido dependía de terceros para usarlo.</p>
+          </div>
+        </div>
+
+        <div class="case-block" id="solucion">
+          <header class="case-block-head">
+            <p class="case-kicker">La solución</p>
+            <h2>Una interfaz propia, con usuarios y permisos, sobre el almacenamiento existente</h2>
+          </header>
+          <div class="case-block-body">
+            <p>Construí un gestor de archivos a medida que trabaja directamente sobre AWS S3. El contenido sigue en el mismo lugar, pero ahora se administra desde una interfaz pensada para quien lo usa todos los días.</p>
+            <ul class="case-list">
+              <li><strong>Subir, buscar, descargar y compartir</strong>Las tareas de todos los días, resueltas desde una interfaz con carpetas y buscador.</li>
+              <li><strong>Autenticación propia</strong>Cada persona ingresa con su usuario, gestionado con Amazon Cognito.</li>
+              <li><strong>Permisos controlados</strong>El acceso a la infraestructura se define con IAM, para que cada usuario pueda hacer solo lo que le corresponde.</li>
+              <li><strong>Sin tocar la consola de AWS</strong>El equipo no necesita conocimientos técnicos ni acceso directo a la infraestructura.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="case-block" id="resultado">
+          <header class="case-block-head">
+            <p class="case-kicker">El resultado</p>
+            <h2>El equipo maneja su contenido sin pedirle nada a sistemas</h2>
+          </header>
+          <div class="case-block-body">
+            <p>Hoy el área administra sus archivos por su cuenta, desde su propia interfaz. Las tareas que antes requerían un pedido y una espera se resuelven en el momento, y el área de sistemas deja de ser un cuello de botella para algo que no debería depender de ella.</p>
+            <p>Al mismo tiempo, la seguridad mejora: en lugar de dar acceso amplio a la infraestructura, cada usuario tiene permisos acotados a lo que necesita.</p>
+          </div>
+        </div>
+
+        <div class="case-block" id="stack">
+          <header class="case-block-head">
+            <p class="case-kicker">Tecnología</p>
+            <h2>Cómo está construido</h2>
+          </header>
+          <div class="case-block-body">
+            <p>Backend en Node.js desplegado en EC2, almacenamiento en S3, autenticación de usuarios con Cognito y control de permisos con IAM.</p>
+            <ul class="project-stack" aria-label="Tecnologías"><li>AWS S3</li><li>Node.js</li><li>Cognito</li><li>EC2</li><li>IAM</li></ul>
+          </div>
+        </div>
+
+        <div class="case-block" id="preguntas">
+          <header class="case-block-head">
+            <p class="case-kicker">Preguntas frecuentes</p>
+            <h2>Lo que suelen preguntarme sobre este tipo de sistema</h2>
+          </header>
+          <div class="case-block-body">
+            <div class="faq">
+              <details>
+                <summary>¿Hay que migrar los archivos a otro lugar?</summary>
+                <p>No necesariamente. Si ya están en AWS u otro almacenamiento en la nube, el gestor puede trabajar sobre lo que ya existe.</p>
+              </details>
+              <details>
+                <summary>¿Se pueden definir distintos niveles de acceso?</summary>
+                <p>Sí. Se puede definir quién ve, sube, descarga o comparte cada contenido, según cómo esté organizado tu equipo.</p>
+              </details>
+              <details>
+                <summary>¿Por qué no usar Google Drive o Dropbox?</summary>
+                <p>A veces alcanza con eso. Un gestor propio tiene sentido cuando el contenido ya vive en tu infraestructura, cuando necesitás reglas de acceso específicas o cuando tiene que integrarse con otros sistemas.</p>
+              </details>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-cta">
+          <div>
+            <h2>¿Tu equipo depende de sistemas para manejar sus propios archivos?</h2>
+            <p>Contame dónde están hoy y cómo los usan.</p>
+          </div>
+          <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20vi%20el%20caso%20del%20gestor%20de%20archivos%20en%20AWS%20y%20quiero%20algo%20parecido" target="_blank" rel="noopener noreferrer" class="btn btn-wa">Hablemos por WhatsApp</a>
+        </div>
+
+        <div class="case-block" id="otros-casos">
+          <header class="case-block-head">
+            <p class="case-kicker">Otros casos</p>
+            <h2>Más soluciones desarrolladas</h2>
+          </header>
+          <div class="case-block-body">
+            <div class="case-more">
+              <a href="/casos/turnos-whatsapp-clinicas/" class="case-card">
+                <span class="project-tag">Salud · WhatsApp</span>
+                <h3>Gestionar turnos por WhatsApp sin hacerlo manualmente</h3>
+                <span>Ver caso →</span>
+              </a>
+              <a href="/casos/tracker-polizas/" class="case-card">
+                <span class="project-tag">Salud · Operaciones</span>
+                <h3>Un tracker que avisa cuando un caso cambia de estado</h3>
+                <span>Ver caso →</span>
+              </a>
+              <a href="/casos/backoffice-tecweek/" class="case-card">
+                <span class="project-tag">TecWeek · Plataforma</span>
+                <h3>Actualizar el evento sin depender de desarrollo</h3>
+                <span>Ver caso →</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section contact" id="contacto" aria-labelledby="contacto-title">
+      <div class="wrap contact-grid">
+        <div class="contact-copy">
+          <h2 class="title" id="contacto-title">¿Charlamos?</h2>
+          <p class="lead">Contame qué te está complicando hoy. No hace falta que sepas qué solución necesitás: me contás cómo funciona y lo vemos juntos.</p>
+          <ul class="contact-list">
+            <li><a href="https://wa.me/5491150560359" target="_blank" rel="noopener noreferrer" class="ico ico-wa">+54 9 11 5056-0359</a></li>
+            <li><a href="mailto:mackoaa@gmail.com" class="ico ico-mail">mackoaa@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/macko-agustin/" target="_blank" rel="noopener noreferrer" class="ico ico-in">LinkedIn</a></li>
+            <li><a href="https://www.behance.net/agustinmacko" target="_blank" rel="noopener noreferrer" class="ico ico-be">Behance</a></li>
+          </ul>
+        </div>
+
+        <form action="https://formspree.io/f/myzgvjbd" method="POST" class="form" id="form">
+          <input type="hidden" name="origen" value="Caso: gestor de archivos en AWS">
+          <p class="form-title">Dejame un mensaje</p>
+          <label for="nombre">Tu nombre</label>
+          <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+          <label for="email">Tu email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+          <label for="mensaje">¿Qué necesitás resolver?</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Contame en pocas palabras cómo trabajan hoy…" required></textarea>
+          <button type="submit" class="btn btn-dark btn-block">Enviar</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>Agustín Macko · Buenos Aires</span>
+      <span>© 2026</span>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
