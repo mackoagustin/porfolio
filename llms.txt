@@ -27,9 +27,9 @@
 - Gobierno de la Ciudad de Buenos Aires: gestor para subir, buscar, descargar y compartir archivos almacenados en AWS, con autenticación y permisos, sin depender del acceso técnico a la infraestructura (AWS S3, Node.js, Cognito, EC2, IAM).
 - Chatbot de turnos médicos: sistema multilínea para clínicas que permite sacar, consultar y cancelar turnos por WhatsApp, con médicos, agendas y configuraciones independientes por clínica, y un dashboard donde el equipo supervisa las conversaciones y puede intervenir cuando hace falta (Express, Supabase, Baileys).
 - [TecWeek](https://www.tecweek.com.ar/): sitio del evento con un backoffice para administrar eventos, agenda, sponsors, imágenes y contenidos sin modificar código (Next.js, Supabase, PostgreSQL).
-- [Laika](https://laika.com.co/): diseño de herramientas internas para logística, devoluciones, pagos, catálogo, productos y reglas de negocio (Product Design, UX/UI, Design System).
+- [Laika](https://laika.com.co/): diseño de herramientas internas para logística, devoluciones, pagos y reglas de negocio, desarrollo del catálogo y un IVR conectado a una base de datos SQL para la atención telefónica (Product Design, UX/UI, Design System, Frontend, IVR, SQL).
+- [Auto Special](https://autospecial.com.ar): sitio, backend y backoffice para un concesionario Ford: carga de vehículos, fotos, precios, stock y promociones, gestión de consultas y blog con SEO propio (UX/UI, Frontend, Backend).
 - [Tracker](https://www.tracker-realestate.com/): diseño y desarrollo del sitio web que presenta la herramienta para el sector inmobiliario.
-- [Auto Special](https://autospecial.com.ar): diseño UX/UI y desarrollo frontend del sitio, organizado alrededor del catálogo de vehículos.
 - [Leon Livings](https://www.leonlivings.com/): diseño UX/UI de la tienda online: navegación, presentación de productos y recorrido de compra.
 
 ## Casos de estudio
@@ -38,6 +38,8 @@
 - [Tracker de pólizas integrado por API](https://agustinmacko.com.ar/casos/tracker-polizas/): app de escritorio que detecta cambios de estado en un sistema de pólizas y centraliza el seguimiento.
 - [Gestor de archivos en AWS](https://agustinmacko.com.ar/casos/gestor-archivos-aws/): interfaz con autenticación y permisos para administrar archivos en S3 sin acceso técnico a la infraestructura.
 - [Sitio y backoffice para TecWeek](https://agustinmacko.com.ar/casos/backoffice-tecweek/): backoffice para administrar eventos, agenda, sponsors y contenidos sin tocar código.
+- [Laika: herramientas internas, catálogo e IVR](https://agustinmacko.com.ar/casos/laika-catalogo-ivr/): diseño de producto para la operación de un e-commerce, desarrollo del catálogo e IVR con base de datos SQL.
+- [Plataforma para la concesionaria Auto Special](https://agustinmacko.com.ar/casos/plataforma-concesionaria-auto-special/): catálogo de vehículos administrable, gestión de consultas y blog con SEO, todo desde un backoffice propio.
 
 ## Tecnologías
 

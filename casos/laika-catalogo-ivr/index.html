@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NZE4ZRXTH5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-NZE4ZRXTH5');
+  </script>
+  <title>Laika: herramientas internas, catálogo e IVR con base de datos SQL | Agustín Macko</title>
+  <meta name="description" content="Caso real: diseño de herramientas internas para logística, devoluciones y pagos, desarrollo del catálogo y un IVR conectado a una base de datos SQL para la atención telefónica de Laika.">
+  <meta name="author" content="Agustín Macko">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#FFFFFF">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:site_name" content="Agustín Macko">
+  <meta property="og:title" content="Del catálogo a la atención telefónica: producto y sistema para Laika">
+  <meta property="og:description" content="Herramientas internas, catálogo e IVR con base de datos SQL para un e-commerce de productos para mascotas.">
+  <meta property="og:url" content="https://agustinmacko.com.ar/casos/laika-catalogo-ivr/">
+  <meta property="og:image" content="https://agustinmacko.com.ar/img/laika.webp">
+  <meta property="og:image:alt" content="Tienda online de Laika, productos para mascotas">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Del catálogo a la atención telefónica: producto y sistema para Laika">
+  <meta name="twitter:description" content="Herramientas internas, catálogo e IVR con base de datos SQL para un e-commerce de productos para mascotas.">
+  <meta name="twitter:image" content="https://agustinmacko.com.ar/img/laika.webp">
+  <link rel="canonical" href="https://agustinmacko.com.ar/casos/laika-catalogo-ivr/">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CreativeWork",
+        "@id": "https://agustinmacko.com.ar/casos/laika-catalogo-ivr/#caso",
+        "name": "Laika: herramientas internas, catálogo e IVR",
+        "headline": "Del catálogo a la atención telefónica: producto y sistema para Laika",
+        "description": "Diseño de herramientas internas para logística, devoluciones, pagos y reglas de negocio, desarrollo del catálogo y un IVR conectado a una base de datos SQL.",
+        "url": "https://agustinmacko.com.ar/casos/laika-catalogo-ivr/",
+        "image": "https://agustinmacko.com.ar/img/laika.webp",
+        "inLanguage": "es-AR",
+        "author": { "@id": "https://agustinmacko.com.ar/#person" },
+        "about": ["Herramientas para operaciones", "Product Design", "Automatizaciones"],
+        "keywords": "IVR con base de datos SQL, atención telefónica automatizada, herramientas internas e-commerce, catálogo de productos, diseño de producto"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://agustinmacko.com.ar/" },
+          { "@type": "ListItem", "position": 2, "name": "Proyectos", "item": "https://agustinmacko.com.ar/#proyectos" },
+          { "@type": "ListItem", "position": 3, "name": "Laika: catálogo e IVR" }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preload" href="/fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="/css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body data-case="laika-catalogo-ivr">
+
+  <a href="#main" class="skip-link">Saltar al contenido</a>
+
+  <header class="header" id="header">
+    <div class="wrap header-inner">
+      <a href="/" class="brand">Agustín Macko</a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="/#proyectos">Proyectos</a>
+        <a href="/#sobre-mi">Sobre mí</a>
+        <a href="https://www.linkedin.com/in/macko-agustin/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="#contacto" class="btn btn-dark btn-sm">Escribime</a>
+      </nav>
+
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <a href="/#proyectos">Proyectos</a>
+      <a href="/#sobre-mi">Sobre mí</a>
+      <a href="https://www.linkedin.com/in/macko-agustin/" target="_blank" rel="noopener noreferrer" class="ico ico-in">LinkedIn</a>
+      <a href="#contacto" class="btn btn-dark">Escribime</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="case-hero" id="caso" aria-labelledby="case-title">
+      <div class="wrap">
+        <nav aria-label="Ruta de navegación">
+          <ol class="crumbs">
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/#proyectos">Proyectos</a></li>
+            <li aria-current="page">Laika: catálogo e IVR</li>
+          </ol>
+        </nav>
+
+        <p class="project-tag">Laika · Producto · Fullstack</p>
+        <h1 id="case-title">Del catálogo a la atención telefónica: <span class="mark">producto y sistema</span> para Laika</h1>
+        <div class="case-intro">
+          <div>
+            <p class="case-summary">En Laika, un e-commerce de productos para mascotas, diseñé las herramientas internas que usa el equipo para logística, devoluciones, pagos y reglas de negocio, desarrollé el catálogo y construí un IVR conectado a una base de datos SQL para la atención telefónica.</p>
+            <div class="actions">
+              <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20vi%20el%20caso%20de%20Laika%20y%20quiero%20algo%20parecido" target="_blank" rel="noopener noreferrer" class="btn btn-wa">Quiero algo así para mi empresa</a>
+              <a href="https://laika.com.co/" target="_blank" rel="noopener noreferrer" class="btn btn-line">Ver sitio online ↗</a>
+            </div>
+          </div>
+          <dl class="case-facts">
+            <div><dt>Cliente</dt><dd>Laika, e-commerce de productos para mascotas</dd></div>
+            <div><dt>Qué resuelve</dt><dd>Operaciones con muchos estados y excepciones, y atención telefónica manual</dd></div>
+            <div><dt>Qué hice</dt><dd>Diseño de producto, desarrollo del catálogo y del IVR</dd></div>
+          </dl>
+        </div>
+
+        <figure class="case-shot">
+          <img src="/img/laika.webp" width="1200" height="550" alt="Tienda online de Laika, productos para mascotas">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Detalle del caso">
+      <div class="wrap case-content">
+
+        <div class="case-block" id="problema">
+          <header class="case-block-head">
+            <p class="case-kicker">El problema</p>
+            <h2>Una operación con muchos estados, excepciones y canales</h2>
+          </header>
+          <div class="case-block-body">
+            <p>Un e-commerce en crecimiento acumula procesos que dependen unos de otros: un pedido pasa por logística, puede terminar en una devolución, tiene un pago asociado y está atado a un catálogo que cambia todo el tiempo. Cada uno de esos procesos tiene reglas y excepciones propias.</p>
+            <p>Cuando las herramientas internas no reflejan bien esas reglas, el equipo opera con ambigüedad y aumenta el margen de error. Y cuando los clientes llaman por teléfono, cada consulta depende de que alguien atienda y busque la información a mano.</p>
+          </div>
+        </div>
+
+        <div class="case-block" id="solucion">
+          <header class="case-block-head">
+            <p class="case-kicker">La solución</p>
+            <h2>Herramientas claras para el equipo, un catálogo ordenado y un IVR con datos reales</h2>
+          </header>
+          <div class="case-block-body">
+            <p>Trabajé tanto en el diseño del producto como en el desarrollo, desde las pantallas que usa el equipo hasta los sistemas que hay detrás.</p>
+            <ul class="case-list">
+              <li><strong>Herramientas internas</strong>Diseño de los flujos de logística, devoluciones, pagos y reglas de negocio, para que cada estado y cada excepción se entiendan a simple vista.</li>
+              <li><strong>Catálogo</strong>Desarrollo del catálogo de productos, la base sobre la que se apoyan la tienda y la operación.</li>
+              <li><strong>IVR con base de datos SQL</strong>Un sistema de atención telefónica automatizada: cada llamada pasa por un menú de opciones que se apoya en una base de datos SQL antes de llegar a una persona.</li>
+              <li><strong>Design System</strong>Componentes y criterios compartidos para que las herramientas mantengan coherencia a medida que crecen.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="case-block" id="resultado">
+          <header class="case-block-head">
+            <p class="case-kicker">El resultado</p>
+            <h2>Menos ambigüedad en la operación y una atención telefónica más ordenada</h2>
+          </header>
+          <div class="case-block-body">
+            <p>Quien opera el sistema todos los días toma decisiones con menos ambigüedad y menos margen de error, porque las herramientas reflejan cómo funciona realmente el negocio.</p>
+            <p>Del lado de la atención, el IVR ordena las llamadas antes de que lleguen al equipo, y la información que necesita cada consulta sale de la misma base de datos en lugar de buscarse a mano.</p>
+          </div>
+        </div>
+
+        <div class="case-block" id="stack">
+          <header class="case-block-head">
+            <p class="case-kicker">Tecnología y disciplinas</p>
+            <h2>Cómo está construido</h2>
+          </header>
+          <div class="case-block-body">
+            <p>Diseño de producto y UX/UI con un design system propio, desarrollo frontend del catálogo e IVR conectado a una base de datos SQL.</p>
+            <ul class="project-stack" aria-label="Tecnologías"><li>Product Design</li><li>UX/UI</li><li>Design System</li><li>Frontend</li><li>IVR</li><li>SQL</li></ul>
+          </div>
+        </div>
+
+        <div class="case-block" id="preguntas">
+          <header class="case-block-head">
+            <p class="case-kicker">Preguntas frecuentes</p>
+            <h2>Lo que suelen preguntarme sobre este tipo de proyecto</h2>
+          </header>
+          <div class="case-block-body">
+            <div class="faq">
+              <details>
+                <summary>¿Qué es un IVR y para qué sirve?</summary>
+                <p>Es un sistema de respuesta telefónica automática: quien llama elige opciones en un menú y el sistema lo guía o lo deriva según lo que necesita. Conectado a una base de datos, puede usar información real en lugar de respuestas fijas.</p>
+              </details>
+              <details>
+                <summary>¿Se puede integrar con los sistemas que ya usamos?</summary>
+                <p>En general sí. Lo primero es revisar dónde están hoy los datos que necesita la atención y desde ahí definir cómo conectarlos.</p>
+              </details>
+              <details>
+                <summary>¿Hacés solo el diseño o también el desarrollo?</summary>
+                <p>Las dos cosas. Puedo diseñar las herramientas, desarrollarlas, o hacer ambas, que es cuando mejor se nota que lo que se decide en una pantalla llega igual al sistema.</p>
+              </details>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-cta">
+          <div>
+            <h2>¿Tu operación tiene reglas que nadie termina de entender?</h2>
+            <p>Contame cómo funciona hoy y vemos cómo convertirlo en herramientas claras.</p>
+          </div>
+          <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20vi%20el%20caso%20de%20Laika%20y%20quiero%20algo%20parecido" target="_blank" rel="noopener noreferrer" class="btn btn-wa">Hablemos por WhatsApp</a>
+        </div>
+
+        <div class="case-block" id="otros-casos">
+          <header class="case-block-head">
+            <p class="case-kicker">Otros casos</p>
+            <h2>Más soluciones desarrolladas</h2>
+          </header>
+          <div class="case-block-body">
+            <div class="case-more">
+              <a href="/casos/turnos-whatsapp-clinicas/" class="case-card">
+                <span class="project-tag">Salud · WhatsApp</span>
+                <h3>Gestionar turnos por WhatsApp sin hacerlo manualmente</h3>
+                <span>Ver caso →</span>
+              </a>
+              <a href="/casos/plataforma-concesionaria-auto-special/" class="case-card">
+                <span class="project-tag">Auto Special · Plataforma</span>
+                <h3>Una concesionaria que publica sus vehículos y su blog sin depender de nadie</h3>
+                <span>Ver caso →</span>
+              </a>
+              <a href="/casos/tracker-polizas/" class="case-card">
+                <span class="project-tag">Salud · Operaciones</span>
+                <h3>Un tracker que avisa cuando un caso cambia de estado</h3>
+                <span>Ver caso →</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section contact" id="contacto" aria-labelledby="contacto-title">
+      <div class="wrap contact-grid">
+        <div class="contact-copy">
+          <h2 class="title" id="contacto-title">¿Charlamos?</h2>
+          <p class="lead">Contame qué te está complicando hoy. No hace falta que sepas qué solución necesitás: me contás cómo funciona y lo vemos juntos.</p>
+          <ul class="contact-list">
+            <li><a href="https://wa.me/5491150560359" target="_blank" rel="noopener noreferrer" class="ico ico-wa">+54 9 11 5056-0359</a></li>
+            <li><a href="mailto:mackoaa@gmail.com" class="ico ico-mail">mackoaa@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/macko-agustin/" target="_blank" rel="noopener noreferrer" class="ico ico-in">LinkedIn</a></li>
+            <li><a href="https://www.behance.net/agustinmacko" target="_blank" rel="noopener noreferrer" class="ico ico-be">Behance</a></li>
+          </ul>
+        </div>
+
+        <form action="https://formspree.io/f/myzgvjbd" method="POST" class="form" id="form">
+          <input type="hidden" name="origen" value="Caso: Laika">
+          <p class="form-title">Dejame un mensaje</p>
+          <label for="nombre">Tu nombre</label>
+          <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+          <label for="email">Tu email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+          <label for="mensaje">¿Qué necesitás resolver?</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Contame en pocas palabras cómo trabajan hoy…" required></textarea>
+          <button type="submit" class="btn btn-dark btn-block">Enviar</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>Agustín Macko · Buenos Aires</span>
+      <span>© 2026</span>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

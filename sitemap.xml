@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://agustinmacko.com.ar/</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-20</lastmod>
   </url>
   <url>
     <loc>https://agustinmacko.com.ar/casos/turnos-whatsapp-clinicas/</loc>
@@ -18,6 +18,14 @@
   </url>
   <url>
     <loc>https://agustinmacko.com.ar/casos/backoffice-tecweek/</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://agustinmacko.com.ar/casos/laika-catalogo-ivr/</loc>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://agustinmacko.com.ar/casos/plataforma-concesionaria-auto-special/</loc>
+    <lastmod>2026-10-20</lastmod>
   </url>
 </urlset>
