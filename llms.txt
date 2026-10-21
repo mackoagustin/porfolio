@@ -26,6 +26,7 @@
 - Salud (confidencial): app de escritorio en Electron, un tracker conectado a la API de un sistema de pólizas que detecta cambios de estado y centraliza el seguimiento, para que el equipo no tenga que buscar cada caso manualmente.
 - Gobierno de la Ciudad de Buenos Aires: gestor para subir, buscar, descargar y compartir archivos almacenados en AWS, con autenticación y permisos, sin depender del acceso técnico a la infraestructura (AWS S3, Node.js, Cognito, EC2, IAM).
 - Chatbot de turnos médicos: sistema multilínea para clínicas que permite sacar, consultar y cancelar turnos por WhatsApp, con médicos, agendas y configuraciones independientes por clínica, y un dashboard donde el equipo supervisa las conversaciones y puede intervenir cuando hace falta (Express, Supabase, Baileys).
+- Domus: sistema de gestión para un estudio de danza y Pilates que reemplazó un desarrollo de 2017 en Outlook, VBA y MySQL. Alumnos, docentes, clases, agenda con asistencia por sala, horarios fijos, cobro mensual automático con becas y bonificaciones, pagos con confirmación de transferencias, roles y auditoría (Next.js, TypeScript, PostgreSQL, Supabase, Drizzle ORM, Better Auth, Vercel).
 - [TecWeek](https://www.tecweek.com.ar/): sitio del evento con un backoffice para administrar eventos, agenda, sponsors, imágenes y contenidos sin modificar código (Next.js, Supabase, PostgreSQL).
 - [Laika](https://laika.com.co/): diseño de herramientas internas para logística, devoluciones, pagos y reglas de negocio, desarrollo del catálogo y un IVR conectado a una base de datos SQL para la atención telefónica (Product Design, UX/UI, Design System, Frontend, IVR, SQL).
 - [Auto Special](https://autospecial.com.ar): sitio, backend y backoffice para un concesionario Ford: carga de vehículos, fotos, precios, stock y promociones, gestión de consultas y blog con SEO propio (UX/UI, Frontend, Backend).
@@ -34,6 +35,7 @@
 
 ## Casos de estudio
 
+- [Domus: sistema de gestión para un estudio de danza y Pilates](https://agustinmacko.com.ar/casos/domus-gestion-estudio-danza/): reemplazo de un sistema de 2017, con alumnos, clases, asistencia, cobros, pagos, roles, auditoría y migración de datos.
 - [Turnos por WhatsApp para clínicas](https://agustinmacko.com.ar/casos/turnos-whatsapp-clinicas/): sistema multi-clínica para sacar, consultar y cancelar turnos desde WhatsApp, supervisado desde un dashboard.
 - [Tracker de pólizas integrado por API](https://agustinmacko.com.ar/casos/tracker-polizas/): app de escritorio que detecta cambios de estado en un sistema de pólizas y centraliza el seguimiento.
 - [Gestor de archivos en AWS](https://agustinmacko.com.ar/casos/gestor-archivos-aws/): interfaz con autenticación y permisos para administrar archivos en S3 sin acceso técnico a la infraestructura.
