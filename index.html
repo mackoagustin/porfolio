@@ -5,13 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NZE4ZRXTH5"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
     gtag('config', 'G-NZE4ZRXTH5');
+
+    (function () {
+      var loaded = false;
+      function loadGtag() {
+        if (loaded) return;
+        loaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-NZE4ZRXTH5';
+        document.head.appendChild(s);
+      }
+      ['scroll', 'pointerdown', 'keydown', 'touchstart'].forEach(function (type) {
+        window.addEventListener(type, loadGtag, { once: true, passive: true });
+      });
+      window.addEventListener('load', function () { setTimeout(loadGtag, 3500); });
+    })();
   </script>
   <title>Agustín Macko | Desarrollo de software a medida para empresas</title>
   <meta name="description" content="Desarrollo software a medida para empresas: sistemas internos, paneles operativos, automatizaciones e integraciones. Trato directo desde la definición hasta la puesta en producción.">
@@ -253,10 +268,10 @@
         <figure class="hero-shots" aria-label="Capturas de proyectos: sitio de TecWeek y herramientas de Laika">
           <div class="shot shot-back">
             <span class="shot-bar" aria-hidden="true"><i></i><i></i><i></i></span>
-            <img src="img/tec2026.webp" width="1200" height="599" alt="Sitio de TecWeek con la cuenta regresiva del evento en Buenos Aires" fetchpriority="high">
+            <img srcset="img/tec2026-480.webp 480w, img/tec2026-800.webp 800w, img/tec2026.webp 1200w" sizes="(max-width: 960px) 88vw, 420px" src="img/tec2026.webp" width="1200" height="599" alt="Sitio de TecWeek con la cuenta regresiva del evento en Buenos Aires" fetchpriority="high">
           </div>
           <div class="shot shot-front" aria-hidden="true">
-            <img src="img/laika.webp" width="1200" height="550" alt="">
+            <img srcset="img/laika-480.webp 480w, img/laika-800.webp 800w, img/laika.webp 1200w" sizes="(max-width: 960px) 88vw, 420px" src="img/laika.webp" width="1200" height="550" alt="">
           </div>
           <!-- <figcaption class="sticker">Hablás directo conmigo</figcaption> -->
         </figure>
@@ -316,7 +331,7 @@
       <div class="carousel reveal" id="projects-track" role="region" aria-roledescription="carrusel" aria-label="Proyectos" tabindex="0">
           <article class="project">
             <div class="project-visual">
-              <img src="img/salud-tracker.webp" width="1200" height="750" alt="Tracker de pólizas con filtros por estado, región y firma, y listado de casos con datos anonimizados" loading="lazy">
+              <img srcset="img/salud-tracker-480.webp 480w, img/salud-tracker-800.webp 800w, img/salud-tracker.webp 1200w" sizes="(max-width: 628px) 86vw, 540px" src="img/salud-tracker.webp" width="1200" height="750" alt="Tracker de pólizas con filtros por estado, región y firma, y listado de casos con datos anonimizados" loading="lazy">
             </div>
             <div class="project-body">
               <p class="project-tag">Salud · Operaciones · Confidencial</p>
@@ -324,8 +339,8 @@
               <p>Para saber si una póliza había cambiado de estado, el equipo tenía que entrar al sistema y revisar caso por caso. Construí un tracker conectado a la API que detecta esas actualizaciones solo: hoy saben en minutos qué casos necesitan atención, sin perder la tarde buscándolos uno por uno.</p>
               <ul class="project-stack" aria-label="Tecnologías"><li>App de escritorio</li><li>Electron</li><li>API</li><li>Integraciones</li></ul>
               <div class="project-links">
-                <a href="/casos/tracker-polizas/" class="link link-dark">Ver caso completo</a>
-                <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20vi%20el%20caso%20del%20tracker%20de%20p%C3%B3lizas%20y%20quiero%20algo%20parecido" target="_blank" rel="noopener noreferrer" class="link">Quiero algo así ↗</a>
+                <a href="/casos/tracker-polizas/" class="link link-dark" aria-label="Ver caso completo: tracker de pólizas">Ver caso completo</a>
+                <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20vi%20el%20caso%20del%20tracker%20de%20p%C3%B3lizas%20y%20quiero%20algo%20parecido" target="_blank" rel="noopener noreferrer" class="link" aria-label="Quiero algo así: tracker de pólizas (abre WhatsApp)">Quiero algo así ↗</a>
               </div>
 
             </div>
@@ -333,7 +348,7 @@
 
           <article class="project">
             <div class="project-visual">
-              <img src="img/Domus.webp" width="1200" height="750" alt="Pantalla de Domus para crear una nueva clase, con actividad, docente, nivel, abono y porcentaje del docente" loading="lazy">
+              <img srcset="img/Domus-480.webp 480w, img/Domus-800.webp 800w, img/Domus.webp 1200w" sizes="(max-width: 628px) 86vw, 540px" src="img/Domus.webp" width="1200" height="750" alt="Pantalla de Domus para crear una nueva clase, con actividad, docente, nivel, abono y porcentaje del docente" loading="lazy">
             </div>
             <div class="project-body">
               <p class="project-tag">Danza y Pilates · Sistema de gestión</p>
@@ -341,15 +356,15 @@
               <p>Desarrollé Domus, el sistema que reemplazó al viejo programa en Outlook y VBA de un estudio de danza y Pilates: alumnos, clases, agenda con asistencia por sala, horarios fijos, cobro mensual automático con becas y bonificaciones, pagos y roles con auditoría. Hoy todo el estudio trabaja sobre un mismo sistema.</p>
               <ul class="project-stack" aria-label="Tecnologías"><li>Next.js</li><li>TypeScript</li><li>PostgreSQL</li><li>Supabase</li></ul>
               <div class="project-links">
-                <a href="/casos/domus-gestion-estudio-danza/" class="link link-dark">Ver caso completo</a>
-                <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20vi%20el%20caso%20de%20Domus%20y%20quiero%20algo%20parecido" target="_blank" rel="noopener noreferrer" class="link">Quiero algo así ↗</a>
+                <a href="/casos/domus-gestion-estudio-danza/" class="link link-dark" aria-label="Ver caso completo: Domus">Ver caso completo</a>
+                <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20vi%20el%20caso%20de%20Domus%20y%20quiero%20algo%20parecido" target="_blank" rel="noopener noreferrer" class="link" aria-label="Quiero algo así: Domus (abre WhatsApp)">Quiero algo así ↗</a>
               </div>
             </div>
           </article>
 
           <article class="project">
             <div class="project-visual">
-              <img src="img/aws.webp" width="1200" height="601" alt="Gestor de archivos en AWS con carpetas, buscador y acciones para subir y compartir contenido" loading="lazy">
+              <img srcset="img/aws-480.webp 480w, img/aws-800.webp 800w, img/aws.webp 1200w" sizes="(max-width: 628px) 86vw, 540px" src="img/aws.webp" width="1200" height="601" alt="Gestor de archivos en AWS con carpetas, buscador y acciones para subir y compartir contenido" loading="lazy">
             </div>
             <div class="project-body">
               <p class="project-tag">GCBA · Cloud</p>
@@ -357,8 +372,8 @@
               <p>Las imágenes del área estaban en AWS, pero no había una forma simple de administrarlas: subirlas, buscarlas o compartirlas requería acceso técnico a la infraestructura. Construí un gestor con autenticación y permisos propios, y ahora el equipo maneja el contenido desde su propia interfaz, sin pedirle nada a sistemas.</p>
               <ul class="project-stack" aria-label="Tecnologías"><li>AWS S3</li><li>Node.js</li><li>Cognito</li><li>EC2</li><li>IAM</li></ul>
               <div class="project-links">
-                <a href="/casos/gestor-archivos-aws/" class="link link-dark">Ver caso completo</a>
-                <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20vi%20el%20caso%20del%20gestor%20de%20archivos%20en%20AWS%20y%20quiero%20algo%20parecido" target="_blank" rel="noopener noreferrer" class="link">Quiero algo así ↗</a>
+                <a href="/casos/gestor-archivos-aws/" class="link link-dark" aria-label="Ver caso completo: gestor de archivos en AWS">Ver caso completo</a>
+                <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20vi%20el%20caso%20del%20gestor%20de%20archivos%20en%20AWS%20y%20quiero%20algo%20parecido" target="_blank" rel="noopener noreferrer" class="link" aria-label="Quiero algo así: gestor de archivos en AWS (abre WhatsApp)">Quiero algo así ↗</a>
               </div>
 
             </div>
@@ -366,7 +381,7 @@
 
           <article class="project">
             <div class="project-visual">
-              <img src="img/bot.jpg" width="1200" height="750" alt="Conversación de WhatsApp con el asistente de turnos: menú para sacar, ver o cancelar turnos y elección de especialidad y médico" loading="lazy">
+              <img srcset="img/bot-480.webp 480w, img/bot-800.webp 800w, img/bot.webp 1200w" sizes="(max-width: 628px) 86vw, 540px" src="img/bot.webp" width="1200" height="750" alt="Conversación de WhatsApp con el asistente de turnos: menú para sacar, ver o cancelar turnos y elección de especialidad y médico" loading="lazy">
             </div>
             <div class="project-body">
               <p class="project-tag">Salud · WhatsApp · Multi-clínica</p>
@@ -374,15 +389,15 @@
               <p>Construí un sistema multilínea para clínicas que permite sacar, consultar y cancelar turnos desde WhatsApp, con agendas, médicos y configuraciones independientes por clínica. Lo que antes eran decenas de mensajes atendidos a mano, hoy se resuelve solo y se supervisa desde un único dashboard.</p>
               <ul class="project-stack" aria-label="Tecnologías"><li>WhatsApp</li><li>Express</li><li>Supabase</li><li>Baileys</li><li>Multi-tenant</li></ul>
               <div class="project-links">
-                <a href="/casos/turnos-whatsapp-clinicas/" class="link link-dark">Ver caso completo</a>
-                <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20vi%20el%20caso%20de%20turnos%20por%20WhatsApp%20y%20quiero%20algo%20parecido" target="_blank" rel="noopener noreferrer" class="link">Quiero algo así ↗</a>
+                <a href="/casos/turnos-whatsapp-clinicas/" class="link link-dark" aria-label="Ver caso completo: turnos por WhatsApp">Ver caso completo</a>
+                <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20vi%20el%20caso%20de%20turnos%20por%20WhatsApp%20y%20quiero%20algo%20parecido" target="_blank" rel="noopener noreferrer" class="link" aria-label="Quiero algo así: turnos por WhatsApp (abre WhatsApp)">Quiero algo así ↗</a>
               </div>
             </div>
           </article>
 
           <article class="project">
             <div class="project-visual">
-              <img src="img/tec2026.webp" width="1200" height="599" alt="Sitio de TecWeek Buenos Aires 2026 con la cuenta regresiva del evento" loading="lazy">
+              <img srcset="img/tec2026-480.webp 480w, img/tec2026-800.webp 800w, img/tec2026.webp 1200w" sizes="(max-width: 628px) 86vw, 540px" src="img/tec2026.webp" width="1200" height="599" alt="Sitio de TecWeek Buenos Aires 2026 con la cuenta regresiva del evento" loading="lazy">
             </div>
             <div class="project-body">
               <p class="project-tag">TecWeek · Plataforma</p>
@@ -390,15 +405,15 @@
               <p>Desarrollé el sitio de TecWeek junto con un backoffice para administrar eventos, agenda, sponsors, imágenes y otros contenidos sin tocar código. Durante el evento, que es cuando más cambia la información, el equipo pudo mantenerlo actualizado por su cuenta, sin esperar a un desarrollador para cada ajuste.</p>
               <ul class="project-stack" aria-label="Tecnologías"><li>Next.js</li><li>Supabase</li><li>PostgreSQL</li><li>Backoffice</li></ul>
               <div class="project-links">
-                <a href="/casos/backoffice-tecweek/" class="link link-dark">Ver caso completo</a>
-                <a href="https://www.tecweek.com.ar/" target="_blank" rel="noopener noreferrer" class="link">Ver sitio online ↗</a>
+                <a href="/casos/backoffice-tecweek/" class="link link-dark" aria-label="Ver caso completo: TecWeek">Ver caso completo</a>
+                <a href="https://www.tecweek.com.ar/" target="_blank" rel="noopener noreferrer" class="link" aria-label="Ver sitio online de TecWeek (se abre en otra pestaña)">Ver sitio online ↗</a>
               </div>
             </div>
           </article>
 
           <article class="project">
             <div class="project-visual">
-              <img src="img/laika.webp" width="1200" height="550" alt="Tienda online de Laika, productos para mascotas" loading="lazy">
+              <img srcset="img/laika-480.webp 480w, img/laika-800.webp 800w, img/laika.webp 1200w" sizes="(max-width: 628px) 86vw, 540px" src="img/laika.webp" width="1200" height="550" alt="Tienda online de Laika, productos para mascotas" loading="lazy">
             </div>
             <div class="project-body">
               <p class="project-tag">Laika · Producto · Fullstack</p>
@@ -406,15 +421,15 @@
               <p>Diseñé herramientas internas para logística, devoluciones, pagos y reglas de negocio, desarrollé el catálogo y construí un IVR conectado a una base de datos SQL para la atención telefónica. Quien opera el sistema todos los días decide con menos ambigüedad, y cada llamada pasa por un menú automático antes de llegar a una persona.</p>
               <ul class="project-stack" aria-label="Disciplinas"><li>Product Design</li><li>UX/UI</li><li>Frontend</li><li>IVR</li><li>SQL</li></ul>
               <div class="project-links">
-                <a href="/casos/laika-catalogo-ivr/" class="link link-dark">Ver caso completo</a>
-                <a href="https://laika.com.co/" target="_blank" rel="noopener noreferrer" class="link">Ver sitio online ↗</a>
+                <a href="/casos/laika-catalogo-ivr/" class="link link-dark" aria-label="Ver caso completo: Laika">Ver caso completo</a>
+                <a href="https://laika.com.co/" target="_blank" rel="noopener noreferrer" class="link" aria-label="Ver sitio online de Laika (se abre en otra pestaña)">Ver sitio online ↗</a>
               </div>
             </div>
           </article>
 
           <article class="project">
             <div class="project-visual">
-              <img src="img/autospecial2026.webp" width="1202" height="602" alt="Sitio de Auto Special, concesionario Ford, con buscador de vehículos" loading="lazy">
+              <img srcset="img/autospecial2026-480.webp 480w, img/autospecial2026-800.webp 800w, img/autospecial2026.webp 1202w" sizes="(max-width: 628px) 86vw, 540px" src="img/autospecial2026.webp" width="1202" height="602" alt="Sitio de Auto Special, concesionario Ford, con buscador de vehículos" loading="lazy">
             </div>
             <div class="project-body">
               <p class="project-tag">Auto Special · Plataforma</p>
@@ -422,35 +437,35 @@
               <p>Diseñé y desarrollé el sitio de Auto Special, su backend y un backoffice para cargar vehículos, fotos, precios, stock y promociones, recibir consultas y publicar notas en el blog con su propio SEO. El equipo mantiene el catálogo y el contenido al día por su cuenta.</p>
               <ul class="project-stack" aria-label="Disciplinas"><li>UX/UI</li><li>Frontend</li><li>Backend</li><li>Backoffice</li><li>Blog</li><li>SEO</li></ul>
               <div class="project-links">
-                <a href="/casos/plataforma-concesionaria-auto-special/" class="link link-dark">Ver caso completo</a>
-                <a href="https://autospecial.com.ar" target="_blank" rel="noopener noreferrer" class="link">Ver sitio online ↗</a>
+                <a href="/casos/plataforma-concesionaria-auto-special/" class="link link-dark" aria-label="Ver caso completo: Auto Special">Ver caso completo</a>
+                <a href="https://autospecial.com.ar" target="_blank" rel="noopener noreferrer" class="link" aria-label="Ver sitio online de Auto Special (se abre en otra pestaña)">Ver sitio online ↗</a>
               </div>
             </div>
           </article>
 
           <article class="project">
             <div class="project-visual">
-              <img src="img/tracker2.webp" width="1200" height="543" alt="Sitio de Tracker, herramienta para inmobiliarios, con la app mostrando su tablero de avance" loading="lazy">
+              <img srcset="img/tracker2-480.webp 480w, img/tracker2-800.webp 800w, img/tracker2.webp 1200w" sizes="(max-width: 628px) 86vw, 540px" src="img/tracker2.webp" width="1200" height="543" alt="Sitio de Tracker, herramienta para inmobiliarios, con la app mostrando su tablero de avance" loading="lazy">
             </div>
             <div class="project-body">
               <p class="project-tag">Tracker · Real Estate</p>
               <h3>Un sitio que explica el producto en segundos</h3>
               <p>Diseñé y desarrollé el sitio de Tracker para presentar la herramienta y su propuesta de valor al sector inmobiliario. Alguien que nunca usó el producto puede entender en la primera pantalla qué hace y para quién es.</p>
               <ul class="project-stack" aria-label="Disciplinas"><li>UX/UI</li><li>Frontend</li><li>Sitio web</li></ul>
-              <a href="https://www.tracker-realestate.com/" target="_blank" rel="noopener noreferrer" class="link">Ver sitio online ↗</a>
+              <a href="https://www.tracker-realestate.com/" target="_blank" rel="noopener noreferrer" class="link" aria-label="Ver sitio online de Tracker (se abre en otra pestaña)">Ver sitio online ↗</a>
             </div>
           </article>
 
           <article class="project">
             <div class="project-visual">
-              <img src="img/leon.webp" width="1200" height="605" alt="Tienda online de Leon Livings, mobiliario de exterior" loading="lazy">
+              <img srcset="img/leon-480.webp 480w, img/leon-800.webp 800w, img/leon.webp 1200w" sizes="(max-width: 628px) 86vw, 540px" src="img/leon.webp" width="1200" height="605" alt="Tienda online de Leon Livings, mobiliario de exterior" loading="lazy">
             </div>
             <div class="project-body">
               <p class="project-tag">Leon Livings · E-commerce</p>
               <h3>Una tienda online fiel a la identidad de la marca</h3>
               <p>Diseñé la experiencia UX/UI de la tienda online, trabajando la navegación, la presentación de productos y el recorrido de compra. La experiencia de comprar quedó tan cuidada como la identidad visual de la marca.</p>
               <ul class="project-stack" aria-label="Disciplinas"><li>UX/UI</li><li>E-commerce</li></ul>
-              <a href="https://www.leonlivings.com/" target="_blank" rel="noopener noreferrer" class="link">Ver sitio online ↗</a>
+              <a href="https://www.leonlivings.com/" target="_blank" rel="noopener noreferrer" class="link" aria-label="Ver sitio online de Leon Livings (se abre en otra pestaña)">Ver sitio online ↗</a>
             </div>
           </article>
 

@@ -5,13 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NZE4ZRXTH5"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
     gtag('config', 'G-NZE4ZRXTH5');
+
+    (function () {
+      var loaded = false;
+      function loadGtag() {
+        if (loaded) return;
+        loaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-NZE4ZRXTH5';
+        document.head.appendChild(s);
+      }
+      ['scroll', 'pointerdown', 'keydown', 'touchstart'].forEach(function (type) {
+        window.addEventListener(type, loadGtag, { once: true, passive: true });
+      });
+      window.addEventListener('load', function () { setTimeout(loadGtag, 3500); });
+    })();
   </script>
   <title>Turnos por WhatsApp para clínicas: sistema multi-clínica a medida | Agustín Macko</title>
   <meta name="description" content="Caso real: sistema para que los pacientes saquen, consulten y cancelen turnos por WhatsApp, con agendas y médicos independientes por clínica y un dashboard para supervisar todo.">
@@ -127,7 +142,7 @@
         </div>
 
         <figure class="case-shot">
-          <img src="/img/bot.jpg" width="1200" height="750" alt="Conversación de WhatsApp con el asistente de turnos: menú para sacar, ver o cancelar turnos y elección de especialidad, médico y horario">
+          <img srcset="/img/bot-480.webp 480w, /img/bot-800.webp 800w, /img/bot.webp 1200w" sizes="(max-width: 1168px) calc(100vw - 48px), 1120px" src="/img/bot.webp" width="1200" height="750" alt="Conversación de WhatsApp con el asistente de turnos: menú para sacar, ver o cancelar turnos y elección de especialidad, médico y horario">
         </figure>
       </div>
     </section>

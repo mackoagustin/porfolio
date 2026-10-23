@@ -5,13 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NZE4ZRXTH5"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
     gtag('config', 'G-NZE4ZRXTH5');
+
+    (function () {
+      var loaded = false;
+      function loadGtag() {
+        if (loaded) return;
+        loaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-NZE4ZRXTH5';
+        document.head.appendChild(s);
+      }
+      ['scroll', 'pointerdown', 'keydown', 'touchstart'].forEach(function (type) {
+        window.addEventListener(type, loadGtag, { once: true, passive: true });
+      });
+      window.addEventListener('load', function () { setTimeout(loadGtag, 3500); });
+    })();
   </script>
   <title>Tracker de pólizas integrado por API: seguimiento automático de casos | Agustín Macko</title>
   <meta name="description" content="Caso real: aplicación de escritorio conectada a la API de un sistema de pólizas que detecta cambios de estado y muestra qué casos necesitan atención, sin revisarlos uno por uno.">
@@ -127,7 +142,7 @@
         </div>
 
         <figure class="case-shot">
-          <img src="/img/salud-tracker.webp" width="1200" height="750" alt="Tracker de pólizas con filtros por estado, región y firma, y listado de casos con datos anonimizados">
+          <img srcset="/img/salud-tracker-480.webp 480w, /img/salud-tracker-800.webp 800w, /img/salud-tracker.webp 1200w" sizes="(max-width: 1168px) calc(100vw - 48px), 1120px" src="/img/salud-tracker.webp" width="1200" height="750" alt="Tracker de pólizas con filtros por estado, región y firma, y listado de casos con datos anonimizados">
           <figcaption>Datos anonimizados por confidencialidad del cliente.</figcaption>
         </figure>
       </div>

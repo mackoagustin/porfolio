@@ -5,13 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NZE4ZRXTH5"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
     gtag('config', 'G-NZE4ZRXTH5');
+
+    (function () {
+      var loaded = false;
+      function loadGtag() {
+        if (loaded) return;
+        loaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-NZE4ZRXTH5';
+        document.head.appendChild(s);
+      }
+      ['scroll', 'pointerdown', 'keydown', 'touchstart'].forEach(function (type) {
+        window.addEventListener(type, loadGtag, { once: true, passive: true });
+      });
+      window.addEventListener('load', function () { setTimeout(loadGtag, 3500); });
+    })();
   </script>
   <title>Sitio, backoffice y blog para concesionaria: caso Auto Special | Agustín Macko</title>
   <meta name="description" content="Caso real: plataforma para Auto Special, concesionario Ford, con backoffice para cargar vehículos, fotos, precios, stock y promociones, gestión de consultas y un blog con SEO propio.">
@@ -127,7 +142,7 @@
         </div>
 
         <figure class="case-shot">
-          <img src="/img/autospecial2026.webp" width="1202" height="602" alt="Sitio de Auto Special, concesionario Ford, con buscador de vehículos">
+          <img srcset="/img/autospecial2026-480.webp 480w, /img/autospecial2026-800.webp 800w, /img/autospecial2026.webp 1202w" sizes="(max-width: 1168px) calc(100vw - 48px), 1120px" src="/img/autospecial2026.webp" width="1202" height="602" alt="Sitio de Auto Special, concesionario Ford, con buscador de vehículos">
         </figure>
       </div>
     </section>
