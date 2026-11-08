@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://agustinmacko.com.ar/</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-11-08</lastmod>
   </url>
   <url>
     <loc>https://agustinmacko.com.ar/casos/domus-gestion-estudio-danza/</loc>
@@ -31,5 +31,17 @@
   <url>
     <loc>https://agustinmacko.com.ar/casos/plataforma-concesionaria-auto-special/</loc>
     <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://agustinmacko.com.ar/clinicas/</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://agustinmacko.com.ar/estudios/</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://agustinmacko.com.ar/concesionarias/</loc>
+    <lastmod>2026-11-08</lastmod>
   </url>
 </urlset>

@@ -81,7 +81,7 @@
 
   <link rel="preload" href="/fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 
-  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/styles.css?v=20261108i">
   <script>document.documentElement.classList.add('js');</script>
 </head>
 <body data-case="gestor-archivos-aws">
@@ -130,9 +130,11 @@
           <div>
             <p class="case-summary">Para un área del Gobierno de la Ciudad de Buenos Aires desarrollé un gestor que permite subir, buscar, descargar y compartir archivos almacenados en AWS S3, con autenticación y permisos propios. El equipo administra su contenido desde una interfaz simple, sin acceso técnico a la infraestructura.</p>
             <div class="actions">
-              <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20vi%20el%20caso%20del%20gestor%20de%20archivos%20en%20AWS%20y%20quiero%20algo%20parecido" target="_blank" rel="noopener noreferrer" class="btn btn-wa">Quiero algo así para mi equipo</a>
+              <a data-location="caso-gestor-aws" href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20vi%20el%20caso%20del%20gestor%20de%20archivos%20en%20AWS%20y%20quiero%20algo%20parecido" target="_blank" rel="noopener noreferrer" class="btn btn-wa">Quiero algo así para mi equipo</a>
+              <a href="#" class="btn btn-line" data-agenda data-location="caso-gestor-aws" hidden>Agendar 15 minutos</a>
               <a href="#solucion" class="btn btn-line">Ver cómo funciona</a>
             </div>
+            <p class="alt-contact">¿Preferís mail? <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=mackoaa@gmail.com&amp;su=Consulta%20desde%20agustinmacko.com.ar&amp;body=Hola%20Agust%C3%ADn%2C%20te%20cuento%20c%C3%B3mo%20trabajamos%20hoy%3A" target="_blank" rel="noopener noreferrer" data-location="caso-gestor-aws">mackoaa@gmail.com</a></p>
           </div>
           <dl class="case-facts">
             <div><dt>Cliente</dt><dd>Gobierno de la Ciudad de Buenos Aires</dd></div>
@@ -227,7 +229,13 @@
             <h2>¿Tu equipo depende de sistemas para manejar sus propios archivos?</h2>
             <p>Contame dónde están hoy y cómo los usan.</p>
           </div>
-          <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20vi%20el%20caso%20del%20gestor%20de%20archivos%20en%20AWS%20y%20quiero%20algo%20parecido" target="_blank" rel="noopener noreferrer" class="btn btn-wa">Hablemos por WhatsApp</a>
+          <div class="cta-group">
+            <div class="actions">
+              <a data-location="caso-gestor-aws-cierre" href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20vi%20el%20caso%20del%20gestor%20de%20archivos%20en%20AWS%20y%20quiero%20algo%20parecido" target="_blank" rel="noopener noreferrer" class="btn btn-wa">Hablemos por WhatsApp</a>
+              <a href="#" class="btn btn-line" data-agenda data-location="caso-gestor-aws-cierre" hidden>Agendar 15 minutos</a>
+            </div>
+            <p class="alt-contact">¿Preferís mail? <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=mackoaa@gmail.com&amp;su=Consulta%20desde%20agustinmacko.com.ar&amp;body=Hola%20Agust%C3%ADn%2C%20te%20cuento%20c%C3%B3mo%20trabajamos%20hoy%3A" target="_blank" rel="noopener noreferrer" data-location="caso-gestor-aws-cierre">mackoaa@gmail.com</a></p>
+          </div>
         </div>
 
         <div class="case-block" id="otros-casos">
@@ -264,15 +272,15 @@
         <div class="contact-copy">
           <h2 class="title" id="contacto-title">¿Charlamos?</h2>
           <p class="lead">Contame qué te está complicando hoy. No hace falta que sepas qué solución necesitás: me contás cómo funciona y lo vemos juntos.</p>
-          <ul class="contact-list">
-            <li><a href="https://wa.me/5491150560359" target="_blank" rel="noopener noreferrer" class="ico ico-wa">+54 9 11 5056-0359</a></li>
-            <li><a href="mailto:mackoaa@gmail.com" class="ico ico-mail">mackoaa@gmail.com</a></li>
-            <li><a href="https://www.linkedin.com/in/macko-agustin/" target="_blank" rel="noopener noreferrer" class="ico ico-in">LinkedIn</a></li>
-            <li><a href="https://www.behance.net/agustinmacko" target="_blank" rel="noopener noreferrer" class="ico ico-be">Behance</a></li>
-          </ul>
         </div>
 
-        <form action="https://formspree.io/f/myzgvjbd" method="POST" class="form" id="form">
+        <form data-location="caso-gestor-aws-contacto" action="https://formspree.io/f/myzgvjbd" method="POST" class="form" id="form">
+          <input type="hidden" name="_subject" value="Nueva consulta desde agustinmacko.com.ar">
+          <input type="hidden" name="pagina_origen" value="" data-fill="page">
+          <input type="hidden" name="utm_source" value="" data-fill="utm_source">
+          <input type="hidden" name="utm_medium" value="" data-fill="utm_medium">
+          <input type="hidden" name="utm_campaign" value="" data-fill="utm_campaign">
+          <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
           <input type="hidden" name="origen" value="Caso: gestor de archivos en AWS">
           <p class="form-title">Dejame un mensaje</p>
           <label for="nombre">Tu nombre</label>
@@ -282,7 +290,21 @@
           <label for="mensaje">¿Qué necesitás resolver?</label>
           <textarea id="mensaje" name="mensaje" rows="4" placeholder="Contame en pocas palabras cómo trabajan hoy…" required></textarea>
           <button type="submit" class="btn btn-dark btn-block">Enviar</button>
+          <!-- TODO: confirmar que puedo responder en el día; si no, cambiar por "Te respondo en menos de 48 hs." -->
+          <p class="form-note">Te respondo en el día.</p>
+          <p class="form-status" role="status" aria-live="polite" hidden></p>
         </form>
+
+        <div class="contact-alt">
+          <p class="contact-alt-title">O escribime directo</p>
+          <ul class="contact-list">
+            <li><a data-location="caso-gestor-aws-contacto" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=mackoaa@gmail.com&amp;su=Consulta%20desde%20agustinmacko.com.ar&amp;body=Hola%20Agust%C3%ADn%2C%20te%20cuento%20c%C3%B3mo%20trabajamos%20hoy%3A" target="_blank" rel="noopener noreferrer" class="ico ico-mail">mackoaa@gmail.com</a></li>
+            <li><a data-location="caso-gestor-aws-contacto" href="https://wa.me/5491150560359" target="_blank" rel="noopener noreferrer" class="ico ico-wa">WhatsApp: +54 9 11 5056-0359</a></li>
+            <li><a href="https://www.linkedin.com/in/macko-agustin/" target="_blank" rel="noopener noreferrer" class="ico ico-in">LinkedIn</a></li>
+            <li><a href="https://www.behance.net/agustinmacko" target="_blank" rel="noopener noreferrer" class="ico ico-be">Behance</a></li>
+          </ul>
+          <a href="#" class="btn btn-line" data-agenda data-location="caso-gestor-aws-contacto" hidden>Agendar 15 minutos</a>
+        </div>
       </div>
     </section>
 
@@ -295,6 +317,6 @@
     </div>
   </footer>
 
-  <script src="/js/main.js"></script>
+  <script src="/js/main.js?v=20261108i"></script>
 </body>
 </html>

@@ -216,7 +216,7 @@
 
   <link rel="preload" href="/fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=20261108i">
   <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
@@ -254,15 +254,25 @@
       <div class="wrap hero-grid">
         <div class="hero-copy">
           <p class="hello">Hola, soy Agustín</p>
-          <h1 id="hero-title">
-            <span class="only-desktop">Convierto procesos complejos en <span class="mark">sistemas simples</span><br> de usar.</span>
-            <span class="only-mobile">Convierto procesos complejos en <span class="mark">sistemas simples</span> de usar.</span>
-          </h1>
+          <h1 id="hero-title">Convierto procesos complejos en <span class="mark">sistemas simples</span><br class="only-desktop"> de usar.</h1>
           <p class="hero-text">Diseño y desarrollo software a medida para empresas. Trabajo directo con vos, desde entender la necesidad hasta poner la solución en producción.</p>
           <div class="actions">
-            <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20te%20quiero%20contar%20lo%20que%20necesito" target="_blank" rel="noopener noreferrer" class="btn btn-wa">Contame qué querés mejorar</a>
+            <a data-location="hero" href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20te%20cuento%20c%C3%B3mo%20trabajamos%20hoy%3A" target="_blank" rel="noopener noreferrer" class="btn btn-wa">Quiero mi diagnóstico</a>
+            <a href="#" class="btn btn-line" data-agenda data-location="hero" hidden>Agendar 15 minutos</a>
             <a href="#proyectos" class="btn btn-line">Ver proyectos</a>
           </div>
+          <p class="alt-contact">¿Preferís mail? <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=mackoaa@gmail.com&amp;su=Consulta%20desde%20agustinmacko.com.ar&amp;body=Hola%20Agust%C3%ADn%2C%20te%20cuento%20c%C3%B3mo%20trabajamos%20hoy%3A" target="_blank" rel="noopener noreferrer" data-location="hero">mackoaa@gmail.com</a></p>
+
+          <p class="hero-proof">Trabajé con <span>GCBA · Laika · Auto Special · TecWeek · Tracker · Leon Livings</span></p>
+
+          <!-- <nav class="case-picker" aria-labelledby="case-picker-title">
+            <p class="case-picker-title" id="case-picker-title">Elegí el que se parezca a tu caso</p>
+            <ul>
+              <li><a href="/casos/turnos-whatsapp-clinicas/" data-location="hero-elegi">Atiendo turnos y consultas por WhatsApp</a></li>
+              <li><a href="/casos/domus-gestion-estudio-danza/" data-location="hero-elegi">Gestiono alumnos, cobros y clases</a></li>
+              <li><a href="/casos/tracker-polizas/" data-location="hero-elegi">Controlo casos o trámites en un solo lugar</a></li>
+            </ul>
+          </nav> -->
         </div>
 
         <figure class="hero-shots" aria-label="Capturas de proyectos: sitio de TecWeek y herramientas de Laika">
@@ -273,7 +283,6 @@
           <div class="shot shot-front" aria-hidden="true">
             <img srcset="img/laika-480.webp 480w, img/laika-800.webp 800w, img/laika.webp 1200w" sizes="(max-width: 960px) 88vw, 420px" src="img/laika.webp" width="1200" height="550" alt="">
           </div>
-          <!-- <figcaption class="sticker">Hablás directo conmigo</figcaption> -->
         </figure>
       </div>
 
@@ -307,7 +316,12 @@
 
           <div class="thread-cta reveal">
             <p>Contame qué necesitás y vemos cómo resolverlo.</p>
-            <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20te%20quiero%20contar%20lo%20que%20necesito" target="_blank" rel="noopener noreferrer" class="btn btn-wa">Hablemos por WhatsApp</a>
+            <div class="cta-group">
+              <div class="actions">
+                <a data-location="thread-cta" href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20te%20cuento%20c%C3%B3mo%20trabajamos%20hoy%3A" target="_blank" rel="noopener noreferrer" class="btn btn-wa">Quiero mi diagnóstico</a>
+                <a href="#" class="btn btn-line" data-agenda data-location="thread-cta" hidden>Agendar 15 minutos</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -321,34 +335,14 @@
             <h2 class="title" id="proyectos-title">Soluciones desarrolladas</h2>
             <p>Distintas industrias y necesidades, pero la misma idea: entender primero cómo funciona el negocio y después construir la herramienta adecuada.</p>
           </div>
-          <div class="carousel-nav">
-            <button type="button" class="carousel-btn" data-dir="-1" aria-label="Proyecto anterior" aria-controls="projects-track">←</button>
-            <button type="button" class="carousel-btn" data-dir="1" aria-label="Proyecto siguiente" aria-controls="projects-track">→</button>
-          </div>
         </div>
       </div>
 
-      <div class="carousel reveal" id="projects-track" role="region" aria-roledescription="carrusel" aria-label="Proyectos" tabindex="0">
+      <div class="wrap projects-grid reveal">
           <article class="project">
+            <span class="project-badge">Danza y Pilates</span>
             <div class="project-visual">
-              <img srcset="img/salud-tracker-480.webp 480w, img/salud-tracker-800.webp 800w, img/salud-tracker.webp 1200w" sizes="(max-width: 628px) 86vw, 540px" src="img/salud-tracker.webp" width="1200" height="750" alt="Tracker de pólizas con filtros por estado, región y firma, y listado de casos con datos anonimizados" loading="lazy">
-            </div>
-            <div class="project-body">
-              <p class="project-tag">Salud · Operaciones · Confidencial</p>
-              <h3>Un tracker que avisa cuando un caso cambia de estado</h3>
-              <p>Para saber si una póliza había cambiado de estado, el equipo tenía que entrar al sistema y revisar caso por caso. Construí un tracker conectado a la API que detecta esas actualizaciones solo: hoy saben en minutos qué casos necesitan atención, sin perder la tarde buscándolos uno por uno.</p>
-              <ul class="project-stack" aria-label="Tecnologías"><li>App de escritorio</li><li>Electron</li><li>API</li><li>Integraciones</li></ul>
-              <div class="project-links">
-                <a href="/casos/tracker-polizas/" class="link link-dark" aria-label="Ver caso completo: tracker de pólizas">Ver caso completo</a>
-                <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20vi%20el%20caso%20del%20tracker%20de%20p%C3%B3lizas%20y%20quiero%20algo%20parecido" target="_blank" rel="noopener noreferrer" class="link" aria-label="Quiero algo así: tracker de pólizas (abre WhatsApp)">Quiero algo así ↗</a>
-              </div>
-
-            </div>
-          </article>
-
-          <article class="project">
-            <div class="project-visual">
-              <img srcset="img/Domus-480.webp 480w, img/Domus-800.webp 800w, img/Domus.webp 1200w" sizes="(max-width: 628px) 86vw, 540px" src="img/Domus.webp" width="1200" height="750" alt="Pantalla de Domus para crear una nueva clase, con actividad, docente, nivel, abono y porcentaje del docente" loading="lazy">
+              <img srcset="img/Domus-480.webp 480w, img/Domus-800.webp 800w, img/Domus.webp 1200w" sizes="(max-width: 640px) calc(100vw - 48px), (max-width: 1168px) calc(50vw - 36px), 548px" src="img/Domus.webp" width="1200" height="750" alt="Pantalla de Domus para crear una nueva clase, con actividad, docente, nivel, abono y porcentaje del docente" loading="lazy">
             </div>
             <div class="project-body">
               <p class="project-tag">Danza y Pilates · Sistema de gestión</p>
@@ -356,32 +350,16 @@
               <p>Desarrollé Domus, el sistema que reemplazó al viejo programa en Outlook y VBA de un estudio de danza y Pilates: alumnos, clases, agenda con asistencia por sala, horarios fijos, cobro mensual automático con becas y bonificaciones, pagos y roles con auditoría. Hoy todo el estudio trabaja sobre un mismo sistema.</p>
               <ul class="project-stack" aria-label="Tecnologías"><li>Next.js</li><li>TypeScript</li><li>PostgreSQL</li><li>Supabase</li></ul>
               <div class="project-links">
-                <a href="/casos/domus-gestion-estudio-danza/" class="link link-dark" aria-label="Ver caso completo: Domus">Ver caso completo</a>
-                <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20vi%20el%20caso%20de%20Domus%20y%20quiero%20algo%20parecido" target="_blank" rel="noopener noreferrer" class="link" aria-label="Quiero algo así: Domus (abre WhatsApp)">Quiero algo así ↗</a>
+                <a href="/casos/domus-gestion-estudio-danza/" class="link" aria-label="Ver caso completo: Domus">Ver caso completo</a>
+                <a data-location="proyecto-domus" href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20vi%20el%20caso%20de%20Domus%20y%20quiero%20algo%20parecido" target="_blank" rel="noopener noreferrer" class="link" aria-label="Quiero algo así: Domus (abre WhatsApp)">Cotizar proyecto ↗</a>
               </div>
             </div>
           </article>
 
           <article class="project">
+            <span class="project-badge">Salud</span>
             <div class="project-visual">
-              <img srcset="img/aws-480.webp 480w, img/aws-800.webp 800w, img/aws.webp 1200w" sizes="(max-width: 628px) 86vw, 540px" src="img/aws.webp" width="1200" height="601" alt="Gestor de archivos en AWS con carpetas, buscador y acciones para subir y compartir contenido" loading="lazy">
-            </div>
-            <div class="project-body">
-              <p class="project-tag">GCBA · Cloud</p>
-              <h3>Un gestor de archivos propio para el contenido en AWS</h3>
-              <p>Las imágenes del área estaban en AWS, pero no había una forma simple de administrarlas: subirlas, buscarlas o compartirlas requería acceso técnico a la infraestructura. Construí un gestor con autenticación y permisos propios, y ahora el equipo maneja el contenido desde su propia interfaz, sin pedirle nada a sistemas.</p>
-              <ul class="project-stack" aria-label="Tecnologías"><li>AWS S3</li><li>Node.js</li><li>Cognito</li><li>EC2</li><li>IAM</li></ul>
-              <div class="project-links">
-                <a href="/casos/gestor-archivos-aws/" class="link link-dark" aria-label="Ver caso completo: gestor de archivos en AWS">Ver caso completo</a>
-                <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20vi%20el%20caso%20del%20gestor%20de%20archivos%20en%20AWS%20y%20quiero%20algo%20parecido" target="_blank" rel="noopener noreferrer" class="link" aria-label="Quiero algo así: gestor de archivos en AWS (abre WhatsApp)">Quiero algo así ↗</a>
-              </div>
-
-            </div>
-          </article>
-
-          <article class="project">
-            <div class="project-visual">
-              <img srcset="img/bot-480.webp 480w, img/bot-800.webp 800w, img/bot.webp 1200w" sizes="(max-width: 628px) 86vw, 540px" src="img/bot.webp" width="1200" height="750" alt="Conversación de WhatsApp con el asistente de turnos: menú para sacar, ver o cancelar turnos y elección de especialidad y médico" loading="lazy">
+              <img srcset="img/bot-480.webp 480w, img/bot-800.webp 800w, img/bot.webp 1200w" sizes="(max-width: 640px) calc(100vw - 48px), (max-width: 1168px) calc(50vw - 36px), 548px" src="img/bot.webp" width="1200" height="750" alt="Conversación de WhatsApp con el asistente de turnos: menú para sacar, ver o cancelar turnos y elección de especialidad y médico" loading="lazy">
             </div>
             <div class="project-body">
               <p class="project-tag">Salud · WhatsApp · Multi-clínica</p>
@@ -389,47 +367,52 @@
               <p>Construí un sistema multilínea para clínicas que permite sacar, consultar y cancelar turnos desde WhatsApp, con agendas, médicos y configuraciones independientes por clínica. Lo que antes eran decenas de mensajes atendidos a mano, hoy se resuelve solo y se supervisa desde un único dashboard.</p>
               <ul class="project-stack" aria-label="Tecnologías"><li>WhatsApp</li><li>Express</li><li>Supabase</li><li>Baileys</li><li>Multi-tenant</li></ul>
               <div class="project-links">
-                <a href="/casos/turnos-whatsapp-clinicas/" class="link link-dark" aria-label="Ver caso completo: turnos por WhatsApp">Ver caso completo</a>
-                <a href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20vi%20el%20caso%20de%20turnos%20por%20WhatsApp%20y%20quiero%20algo%20parecido" target="_blank" rel="noopener noreferrer" class="link" aria-label="Quiero algo así: turnos por WhatsApp (abre WhatsApp)">Quiero algo así ↗</a>
+                <a href="/casos/turnos-whatsapp-clinicas/" class="link" aria-label="Ver caso completo: turnos por WhatsApp">Ver caso completo</a>
+                <a data-location="proyecto-turnos-clinicas" href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20vi%20el%20caso%20de%20turnos%20por%20WhatsApp%20y%20quiero%20algo%20parecido" target="_blank" rel="noopener noreferrer" class="link" aria-label="Quiero algo así: turnos por WhatsApp (abre WhatsApp)">Cotizar proyecto  ↗</a>
               </div>
             </div>
           </article>
 
           <article class="project">
+            <span class="project-badge">Salud</span>
             <div class="project-visual">
-              <img srcset="img/tec2026-480.webp 480w, img/tec2026-800.webp 800w, img/tec2026.webp 1200w" sizes="(max-width: 628px) 86vw, 540px" src="img/tec2026.webp" width="1200" height="599" alt="Sitio de TecWeek Buenos Aires 2026 con la cuenta regresiva del evento" loading="lazy">
+              <img srcset="img/salud-tracker-480.webp 480w, img/salud-tracker-800.webp 800w, img/salud-tracker.webp 1200w" sizes="(max-width: 640px) calc(100vw - 48px), (max-width: 1168px) calc(50vw - 36px), 548px" src="img/salud-tracker.webp" width="1200" height="750" alt="Tracker de pólizas con filtros por estado, región y firma, y listado de casos con datos anonimizados" loading="lazy">
             </div>
             <div class="project-body">
-              <p class="project-tag">TecWeek · Plataforma</p>
-              <h3>Actualizar el evento sin depender de desarrollo</h3>
-              <p>Desarrollé el sitio de TecWeek junto con un backoffice para administrar eventos, agenda, sponsors, imágenes y otros contenidos sin tocar código. Durante el evento, que es cuando más cambia la información, el equipo pudo mantenerlo actualizado por su cuenta, sin esperar a un desarrollador para cada ajuste.</p>
-              <ul class="project-stack" aria-label="Tecnologías"><li>Next.js</li><li>Supabase</li><li>PostgreSQL</li><li>Backoffice</li></ul>
+              <p class="project-tag">Salud · Operaciones · Confidencial</p>
+              <h3>Un tracker que avisa cuando un caso cambia de estado</h3>
+              <p>Para saber si una póliza había cambiado de estado, el equipo tenía que entrar al sistema y revisar caso por caso. Construí un tracker conectado a la API que detecta esas actualizaciones solo: hoy saben en minutos qué casos necesitan atención, sin perder la tarde buscándolos uno por uno.</p>
+              <ul class="project-stack" aria-label="Tecnologías"><li>App de escritorio</li><li>Electron</li><li>API</li><li>Integraciones</li></ul>
               <div class="project-links">
-                <a href="/casos/backoffice-tecweek/" class="link link-dark" aria-label="Ver caso completo: TecWeek">Ver caso completo</a>
-                <a href="https://www.tecweek.com.ar/" target="_blank" rel="noopener noreferrer" class="link" aria-label="Ver sitio online de TecWeek (se abre en otra pestaña)">Ver sitio online ↗</a>
+                <a href="/casos/tracker-polizas/" class="link" aria-label="Ver caso completo: tracker de pólizas">Ver caso completo</a>
+                <a data-location="proyecto-tracker-polizas" href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20vi%20el%20caso%20del%20tracker%20de%20p%C3%B3lizas%20y%20quiero%20algo%20parecido" target="_blank" rel="noopener noreferrer" class="link" aria-label="Quiero algo así: tracker de pólizas (abre WhatsApp)">Cotizar proyecto  ↗</a>
               </div>
+
             </div>
           </article>
 
           <article class="project">
+            <span class="project-badge">Sector público</span>
             <div class="project-visual">
-              <img srcset="img/laika-480.webp 480w, img/laika-800.webp 800w, img/laika.webp 1200w" sizes="(max-width: 628px) 86vw, 540px" src="img/laika.webp" width="1200" height="550" alt="Tienda online de Laika, productos para mascotas" loading="lazy">
+              <img srcset="img/aws-480.webp 480w, img/aws-800.webp 800w, img/aws.webp 1200w" sizes="(max-width: 640px) calc(100vw - 48px), (max-width: 1168px) calc(50vw - 36px), 548px" src="img/aws.webp" width="1200" height="601" alt="Gestor de archivos en AWS con carpetas, buscador y acciones para subir y compartir contenido" loading="lazy">
             </div>
             <div class="project-body">
-              <p class="project-tag">Laika · Producto · Fullstack</p>
-              <h3>Del catálogo a la atención telefónica, con reglas que se entienden</h3>
-              <p>Diseñé herramientas internas para logística, devoluciones, pagos y reglas de negocio, desarrollé el catálogo y construí un IVR conectado a una base de datos SQL para la atención telefónica. Quien opera el sistema todos los días decide con menos ambigüedad, y cada llamada pasa por un menú automático antes de llegar a una persona.</p>
-              <ul class="project-stack" aria-label="Disciplinas"><li>Product Design</li><li>UX/UI</li><li>Frontend</li><li>IVR</li><li>SQL</li></ul>
+              <p class="project-tag">GCBA · Cloud</p>
+              <h3>Un gestor de archivos propio para el contenido en AWS</h3>
+              <p>Las imágenes del área estaban en AWS, pero no había una forma simple de administrarlas: subirlas, buscarlas o compartirlas requería acceso técnico a la infraestructura. Construí un gestor con autenticación y permisos propios, y ahora el equipo maneja el contenido desde su propia interfaz, sin pedirle nada a sistemas.</p>
+              <ul class="project-stack" aria-label="Tecnologías"><li>AWS S3</li><li>Node.js</li><li>Cognito</li><li>EC2</li><li>IAM</li></ul>
               <div class="project-links">
-                <a href="/casos/laika-catalogo-ivr/" class="link link-dark" aria-label="Ver caso completo: Laika">Ver caso completo</a>
-                <a href="https://laika.com.co/" target="_blank" rel="noopener noreferrer" class="link" aria-label="Ver sitio online de Laika (se abre en otra pestaña)">Ver sitio online ↗</a>
+                <a href="/casos/gestor-archivos-aws/" class="link" aria-label="Ver caso completo: gestor de archivos en AWS">Ver caso completo</a>
+                <a data-location="proyecto-gestor-aws" href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20vi%20el%20caso%20del%20gestor%20de%20archivos%20en%20AWS%20y%20quiero%20algo%20parecido" target="_blank" rel="noopener noreferrer" class="link" aria-label="Quiero algo así: gestor de archivos en AWS (abre WhatsApp)">Cotizar proyecto  ↗</a>
               </div>
+
             </div>
           </article>
 
           <article class="project">
+            <span class="project-badge">Concesionarias</span>
             <div class="project-visual">
-              <img srcset="img/autospecial2026-480.webp 480w, img/autospecial2026-800.webp 800w, img/autospecial2026.webp 1202w" sizes="(max-width: 628px) 86vw, 540px" src="img/autospecial2026.webp" width="1202" height="602" alt="Sitio de Auto Special, concesionario Ford, con buscador de vehículos" loading="lazy">
+              <img srcset="img/autospecial2026-480.webp 480w, img/autospecial2026-800.webp 800w, img/autospecial2026.webp 1202w" sizes="(max-width: 640px) calc(100vw - 48px), (max-width: 1168px) calc(50vw - 36px), 548px" src="img/autospecial2026.webp" width="1202" height="602" alt="Sitio de Auto Special, concesionario Ford, con buscador de vehículos" loading="lazy">
             </div>
             <div class="project-body">
               <p class="project-tag">Auto Special · Plataforma</p>
@@ -437,94 +420,193 @@
               <p>Diseñé y desarrollé el sitio de Auto Special, su backend y un backoffice para cargar vehículos, fotos, precios, stock y promociones, recibir consultas y publicar notas en el blog con su propio SEO. El equipo mantiene el catálogo y el contenido al día por su cuenta.</p>
               <ul class="project-stack" aria-label="Disciplinas"><li>UX/UI</li><li>Frontend</li><li>Backend</li><li>Backoffice</li><li>Blog</li><li>SEO</li></ul>
               <div class="project-links">
-                <a href="/casos/plataforma-concesionaria-auto-special/" class="link link-dark" aria-label="Ver caso completo: Auto Special">Ver caso completo</a>
-                <a href="https://autospecial.com.ar" target="_blank" rel="noopener noreferrer" class="link" aria-label="Ver sitio online de Auto Special (se abre en otra pestaña)">Ver sitio online ↗</a>
+                <a href="/casos/plataforma-concesionaria-auto-special/" class="link" aria-label="Ver caso completo: Auto Special">Ver caso completo</a>
+                <a data-location="proyecto-auto-special" href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20vi%20el%20caso%20de%20Auto%20Special%20y%20quiero%20algo%20parecido" target="_blank" rel="noopener noreferrer" class="link" aria-label="Quiero algo así: Auto Special (abre WhatsApp)">Cotizar proyecto  ↗</a>
               </div>
             </div>
           </article>
 
           <article class="project">
+            <span class="project-badge">Eventos</span>
             <div class="project-visual">
-              <img srcset="img/tracker2-480.webp 480w, img/tracker2-800.webp 800w, img/tracker2.webp 1200w" sizes="(max-width: 628px) 86vw, 540px" src="img/tracker2.webp" width="1200" height="543" alt="Sitio de Tracker, herramienta para inmobiliarios, con la app mostrando su tablero de avance" loading="lazy">
+              <img srcset="img/tec2026-480.webp 480w, img/tec2026-800.webp 800w, img/tec2026.webp 1200w" sizes="(max-width: 640px) calc(100vw - 48px), (max-width: 1168px) calc(50vw - 36px), 548px" src="img/tec2026.webp" width="1200" height="599" alt="Sitio de TecWeek Buenos Aires 2026 con la cuenta regresiva del evento" loading="lazy">
+            </div>
+            <div class="project-body">
+              <p class="project-tag">TecWeek · Plataforma</p>
+              <h3>Actualizar el evento sin depender de desarrollo</h3>
+              <p>Desarrollé el sitio de TecWeek junto con un backoffice para administrar eventos, agenda, sponsors, imágenes y otros contenidos sin tocar código. Durante el evento, que es cuando más cambia la información, el equipo pudo mantenerlo actualizado por su cuenta, sin esperar a un desarrollador para cada ajuste.</p>
+              <ul class="project-stack" aria-label="Tecnologías"><li>Next.js</li><li>Supabase</li><li>PostgreSQL</li><li>Backoffice</li></ul>
+              <div class="project-links">
+                <a href="/casos/backoffice-tecweek/" class="link" aria-label="Ver caso completo: TecWeek">Ver caso completo</a>
+                <a data-location="proyecto-tecweek" href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20vi%20el%20caso%20de%20TecWeek%20y%20quiero%20algo%20parecido" target="_blank" rel="noopener noreferrer" class="link" aria-label="Quiero algo así: TecWeek (abre WhatsApp)">Cotizar proyecto  ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <span class="project-badge">E-commerce</span>
+            <div class="project-visual">
+              <img srcset="img/laika-480.webp 480w, img/laika-800.webp 800w, img/laika.webp 1200w" sizes="(max-width: 640px) calc(100vw - 48px), (max-width: 1168px) calc(50vw - 36px), 548px" src="img/laika.webp" width="1200" height="550" alt="Tienda online de Laika, productos para mascotas" loading="lazy">
+            </div>
+            <div class="project-body">
+              <p class="project-tag">Laika · Producto · Fullstack</p>
+              <h3>Del catálogo a la atención telefónica, con reglas que se entienden</h3>
+              <p>Diseñé herramientas internas para logística, devoluciones, pagos y reglas de negocio, desarrollé el catálogo y construí un IVR conectado a una base de datos SQL para la atención telefónica. Quien opera el sistema todos los días decide con menos ambigüedad, y cada llamada pasa por un menú automático antes de llegar a una persona.</p>
+              <ul class="project-stack" aria-label="Disciplinas"><li>Product Design</li><li>UX/UI</li><li>Frontend</li><li>IVR</li><li>SQL</li></ul>
+              <div class="project-links">
+                <a href="/casos/laika-catalogo-ivr/" class="link" aria-label="Ver caso completo: Laika">Ver caso completo</a>
+                <a data-location="proyecto-laika" href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20vi%20el%20caso%20de%20Laika%20y%20quiero%20algo%20parecido" target="_blank" rel="noopener noreferrer" class="link" aria-label="Quiero algo así: Laika (abre WhatsApp)">Cotizar proyecto  ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <span class="project-badge">Inmobiliarias</span>
+            <div class="project-visual">
+              <img srcset="img/tracker2-480.webp 480w, img/tracker2-800.webp 800w, img/tracker2.webp 1200w" sizes="(max-width: 640px) calc(100vw - 48px), (max-width: 1168px) calc(50vw - 36px), 548px" src="img/tracker2.webp" width="1200" height="543" alt="Sitio de Tracker, herramienta para inmobiliarios, con la app mostrando su tablero de avance" loading="lazy">
             </div>
             <div class="project-body">
               <p class="project-tag">Tracker · Real Estate</p>
               <h3>Un sitio que explica el producto en segundos</h3>
               <p>Diseñé y desarrollé el sitio de Tracker para presentar la herramienta y su propuesta de valor al sector inmobiliario. Alguien que nunca usó el producto puede entender en la primera pantalla qué hace y para quién es.</p>
               <ul class="project-stack" aria-label="Disciplinas"><li>UX/UI</li><li>Frontend</li><li>Sitio web</li></ul>
-              <a href="https://www.tracker-realestate.com/" target="_blank" rel="noopener noreferrer" class="link" aria-label="Ver sitio online de Tracker (se abre en otra pestaña)">Ver sitio online ↗</a>
+              <div class="project-links">
+                <a href="https://www.tracker-realestate.com/" target="_blank" rel="noopener noreferrer" class="link" aria-label="Ver sitio online de Tracker (se abre en otra pestaña)">Ver sitio online ↗</a>
+                <a data-location="proyecto-tracker-sitio" href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20vi%20el%20sitio%20de%20Tracker%20y%20quiero%20algo%20parecido" target="_blank" rel="noopener noreferrer" class="link" aria-label="Quiero algo así: sitio de Tracker (abre WhatsApp)">Cotizar proyecto  ↗</a>
+              </div>
             </div>
           </article>
 
           <article class="project">
+            <span class="project-badge">E-commerce</span>
             <div class="project-visual">
-              <img srcset="img/leon-480.webp 480w, img/leon-800.webp 800w, img/leon.webp 1200w" sizes="(max-width: 628px) 86vw, 540px" src="img/leon.webp" width="1200" height="605" alt="Tienda online de Leon Livings, mobiliario de exterior" loading="lazy">
+              <img srcset="img/leon-480.webp 480w, img/leon-800.webp 800w, img/leon.webp 1200w" sizes="(max-width: 640px) calc(100vw - 48px), (max-width: 1168px) calc(50vw - 36px), 548px" src="img/leon.webp" width="1200" height="605" alt="Tienda online de Leon Livings, mobiliario de exterior" loading="lazy">
             </div>
             <div class="project-body">
               <p class="project-tag">Leon Livings · E-commerce</p>
               <h3>Una tienda online fiel a la identidad de la marca</h3>
               <p>Diseñé la experiencia UX/UI de la tienda online, trabajando la navegación, la presentación de productos y el recorrido de compra. La experiencia de comprar quedó tan cuidada como la identidad visual de la marca.</p>
               <ul class="project-stack" aria-label="Disciplinas"><li>UX/UI</li><li>E-commerce</li></ul>
-              <a href="https://www.leonlivings.com/" target="_blank" rel="noopener noreferrer" class="link" aria-label="Ver sitio online de Leon Livings (se abre en otra pestaña)">Ver sitio online ↗</a>
+              <div class="project-links">
+                <a href="https://www.leonlivings.com/" target="_blank" rel="noopener noreferrer" class="link" aria-label="Ver sitio online de Leon Livings (se abre en otra pestaña)">Ver sitio online ↗</a>
+                <a data-location="proyecto-leon-livings" href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20vi%20la%20tienda%20de%20Leon%20Livings%20y%20quiero%20algo%20parecido" target="_blank" rel="noopener noreferrer" class="link" aria-label="Quiero algo así: tienda de Leon Livings (abre WhatsApp)">Cotizar proyecto  ↗</a>
+              </div>
             </div>
           </article>
 
       </div>
     </section>
 
-    <!-- SOBRE MÍ Y CÓMO TRABAJO -->
-    <section class="section section-warm" id="sobre-mi" aria-labelledby="sobre-title">
+  
+    <section class="section section-warm testimonials-section" id="testimonios" aria-labelledby="testimonios-title" hidden>
       <div class="wrap">
-        <div class="about-intro">
-          <div class="about-copy">
-            <p class="about-kicker reveal">Sobre mí</p>
-            <h2 class="about-statement reveal" id="sobre-title">Diseño el producto y <span class="mark">construyo el sistema.</span></h2>
-            <p class="about-lead reveal">Diseñador UX/UI y desarrollador fullstack en Buenos Aires. Trabajás directo conmigo de la primera charla a la puesta en marcha, sin intermediarios.</p>
-            <ul class="about-facts reveal">
-              <li>Buenos Aires, Argentina</li>
-              <li>UX/UI + desarrollo fullstack</li>
-              <li>Trato directo, sin intermediarios</li>
-            </ul>
-          </div>
+        <h2 class="title" id="testimonios-title">Lo que dicen quienes trabajaron conmigo</h2>
+        <div class="testimonials">
+          <!-- Leon Livings: cita tomada de su WhatsApp, apenas editada.
+               TODO: reemplazar "Equipo de Leon Livings" por el nombre real y confirmar que se puede publicar. -->
+          <figure class="testimonial" data-aprobado="si" hidden>
+            <blockquote data-field="cita">Activé Google Ads con la nueva web hace unos días y ya tuve varias consultas. Y ayer justo hice una buena venta con un cliente que entró por la web.</blockquote>
+            <figcaption>
+              <span class="testimonial-name" data-field="nombre">Agustín</span>
+              <span data-field="proyecto">Leon Livings</span></span>
+            </figcaption>
+          </figure>
 
-          <figure class="duo reveal">
-            <div class="duo-card duo-design" aria-hidden="true">
-              <p class="duo-bar"><span></span><span></span><span></span> Diseño · turno</p>
-              <p class="duo-title">Tu turno</p>
-              <p class="duo-row">Clínica médica <span>Mar 10:00</span></p>
-              <p class="duo-btn">Confirmar</p>
-            </div>
-            <svg class="duo-arrow" viewBox="0 0 80 40" aria-hidden="true"><path d="M4 30 C 24 4, 52 4, 72 22" /><path d="M62 22 L72 22 L68 12" /></svg>
-            <div class="duo-card duo-code" aria-hidden="true">
-              <p class="duo-bar"><span></span><span></span><span></span> turno.jsx</p>
-<pre><code><i>&lt;Turno</i>
-  <b>especialidad</b>=<s>"Clínica médica"</s>
-  <b>horario</b>=<s>"Mar 10:00"</s>
-<i>/&gt;</i>
-<i>&lt;Boton&gt;</i>Confirmar<i>&lt;/Boton&gt;</i></code></pre>
-            </div>
-            <figcaption>Lo que decidimos en una pantalla llega igual al código.</figcaption>
+          <figure class="testimonial" data-aprobado="si" hidden>
+            <blockquote data-field="cita">Estuve revisando la web y no es cortesía: está muy bien hecha. El sitio vuela para la cantidad de imágenes que maneja, y el formulario está mejor resuelto que en el 90% de los sitios de concesionarias que miré.</blockquote>
+            <figcaption>
+              <span class="testimonial-name" data-field="nombre">Dolores</span>
+              <span data-field="proyecto">Auto Special</span></span>
+            </figcaption>
+          </figure>
+        
+          <figure class="testimonial" data-aprobado="si" hidden>
+            <blockquote data-field="cita">Hay procesos que antes nos llevaban 30 horas y hoy se resuelven mucho más rápido. Ese tiempo lo recuperé para otras cosas, como jugar con mi hija.</blockquote>
+            <figcaption>Diseño el producto 
+              <span class="testimonial-name" data-field="nombre">Analia</span>
+              <span data-field="proyecto">Tracker de pólizas</span></span>
+            </figcaption>
+          </figure>
+          <!-- Domus: BORRADOR escrito a partir de lo que te contaron, no es una cita textual.
+               TODO: mandárselo para que lo apruebe o lo reescriba, y reemplazar "Equipo del estudio de danza" por el nombre real. -->
+          <figure class="testimonial" data-aprobado="si" hidden>
+            <blockquote data-field="cita">Con Domus tenemos un panorama mucho más claro de cómo funciona el estudio, y somos más ágiles para atender a la gente.</blockquote>
+            <figcaption>
+              <span class="testimonial-name" data-field="nombre">Julio</span>
+             <span data-field="proyecto">Domus</span></span>
+            </figcaption>
           </figure>
         </div>
+      </div>
+    </section>
 
-        <p class="about-kicker steps-kicker reveal" id="como-trabajo">Cómo trabajamos juntos</p>
+    <!-- SOBRE MÍ Y CÓMO TRABAJO -->
+    <section class="section " id="sobre-mi" aria-labelledby="sobre-title">
+      <div class="wrap">
+        <div class="about-intro">
+          <div class="about-head">
+            <p class="about-kicker reveal">Sobre mí</p>
+            <h2 class="about-statement reveal" id="sobre-title">Diseño el producto y <span class="mark">construyo el sistema.</span></h2>
+          </div>
+
+          <!-- La foto y la captura de Figma se configuran en js/main.js (ABOUT_PHOTO y FIGMA_IMG).
+               Mientras estén vacías, solo se muestra la captura de Domus. -->
+          <figure class="about-visual reveal" data-caption-figma="Domus: del boceto a producción.">
+            <div class="about-stage">
+              <div class="about-frame about-photo" hidden>
+                <span class="shot-bar" aria-hidden="true"><i></i><i></i><i></i></span>
+              </div>
+              <div class="about-frame about-figma" hidden>
+                <span class="shot-bar" aria-hidden="true"><i></i><i></i><i></i></span>
+              </div>
+              <svg class="about-arrow" viewBox="0 0 80 40" aria-hidden="true" hidden><path d="M4 30 C 24 4, 52 4, 72 22" /><path d="M62 22 L72 22 L68 12" /></svg>
+              <div class="about-frame about-domus">
+                <span class="shot-bar" aria-hidden="true"><i></i><i></i><i></i></span>
+                <img srcset="img/Domus-480.webp 480w, img/Domus-800.webp 800w, img/Domus.webp 1200w" sizes="(max-width: 760px) 80vw, 340px" src="img/Domus.webp" width="1200" height="750" alt="Pantalla de Domus, el sistema de gestión de un estudio de danza, con el formulario para crear una nueva clase" loading="lazy">
+              </div>
+            </div>
+            <figcaption>Domus: sistema de gestión para un estudio de danza.</figcaption>
+          </figure>
+
+          <div class="about-body">
+            <p class="about-lead reveal">Vengo de la educación especial. Pasé años pensando cómo lograr que alguien entienda algo que le cuesta, y hoy aplico eso a los sistemas: si el equipo no lo entiende o no lo usa, no sirve, aunque funcione perfecto.</p>
+            <!-- TODO: completar cuántos años hace que pasaste al diseño y al desarrollo (por ejemplo "6 años") en el span vacío.
+                 Hasta que esté completo se muestra la versión sin ese dato. -->
+            <p class="about-lead reveal" id="about-trayectoria" data-needs-content hidden>Hace <span data-required></span> pasé al diseño y al desarrollo. Diseño las pantallas y escribo el código, así que lo que decidimos al principio es lo que termina funcionando.</p>
+            <p class="about-lead reveal" data-fallback-for="about-trayectoria">Diseño las pantallas y escribo el código, así que lo que decidimos al principio es lo que termina funcionando.</p>
+            <!-- TODO: confirmar que trabajás con equipos de todo el país y de Latinoamérica; si es así, sacar el atributo hidden del span. -->
+            <p class="about-location reveal">Buenos Aires, Argentina<span hidden> · trabajo con equipos de todo el país y de Latinoamérica.</span></p>
+            <a href="https://www.linkedin.com/in/macko-agustin/" target="_blank" rel="noopener noreferrer" class="btn btn-line reveal" data-location="sobre-mi">Ver mi LinkedIn</a>
+          </div>
+        </div>
+
+        <h2 class="about-kicker steps-kicker reveal" id="como-trabajo">Qué pasa cuando me escribís</h2>
         <ol class="steps">
           <li class="step reveal" style="--i: 0">
-            <p class="step-label"><span class="step-n">01</span> Diseño y descubrimiento</p>
-            <h3>Definimos juntos la solución</h3>
-            <p>Visualizamos la experiencia de quienes van a usar el sistema. Contame tu idea o cómo funciona hoy tu proceso y te ayudo a encontrar la mejor solución para tu caso.</p>
+            <span class="step-n" aria-hidden="true">01</span>
+            <h3>Una charla de 20 minutos, sin costo</h3>
+            <p>Me contás cómo trabajan hoy y qué les complica. Yo hago las preguntas y vos no tenés que llegar con la solución definida.</p>
+            <!-- TODO: completar el plazo de la propuesta (por ejemplo "3 días hábiles") en el span vacío. Hasta entonces la píldora no se muestra. -->
+            <p class="step-pill" data-needs-content hidden><span>Recibís:</span> una propuesta por escrito en <span data-required></span></p>
           </li>
           <li class="step reveal" style="--i: 1">
-            <p class="step-label"><span class="step-n">02</span> Desarrollo</p>
-            <h3>Construyo el sistema</h3>
-            <p>Construyo el sistema por etapas y vas viendo cómo tu idea se hace realidad. Las decisiones importantes las tomamos juntos.</p>
+            <span class="step-n" aria-hidden="true">02</span>
+            <h3>Construcción por etapas</h3>
+            <!-- TODO: completar cada cuánto mostrás una versión ("semana" o "2 semanas") en el span vacío.
+                 Hasta entonces se muestra la versión sin ese dato. -->
+            <p id="paso-etapas" data-needs-content hidden>Cada <span data-required></span> te muestro una versión que ya funciona, con tus datos. Opinás sobre algo que podés usar, no sobre un dibujo.</p>
+            <p data-fallback-for="paso-etapas">Te muestro por etapas una versión que ya funciona, con tus datos. Opinás sobre algo que podés usar, no sobre un dibujo.</p>
           </li>
           <li class="step reveal" style="--i: 2">
-            <p class="step-label"><span class="step-n">03</span> Acompañamiento</p>
-            <h3>Lo pongo en marcha y lo sostengo</h3>
-            <p>Lo ponemos en marcha, lo mantengo e incorporo mejoras y actualizaciones cuando tu equipo empieza a usarlo de verdad.</p>
+            <span class="step-n" aria-hidden="true">03</span>
+            <h3>Puesta en marcha y seguimiento</h3>
+            <p>Lo instalo, capacito a quien lo va a usar y sigo cerca las primeras semanas para corregir lo que aparece cuando se usa de verdad.</p>
+            <!-- TODO: completar el período de acompañamiento (por ejemplo "el primer mes") en el span vacío. Hasta entonces la píldora no se muestra. -->
+            <p class="step-pill" data-needs-content hidden><span>Recibís:</span> acompañamiento durante <span data-required></span></p>
           </li>
         </ol>
+        <a data-location="hero" href="https://wa.me/5491150560359?text=Hola%20Agust%C3%ADn%2C%20te%20cuento%20c%C3%B3mo%20trabajamos%20hoy%3A" target="_blank" rel="noopener noreferrer" class="btn btn-wa">¿Hablamos de tu caso?</a>
+
       </div>
     </section>
 
@@ -534,15 +616,15 @@
         <div class="contact-copy reveal">
           <h2 class="title" id="contacto-title">¿Charlamos?</h2>
           <p class="lead">Contame qué te está complicando hoy. No hace falta que sepas qué solución necesitás: me contás cómo funciona y lo vemos juntos.</p>
-          <ul class="contact-list">
-            <li><a href="https://wa.me/5491150560359" target="_blank" rel="noopener noreferrer" class="ico ico-wa">+54 9 11 5056-0359</a></li>
-            <li><a href="mailto:mackoaa@gmail.com" class="ico ico-mail">mackoaa@gmail.com</a></li>
-            <li><a href="https://www.linkedin.com/in/macko-agustin/" target="_blank" rel="noopener noreferrer" class="ico ico-in">LinkedIn</a></li>
-            <li><a href="https://www.behance.net/agustinmacko" target="_blank" rel="noopener noreferrer" class="ico ico-be">Behance</a></li>
-          </ul>
         </div>
 
-        <form action="https://formspree.io/f/myzgvjbd" method="POST" class="form reveal" id="form">
+        <form data-location="contacto" action="https://formspree.io/f/myzgvjbd" method="POST" class="form reveal" id="form">
+          <input type="hidden" name="_subject" value="Nueva consulta desde agustinmacko.com.ar">
+          <input type="hidden" name="pagina_origen" value="" data-fill="page">
+          <input type="hidden" name="utm_source" value="" data-fill="utm_source">
+          <input type="hidden" name="utm_medium" value="" data-fill="utm_medium">
+          <input type="hidden" name="utm_campaign" value="" data-fill="utm_campaign">
+          <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
           <p class="form-title">Dejame un mensaje</p>
           <label for="nombre">Tu nombre</label>
           <input type="text" id="nombre" name="nombre" autocomplete="name" required>
@@ -551,7 +633,21 @@
           <label for="mensaje">¿Qué necesitás resolver?</label>
           <textarea id="mensaje" name="mensaje" rows="4" placeholder="Contame en pocas palabras cómo trabajan hoy…" required></textarea>
           <button type="submit" class="btn btn-dark btn-block">Enviar</button>
+          <!-- TODO: confirmar que puedo responder en el día; si no, cambiar por "Te respondo en menos de 48 hs." -->
+          <p class="form-note">Te respondo en el día.</p>
+          <p class="form-status" role="status" aria-live="polite" hidden></p>
         </form>
+
+        <div class="contact-alt reveal">
+          <p class="contact-alt-title">O escribime directo</p>
+          <ul class="contact-list">
+            <li><a data-location="contacto" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=mackoaa@gmail.com&amp;su=Consulta%20desde%20agustinmacko.com.ar&amp;body=Hola%20Agust%C3%ADn%2C%20te%20cuento%20c%C3%B3mo%20trabajamos%20hoy%3A" target="_blank" rel="noopener noreferrer" class="ico ico-mail">mackoaa@gmail.com</a></li>
+            <li><a data-location="contacto" href="https://wa.me/5491150560359" target="_blank" rel="noopener noreferrer" class="ico ico-wa">WhatsApp: +54 9 11 5056-0359</a></li>
+            <li><a href="https://www.linkedin.com/in/macko-agustin/" target="_blank" rel="noopener noreferrer" class="ico ico-in">LinkedIn</a></li>
+            <li><a href="https://www.behance.net/agustinmacko" target="_blank" rel="noopener noreferrer" class="ico ico-be">Behance</a></li>
+          </ul>
+          <a href="#" class="btn btn-line" data-agenda data-location="contacto" hidden>Agendar 15 minutos</a>
+        </div>
       </div>
     </section>
 
@@ -564,6 +660,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=20261108i"></script>
 </body>
 </html>
